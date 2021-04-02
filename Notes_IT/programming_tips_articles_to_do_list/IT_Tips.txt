@@ -1,0 +1,206 @@
+Get a white board to practice programming interview questions. 
+
+//
+
+Learn Data Flow Diagrams(they are also called  Process Model)
+// check out mockingbird for website wireframes ( really cool) 
+// learn fundamental algorithms 
+
+Build small projects, thats how you practice the logic necessary to build programs, work your way from there to medium projects and so on.
+
+Finish the projects that you start.
+
+Make your code easily disposable, things change be prepared to delete chunks of your code.
+Create value as fast as possible so that other can see it's value growing over time.
+Great software today is often preferable to perfect software tomorrow.
+
+If we compare creating software to building a house, we put doors with doors and windows with windows. For example think about MVC architecture, we have three folders models, views and controllers, we put a lot of files there but when we build a house we have a floor and the doors have their place and each window has it's place they are not bunched up together.
+
+// 
+Learn to say no when asked to work longer hours or on weekend. You are going to be burned out, this is not easy, people that you like or you respect will ask you and you will not get paid and you WILL burn out.
+
+// Joel Test
+The Joel Test:
+1.Do you use source control? 
+2.Can you make a build in one step? 
+3.Do you make daily builds? 
+4.Do you have a bug database? 
+5.Do you fix bugs before writing new code? 
+6.Do you have an up-to-date schedule? 
+7.Do you have a spec? 
+8.Do programmers have quiet working conditions? 
+9.Do you use the best tools money can buy? 
+10.Do you have testers? 
+11.Do new candidates write code during their interview? 
+12.Do you do hallway usability testing? 
+ 
+
+<Software architecture>
+
+You should consider the way that data flows in and out of your
+system and the ways in which it is transformed. At such a level of abstraction, there
+are fewer variations in structure than you might guess
+</Software architecture>
+
+When you’re trying to design code, writing the client interface first can help guide your design. Write the API of the code so it’s structured in the way you want to call it; then implement the functionality within that structure rather than implementing the functionality and then designing the public API.
+
+
+Programmers always overestimate their long-term
+productivity. Most large software projects still cost more than expected. Most
+projects still take longer to finish than expected. Many are canceled prior to
+completion and many, once deployed, fail to achieve the business goals they were
+intended to serve.
+
+
+What these people see in large projects, time and again,
+are failures relating to requirements and failures relating to integration: teams build
+the wrong thing and then they can’t get the pieces they build to fit together. Based on
+these observations, the challenges of software seemed to parallel the challenges of
+architecture – the craftsmanship of the individual worker is all well and good, but
+success comes from careful planning and coordination.
+
+We do know that there’s at least one major flaw in the software as architecture
+metaphor, and that is that unlike a building that remains under construction until a
+designated “grand opening,” software should be built and deployed incrementally – if
+not one “room at a time” then at least “one floor at a time.” This is, of course, easier
+in some situations than in others, but one of the great truisms of software
+development management is that from the first weeks of the project, you should be
+able to at least potentially ship your latest build.
+
+// development speed
+It is counterintuitive, but the number one thing you can do to speed up your
+development schedule is to write a lot of tests. It doesn’t pay off in the first days, but
+it pays off in just a few weeks. By the time you get several months into a project, you
+will be madly in love with your testing suite. Once you develop a system with a proper
+suite of tests, you will consider it incompetent foolishness to develop without one.
+
+// Simple design
+Simple design both exploits XP practices and is also an enabling practice. Only if you have testing, continuous integration, and refactoring can you practice simple design effectively. But at the same time keeping the design simple is essential to keeping the change curve flat. Any unneeded complexity makes a system harder to change in all directions except the one you anticipate with the complex flexibility you put in. However people aren't good at anticipating, so it's best to strive for simplicity. However people won't get the simplest thing first time, so you need to refactor in order get closer to the goal.
+
+//
+First keep in mind what you're drawing the diagrams for. The primary value is communication. Effective communication means selecting important things and neglecting the less important. This selectivity is the key to using the UML well. Don't draw every class - only the important ones. For each class, don't show every attribute and operation - only the important ones. Don't draw sequence diagrams for all use cases and scenarios - only... you get the picture. A common problem with the common use of diagrams is that people try to make them comprehensive. The code is the best source of comprehensive information, as the code is the easiest thing to keep in sync with the code. For diagrams comprehensiveness is the enemy of comprehensibility.
+- keep them short
+- don't try to address all the details (just the important ones)
+- treat the resulting design as a sketch, not as a final design
+
+the diagrams act to summarize and highlight important issues.
+
+//
+In this view one of the main source of complexity is the irreversibility of decisions. If you can easily change your decisions, this means it's less important to get them right - which makes your life much simpler. The consequence for evolutionary design is that designers need to think about how they can avoid irreversibility in their decisions. Rather than trying to get the right decision now, look for a way to either put off the decision until later (when you'll have more information) or make the decision in such a way that you'll be able to reverse it later on without too much difficulty.
+
+This determination to support reversibility is one of the reasons that agile methods put a lot of emphases on source code control systems, and of putting everything into such a system. While this does not guarantee reversibility, particularly for longed-lived decisions, it does provide a foundation that gives confidence to a team, even if it's rarely used.
+
+Designing for reversibility also implies a process that makes errors show up quickly. One of the values of iterative development is that the rapid iterations allow customers to see a system as it grows, and if a mistake is made in requirements it can be spotted and fixed before the cost of fixing becomes prohibitive. This same rapid spotting is also important for design. This means that you have to set things up so that potential problem areas are rapidly tested to see what issues arrive. It also means it's worth doing experiments to see how hard future changes can be, even if you don't actually make the real change now - effectively doing a throw-away prototype on a branch of the system. Several teams have reporting trying out a future change early in prototype mode to see how hard it would be.
+
+//
+“No product is an island. A product is more than the product. It is a cohesive, integrated set of experiences. Think through all of the stages of a product or service – from initial intentions through final reflections, from first usage to help, service, and maintenance. Make them all work together seamlessly.”
+
+— Don Norman, inventor of the term “User Experience” 
+
+// So is Design Dead?
+
+Not by any means, but the nature of design has changed. XP design looks for the following skills:
+
+- A constant desire to keep code as clear and simple as possible
+Refactoring skills so you can confidently make improvements whenever you see the need.
+- A good knowledge of patterns: not just the solutions but also appreciating when to use them and how to evolve into them.
+- Designing with an eye to future changes, knowing that decisions taken now will have to be changed in the future.
+- Knowing how to communicate the design to the people who need to understand it, using code, diagrams and above all: conversation.
+
+// Test Double
+Meszaros uses the term Test Double as the generic term for any kind of pretend object used in place of a real object for testing purposes. The name comes from the notion of a Stunt Double in movies. (One of his aims was to avoid using any name that was already widely used.) Meszaros then defined four particular kinds of double:
+
+Dummy objects are passed around but never actually used. Usually they are just used to fill parameter lists.
+
+Fake objects actually have working implementations, but usually take some shortcut which makes them not suitable for production (an in memory database is a good example).
+
+Stubs provide canned answers to calls made during the test, usually not responding at all to anything outside what's programmed in for the test. Stubs may also record information about calls, such as an email gateway stub that remembers the messages it 'sent', or maybe only how many messages it 'sent'.
+
+Mocks are what we are talking about here: objects pre-programmed with expectations which form a specification of the calls they are expected to receive.
+
+//
+Constructor function, pass in an object instead of having params. What if some params become 
+useless, in time you will find out that you can't change the func. Pass an object for 
+configuration so that missing params can easily be replaced by defaults or ignored, also the 
+order doesn't matter because you have an obj properties. You can copy the properties and methods 
+of that object(mostly done in js) into your own obj or fc or methods etc. You can freeze the obj 
+so that nobody can add props and methods to it later(again this is possible in javascript).
+
+Break things in smaller things.
+
+How to program video(draw diagram) ex: on the left types(the things that enter the prg and don't 
+have much functionality to them, or little functionality as in they have fc to describe 
+themselves): cat, catnip, mouse. On the right the functions graph ex:
+				  Life
+      |            |                |
+   Eat			Lay in sun        Play
+
+Wrapper around 3rd party code if possible for ex: tests won't have to be changed because they 
+require the 3rd party, the code will stay the same.
+
+(Imagine code as a graph)ON new requirements delete the children and the parents affected by 
+change 
+because if you modify code to adapt it to new changes you will continue to add technical debt. 
+
+fundamental algorithms
+
+// Sum Types
+// We create types length,width and radius just for clarity
+
+type length = float; type width = float; type radius = float;
+type shape = Rect(length,width) | Circle(radius);
+
+let area = fun 
+	| Rect(length, width) => length *.width
+	| Circle(radius) => J.Math._PI *.radius *.radius;
+
+Planning ahead.
+Git history hygiene.(What rebase is)
+Test driven development.
+Notes & Conversations.
+
+Take notes and write down questions. If you split your work in simple chunks, even if you are interrupted is not a big deal. But if you keep too much in your head and you are interrupted you can be resentful and annoyed, you might want to avoid social interactions but that will make you isolated.
+
+When you decide to do something like testing a part of your code, you might spot problems, possible problems, areas where you could refactor or you might have questions about a specific part of the code, take notes and write down questions so you can get them off you head and continue to focus on the task at hand.
+
+Conversations: explain to other people what you are trying to do, you can spot a lot of wrong things by explaining to another and clarify your ideas.
+
+Do not allow quick and dirty code, be professional or end up in a swamp. Quick and dirty slows the project. You don't ask a doctor to skip washing their hands to do their work faster.
+
+Give meaningful names to variables, ex:
+	elapsed_time_in_days;
+	daysSinceCreation;
+	daysSinceModification;
+
+Functions express intent:
+
+functions set_numeric_thumbnail_size($requested_size = 'xsmall') {
+	if (array_key_exists($requested_size, $this->thumbnail_sizes_map)) {
+		etc...
+	}
+}
+
+Comments are often lies waiting to happen. Code should speak for itself as much as possible. What happens is that somebody fixes the code and might forget the comments, now the comments are wrong. You need to maintain both code and comments if you have comments. Before comments think first of making the function expressive.
+
+Leave existing code better than before. Take a bit of time and improve surrounding code.
+
+A function/method should do one thing only, if possible. With classes you look for cohesiveness, are most of the methods using most of the properties.
+
+Write tests.
+
+Work in short cycles incremental and iterative.
+
+Software architectures are structures that support the use cases of the system...
+
+Frameworks are tools to be used, not architectures to be conformed to.
+
+Ex: coder writes a plugin for wordpress,the code doesn't need to scream this is plugin for Wordpress it's written as some image compression for example, you read it and you don't think this is a wordpress plugin.
+
+Practice, practice * 3.
+
+When you write code you have to be twice as smart to debug it.
+
+Testing create new types from existing ones and stub out the things that are unnecessary for the test.
+
+
+

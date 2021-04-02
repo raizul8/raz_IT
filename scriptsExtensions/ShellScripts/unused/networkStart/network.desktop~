@@ -1,0 +1,8 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Network
+Comment=restarts network
+Exec=sudo /home/raz2/razIT/scriptsExtensions/ShellScripts/network/network.sh
+Icon=/home/raz2/razIT/scriptsExtensions/ShellScripts/network/n5.jpg
+Terminal=false;

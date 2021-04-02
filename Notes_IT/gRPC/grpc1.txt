@@ -1,0 +1,94 @@
+// To generate the protobuf message classes from our echo.proto, run the following command:
+
+protoc -I=$DIR echo.proto \
+  --js_out=import_style=commonjs:$OUT_DIR
+
+// out current dir js
+protoc -I=. echo.proto \
+  --js_out=import_style=commonjs:.
+
+ // out current dir typescript
+protoc -I=. echo.proto \
+  --js_out=import_style=typescript:. 
+
+// for the web client part you only need the command bellow
+// To generate the service client stub file, run this command:
+ protoc -I=$DIR helloworld.proto \
+  --js_out=import_style=commonjs:. \
+  --grpc-web_out=import_style=commonjs,mode=grpcwebtext:$OUT_DIR
+
+// output current dir
+ protoc -I=. helloworld.proto \
+  --js_out=import_style=commonjs:. \
+  --grpc-web_out=import_style=commonjs,mode=grpcwebtext:. 
+  
+ // output current dir js with typescript definition
+ protoc -I=. helloworld.proto \
+  --js_out=import_style=commonjs:. \
+  --grpc-web_out=import_style=commonjs+dts,mode=grpcwebtext:. 
+
+// output current dir js with typescript(it still contains d.ts file but the Service file is named differently from grpc-web_out=import_style=commonjs+dts)
+protoc -I=. helloworld.proto --js_out=import_style=commonjs:. --grpc-web_out=import_style=typescript,mode=grpcwebtext:.
+
+
+// In the --grpc-web_out param above:
+mode can be grpcwebtext (default) or grpcweb
+import_style can be closure (default) or commonjs
+--js_out=import_style=commonjs:.
+--js_out=import_style=commonjs+dts:.
+--js_out=import_style=typescript:.
+
+// write js code
+const {EchoRequest, EchoResponse} = require('./echo_pb.js');
+const {EchoServiceClient} = require('./echo_grpc_web_pb.js');
+
+// you need package.json
+{
+  "name": "grpc-web-commonjs-example",
+  "dependencies": {
+    "google-protobuf": "^3.6.1",
+    "grpc-web": "^0.4.0"
+  },
+  "devDependencies": {
+    "browserify": "^16.2.2",
+    "webpack": "^4.16.5",
+    "webpack-cli": "^3.1.0"
+  }
+}
+
+// compile relevant files
+npm install
+npx webpack client.js
+
+// Run the Example!
+// We are ready to run the Hello World example. The following set of commands will run the 3 processes all in the background.
+
+// Run the NodeJS gRPC Service. This listens at port :9090.
+$ node server.js &
+
+// Run the Envoy proxy. The envoy.yaml file configures Envoy to listen to browser requests at port :8080, and forward them to port :9090 (see above).
+$ docker build -t helloworld/envoy -f ./envoy.Dockerfile .
+$ docker run -d -p 8080:8080 --network=host helloworld/envoy
+
+// Run the simple Web Server. This hosts the static file index.html and dist/main.js we generated earlier.
+$ python -m SimpleHTTPServer 8081 &
+// When these are all ready, you can open a browser tab and navigate to
+localhost:8081
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

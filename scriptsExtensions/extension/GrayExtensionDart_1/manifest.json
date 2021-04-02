@@ -1,0 +1,30 @@
+{
+  "manifest_version": 3,
+
+  "name": "GreyExtensionDart",
+  "description": "This extension will make some webpages with grey background.",
+  "version": "1.0",
+
+  "icons": { "16": "addSite16.png",
+			 "48": "addSite48.png",
+			 "128": "addSite128.png"
+  },
+
+	"permissions": [
+		"storage"
+  ],
+  
+  "browser_action": {
+    "default_icon": "addSite19.png"
+  },
+  
+  "content_scripts": [
+    {
+      "matches": ["*://*/*"],
+	  //"matches": ["http://en.wikipedia.org/wiki/Main_Page"],
+	  //"css": ["mystyles.css"],
+      // "js": ["myjavascript.js"]
+      "js": ["myjavascriptNew.js"]
+    }
+  ]
+}

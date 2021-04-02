@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Encoding=UTF-8
+Name=NetRestart
+Comment=Restarts network
+Exec=/home/raz/raz_IT/scriptsExtensions/ShellScripts/network_restart/nRestart.sh
+Icon=/home/raz/raz_IT/scriptsExtensions/ShellScripts/network_restart/network.png
+Terminal=false;

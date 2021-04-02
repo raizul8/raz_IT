@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Encoding=UTF-8
+Name=Disable touchpad
+Comment=Disable touchpad untill reboot
+Exec=/home/raizul2/razIT/scriptsExtensions/ShellScripts/disableTouchPad/disableTouchPad.sh
+Icon=/home/raizul2/razIT/scriptsExtensions/ShellScripts/disableTouchPad/touchpad1.png
+Terminal=true
+Categories=RazPrograms;

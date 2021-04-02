@@ -1,0 +1,24 @@
+// install protocol buffers
+#! /bin/bash
+# Make sure you grab the latest version
+curl -OL https://github.com/google/protobuf/releases/download/v3.6.1/protoc-3.6.1-linux-x86_64.zip
+https://github.com/google/protobuf/releases/download/v3.6.1/protoc-3.6.1-linux-x86_64.zip
+# Unzip
+unzip protoc-3.6.1-linux-x86_64.zip -d protoc3
+
+# Move protoc to /usr/local/bin/
+sudo mv protoc3/bin/* /usr/local/bin/
+
+# Move protoc3/include to /usr/local/include/
+sudo mv protoc3/include/* /usr/local/include/
+
+# Optional: change owner
+sudo chown $USER /usr/local/bin/protoc
+sudo chown -R $USER /usr/local/include/google
+
+
+for grpc web to work
+ sudo apt-get install libprotoc-dev
+
+STOW 
+	Stow is a tool for managing the installation of multiple software packages in the same run-time directory tree. One historical difficulty of this task has been the need to administer, upgrade, install, and remove files in independent packages without confusing them with other files sharing the same file system space.

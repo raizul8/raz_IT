@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<!-- saved from url=(0048)http://dartlangfr.net/dart-cheat-sheet/html.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Dart Cheat Sheet [HTML]</title>
+    
+    <link href="http://dartlangfr.net/dart-cheat-sheet/favicon.ico" rel="icon" type="image/x-icon">
+    <link href="http://dartlangfr.net/dart-cheat-sheet/favicon.ico" rel="shortcut icon" type="image/x-icon">
+    <link href="http://dartlangfr.net/dart-cheat-sheet/css/main.css" rel="stylesheet">
+    <link href="http://dartlangfr.net/dart-cheat-sheet/css/html.css" rel="stylesheet">
+    <link href="./Dart Cheat Sheet [HTML]_files/css" rel="stylesheet" type="text/css">
+    <meta name="description" content="The cheat sheet references main classes and methods from Dart SDK.">
+    <meta name="author" content="Guillaume Girou, Nicolas François, Vincent Bostoen">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <!-- Google Analytics -->
+    <script src="./Dart Cheat Sheet [HTML]_files/cb=gapi.loaded_1" async=""></script><script src="./Dart Cheat Sheet [HTML]_files/cb=gapi.loaded_0" async=""></script><script async="" src="./Dart Cheat Sheet [HTML]_files/analytics.js"></script><script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      
+      ga('create', 'UA-42028125-2', 'dartlangfr.net');
+      ga('send', 'pageview');
+    </script>
+  <style type="text/css"></style></head>
+  <body style="color: black; background-color: rgb(211, 211, 211);">
+    <div id="header" style="color: black; background-color: rgb(211, 211, 211);">
+      <h1>
+        <img alt="Dart Logo" src="./Dart Cheat Sheet [HTML]_files/dart-logo.png">
+        dart:html
+        <span class="noprint" style="display: inline">
+          <div id="___plusone_0" style="text-indent: 0px; margin: 0px; padding: 0px; border-style: none; float: none; line-height: normal; font-size: 1px; vertical-align: baseline; display: inline-block; width: 106px; height: 24px; background: transparent;"><iframe frameborder="0" hspace="0" marginheight="0" marginwidth="0" scrolling="no" style="position: static; top: 0px; width: 106px; margin: 0px; border-style: none; left: 0px; visibility: visible; height: 24px;" tabindex="0" vspace="0" width="100%" id="I0_1425393304452" name="I0_1425393304452" src="./Dart Cheat Sheet [HTML]_files/fastbutton.html" data-gapiattached="true" title="+1"></iframe></div>
+        </span>
+      </h1>
+      <div class="nav" style="color: black; background-color: rgb(211, 211, 211);">
+        <ul>
+          <li>
+            <div class="btn-group" style="color: black; background-color: rgb(211, 211, 211);">
+              <a href="http://dartlangfr.net/dart-cheat-sheet/core.html" class="btn btn-default"><img src="./Dart Cheat Sheet [HTML]_files/core32.png" alt="Core"> Core</a>
+              <a href="./Dart Cheat Sheet [HTML]_files/Dart Cheat Sheet [HTML].html" class="btn btn-default active"><img src="./Dart Cheat Sheet [HTML]_files/html32.png" alt="HTML"> HTML</a>
+              <a href="http://dartlangfr.net/dart-cheat-sheet/angular.html" class="btn btn-default"><img src="./Dart Cheat Sheet [HTML]_files/angular32.png" alt="HTML"> AngularDart</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div id="content" style="color: black; background-color: rgb(211, 211, 211);">
+      <div class="grid" style="color: black; background-color: rgb(211, 211, 211);">
+        <div id="elements-section" class="section-container" style="color: black; background-color: rgb(211, 211, 211);">
+          <p style="color: black;">Elements</p>
+          <div id="html-elements-section" class="section" style="color: black; background-color: rgb(211, 211, 211);">
+            <p style="color: black;">Html Elements</p>
+            <i>Class name: "___<b>Element</b>" (eg. ImageElement)</i>
+            <ul class="section-content column3">
+              <li>Anchor</li>
+              <li>Area</li>
+              <li>BR</li>
+              <li>Base</li>
+              <li>Body</li>
+              <li>Button</li>
+              <li>Canvas</li>
+              <li>Content</li>
+              <li>DList</li>
+              <li>DataList</li>
+              <li>Details</li>
+              <li>Dialog</li>
+              <li>Div</li>
+              <li>Embed</li>
+              <li>FieldSet</li>
+              <li>Form</li>
+              <li>HR</li>
+              <li>Head</li>
+              <li>Heading</li>
+              <li>HtmlHtml</li>
+              <li>IFrame</li>
+              <li>Image</li>
+              <li>Input</li>
+              <li>Keygen</li>
+              <li>LI</li>
+              <li>Label</li>
+              <li>Legend</li>
+              <li>Link</li>
+              <li>Map</li>
+              <li>Media</li>
+              <li>Menu</li>
+              <li>Meta</li>
+              <li>Meter</li>
+              <li>Mod</li>
+              <li>OList</li>
+              <li>Object</li>
+              <li>OptGroup</li>
+              <li>Option</li>
+              <li>Output</li>
+              <li>Paragraph</li>
+              <li>Param</li>
+              <li>Pre</li>
+              <li>Progress</li>
+              <li>Quote</li>
+              <li>Script</li>
+              <li>Select</li>
+              <li>Shadow</li>
+              <li>Source</li>
+              <li>Span</li>
+              <li>Style</li>
+              <li>TableCaption</li>
+              <li>TableCell</li>
+              <li>TableCol</li>
+              <li>Table</li>
+              <li>TableRow</li>
+              <li>TableSection</li>
+              <li>Template</li>
+              <li>TextArea</li>
+              <li>Title</li>
+              <li>Track</li>
+              <li>UList</li>
+              <li>Unknown</li>
+            </ul>
+          </div>
+          <div id="input-elements-section" class="section" style="color: black; background-color: rgb(211, 211, 211);">
+            <p style="color: black;">Input Elements</p>
+            <i>Class name: "___<b>InputElement</b>" (eg. TextInputElement)</i>
+            <ul class="section-content column3">
+              <li>Checkbox</li>
+              <li>FileUpload</li>
+              <li>Hidden</li>
+              <li>Button</li>
+              <li>ImageButton</li>
+              <li>RadioButton</li>
+              <li>ResetButton</li>
+              <li>SubmitButton</li>
+              <li>Date</li>
+              <li>LocalDateTime</li>
+              <li>Month</li>
+              <li>Number</li>
+              <li>Range</li>
+              <li>Time</li>
+              <li>Week</li>
+              <li>Email</li>
+              <li>Password</li>
+              <li>Search</li>
+              <li>Telephone</li>
+              <li>Text</li>
+              <li>Url</li>
+            </ul>
+          </div>
+        </div>
+        <div id="query-dom-section" class="section-container" style="color: black; background-color: rgb(211, 211, 211);">
+          <p style="color: black;">Query the DOM</p>
+          <div class="section" style="color: black; background-color: rgb(211, 211, 211);">
+            <p style="color: black;">Methods</p>
+            <ul class="section-content">
+              <li>querySelector(cssSelector);</li>
+              <li>querySelectorAll(cssSelector);</li>
+            </ul>
+          </div>
+          <div class="section" style="color: black; background-color: rgb(211, 211, 211);">
+            <p style="color: black;">Examples</p>
+             <ul class="section-content">
+                <li>querySelector(<span class="str">'#foo'</span>);</li>
+                <li>querySelectorAll(<span class="str">'div'</span>);</li>
+                <li>querySelectorAll(<span class="str">'[name="foo"]'</span>);</li>
+                <li>querySelectorAll(<span class="str">'.foo'</span>);</li>
+                <li>querySelector(<span class="str">'.foo .bar'</span>);</li>
+                <li>querySelectorAll(<span class="str">'.foo .bar'</span>);</li>
+              </ul>
+          </div>
+        </div>
+        <div id="events-section" class="section-container" style="color: black; background-color: rgb(211, 211, 211);">
+          <p style="color: black;">Events</p>
+          <i>Events stream property: "<b>on</b>___" (eg. onClick)</i>
+          <div class="section" style="color: black; background-color: rgb(211, 211, 211);">
+            <p style="color: black;">Element events</p>
+            <ul class="section-content column3">
+              <li>Abort</li>
+              <li>BeforeCopy</li>
+              <li>BeforeCut</li>
+              <li>BeforePaste</li>
+              <li>Blur</li>
+              <li>Change</li>
+              <li>Copy</li>
+              <li>Cut</li>
+              <li>Error</li>
+              <li>Focus</li>
+              <li>FullscreenChange</li>
+              <li>FullscreenError</li>
+              <li>Input</li>
+              <li>Invalid</li>
+              <li>Load</li>
+              <li>Paste</li>
+              <li>Reset</li>
+              <li>Scroll</li>
+              <li>Search</li>
+              <li>Select</li>
+              <li>SelectStart</li>
+              <li>Submit</li>
+            </ul>
+          </div>
+          <div class="section" style="color: black; background-color: rgb(211, 211, 211);">
+            <p style="color: black;">Mouse events</p>
+            <ul class="section-content column3">
+              <li>DoubleClick</li>
+              <li>Click</li>
+              <li>ContextMenu</li>
+              <li>Drag</li>
+              <li>DragEnd</li>
+              <li>DragEnter</li>
+              <li>DragLeave</li>
+              <li>DragOver</li>
+              <li>DragStart</li>
+              <li>Drop</li>
+              <li>MouseDown</li>
+              <li>MouseEnter</li>
+              <li>MouseLeave</li>
+              <li>MouseMove</li>
+              <li>MouseOut</li>
+              <li>MouseOver</li>
+              <li>MouseUp</li>
+              <li>MouseWheel</li>
+            </ul>
+          </div>
+          <div class="section" style="color: black; background-color: rgb(211, 211, 211);">
+            <p style="color: black;">Keyboard events</p>
+            <ul class="section-content column3">
+              <li>KeyDown</li>
+              <li>KeyPress</li>
+              <li>KeyUp</li>
+            </ul>
+          </div>
+          <div class="section" style="color: black; background-color: rgb(211, 211, 211);">
+            <p style="color: black;">Touch events</p>
+            <ul class="section-content column3">
+              <li>TouchCancel</li>
+              <li>TouchEnd</li>
+              <li>TouchEnter</li>
+              <li>TouchLeave</li>
+              <li>TouchMove</li>
+              <li>TouchStart</li>
+            </ul>
+          </div>
+          <div class="section" style="color: black; background-color: rgb(211, 211, 211);">
+            <p style="color: black;">Other events</p>
+            <ul class="section-content">
+              <li>TransitionEnd</li>
+            </ul>
+          </div>
+          <div class="section" style="color: black; background-color: rgb(211, 211, 211);">
+            <p style="color: black;">Examples</p>
+            <pre class="lang-dart"><span class="var">buttonElem</span>.onClick.listen((<span class="typ">MouseEvent</span> event) {
+  print(event);
+});
+            </pre>
+          </div>
+        </div>
+        <div id="element-section" class="section-container" style="color: black; background-color: rgb(211, 211, 211);">
+          <p style="color: black;">Element</p>
+          <div class="section" style="color: black; background-color: rgb(211, 211, 211);">
+            <p style="color: black;">Creation</p>
+            <ul class="section-content">
+              <li>new Element.div()</li>
+              <li>new Element.tag('div')</li>
+              <li>new DivElement()</li>
+            </ul>
+          </div>
+          <div class="section" style="color: black; background-color: rgb(211, 211, 211);">
+            <p style="color: black;">Properties</p>
+            <ul class="section-content column2">
+              <li>Map attributes</li>
+              <li>classes</li>
+              <li>className</li>
+              <li>document</li>
+              <li>id</li>
+              <li>innerHtml</li>
+              <li>nodeName</li>
+              <li>nodes</li>
+              <li>Events on</li>
+              <li>outerHtml</li>
+              <li>style</li>
+              <li>tabIndex</li>
+              <li>tagName</li>
+              <li>text</li>
+              <li>title</li>
+              <li><b>Elements Navigation</b></li>
+              <li>children</li>
+              <li>nextElementSibling</li>
+              <li>offsetParent</li>
+              <li>parent</li>
+              <li>previousElementSibling</li>
+              <li><b>Nodes Navigation</b></li>
+              <li>childNodes</li>
+              <li>firstChild</li>
+              <li>lastChild</li>
+              <li>nextNode</li>
+              <li>parentNode</li>
+              <li>previousNode</li>
+              <li><b>Dimensions &amp; positions</b></li>
+              <li>client</li>
+              <li>documentOffset</li>
+              <li>offset</li>
+              <li>borderEdge</li>
+              <li>contentEdge</li>
+              <li>marginEdge</li>
+              <li>paddingEdge</li>
+              <li>scrollHeight</li>
+              <li>scrollLeft</li>
+              <li>scrollTop</li>
+              <li>scrollWidth</li>
+            </ul>
+          </div>
+          <div class="section" style="color: black; background-color: rgb(211, 211, 211);">
+            <p style="color: black;">Methods</p>
+            <ul class="section-content">
+              <li>Node append(Node newChild)</li>
+              <li>appendHtml(String text)</li>
+              <li>appendText(String text)</li>
+              <li>blur()</li>
+              <li>click()</li>
+              <li>bool contains(Node other)</li>
+              <li>bool dispatchEvent(Event event)</li>
+              <li>focus()</li>
+              <li>Point offsetTo(Element parent)</li>
+              <li>Element querySelector(String selectors)</li>
+              <li>ElementList querySelectorAll(String selectors)</li>
+              <li>remove()</li>
+              <li>Node replaceWith(Node otherNode)</li>
+              <li>scrollByLines(int lines)</li>
+              <li>scrollByPages(int pages)</li>
+              <li>scrollIntoView([ScrollAlignment alignment])</li>
+            </ul>
+          </div>
+          <div class="section" style="color: black; background-color: rgb(211, 211, 211);">
+            <p style="color: black;">Examples</p>
+            <ul class="section-content">
+              <li>element.attributes.containsKey('name');</li>
+              <li>element.attributes['name'];</li>
+              <li>element.attributes['name'] = 'value';</li>
+              <li>element.attributes.remove('name');</li>
+            </ul>
+          </div>
+        </div>
+        <div id="css-section" class="section-container" style="color: black; background-color: rgb(211, 211, 211);">
+          <p style="color: black;">CSS (CssStyleDeclaration)</p>
+          <div class="section" style="color: black; background-color: rgb(211, 211, 211);">
+            <p style="color: black;">Main Properties</p>
+            <ul class="section-content column3">
+              <li>animation</li>
+              <li>appearance</li>
+              <li>background</li>
+              <li>border</li>
+              <li>bottom</li>
+              <li>clear</li>
+              <li>color</li>
+              <li>content</li>
+              <li>cursor</li>
+              <li>direction</li>
+              <li>display</li>
+              <li>float</li>
+              <li>font</li>
+              <li>fontFamily</li>
+              <li>fontSize</li>
+              <li>fontStyle</li>
+              <li>fontWeight</li>
+              <li>height</li>
+              <li>hyphens</li>
+              <li>left</li>
+              <li>margin</li>
+              <li>marquee</li>
+              <li>mask</li>
+              <li>maxHeight</li>
+              <li>maxWidth</li>
+              <li>maxZoom</li>
+              <li>minHeight</li>
+              <li>minWidth</li>
+              <li>minZoom</li>
+              <li>opacity</li>
+              <li>order</li>
+              <li>orientation</li>
+              <li>orphans</li>
+              <li>outline</li>
+              <li>overflow</li>
+              <li>overflowX</li>
+              <li>overflowY</li>
+              <li>padding</li>
+              <li>page</li>
+              <li>perspective</li>
+              <li>position</li>
+              <li>quotes</li>
+              <li>resize</li>
+              <li>right</li>
+              <li>size</li>
+              <li>textAlign</li>
+              <li>textDecoration</li>
+              <li>textIndent</li>
+              <li>textOrientation</li>
+              <li>textOverflow</li>
+              <li>textOverline</li>
+              <li>textShadow</li>
+              <li>textStroke</li>
+              <li>textTransform</li>
+              <li>textUnderline</li>
+              <li>top</li>
+              <li>transform</li>
+              <li>transition</li>
+              <li>verticalAlign</li>
+              <li>visibility</li>
+              <li>whiteSpace</li>
+              <li>width</li>
+              <li>wordBreak</li>
+              <li>wordSpacing</li>
+              <li>wordWrap</li>
+              <li>wrap</li>
+              <li>zIndex</li>
+              <li>zoom</li>
+            </ul>
+          </div>
+          <div class="section" style="color: black; background-color: rgb(211, 211, 211);">
+            <p style="color: black;">Methods</p>
+            <ul class="section-content">
+              <li>getPropertyPriority(propertyName)</li>
+              <li>getPropertyValue(propertyName)</li>
+              <li>item(index)</li>
+              <li>removeProperty(propertyName)</li>
+              <li>setProperty(propertyName, value, [priority])</li>
+            </ul>
+          </div>
+        </div>
+        <div id="http-request-section" class="section-container" style="color: black; background-color: rgb(211, 211, 211);">
+          <p style="color: black;">HTTP Request</p>
+          <div class="section" style="color: black; background-color: rgb(211, 211, 211);">
+            <p style="color: black;">Static Methods</p>
+            <ul class="section-content">
+              <li>getString(String url)</li>
+              <li>postFormData(String url, Map data)</li>
+            </ul>
+          </div>
+          <div class="section" style="color: black; background-color: rgb(211, 211, 211);">
+            <p style="color: black;">Methods</p>
+            <ul class="section-content">
+              <li>String getResponseHeader(String header)</li>
+              <li>open(String method, String url) </li>
+              <li>setRequestHeader(String header, String value)</li>
+              <li>abort()</li>
+            </ul>
+          </div>
+          <div class="section" style="color: black; background-color: rgb(211, 211, 211);">
+            <p style="color: black;">Example</p>
+            <pre class="lang-dart"><span class="typ">HttpRequest</span>.getString(<span class="str">'http://theUrl'</span>)
+           .then((<span class="var">response</span>) {
+  doSomethingWith(<span class="var">response</span>);
+});
+          </pre>
+          </div>
+        </div>
+        <div id="web-socket-section" class="section-container" style="color: black; background-color: rgb(211, 211, 211);">
+          <p style="color: black;">Web Socket</p>
+          <div class="section" style="color: black; background-color: rgb(211, 211, 211);">
+            <p style="color: black;">Example</p>
+            <pre class="lang-dart"><span class="kwd">var</span> <span class="var">webSocket</span> =
+    <span class="kwd">new</span> <span class="typ">WebSocket</span>(<span class="str">'ws://127.0.0.1:1337/ws'</span>);
+if (<span class="var">webSocket</span> != <span class="kwd">null</span> &amp;&amp;
+    <span class="var">webSocket</span>.readyState == <span class="typ">WebSocket</span>.OPEN) {
+  <span class="var">webSocket</span>.send(data);
+} else {
+  print(<span class="str">'WebSocket not connected'</span>);
+}
+<span class="var">webSocket</span>.onMessage.listen((<span class="typ">MessageEvent</span> <span class="var">e</span>) {
+  receivedData(<span class="var">e</span>.data);
+});
+            </pre>
+          </div>
+        </div> 
+        <div id="event-source-section" class="section-container" style="color: black; background-color: rgb(211, 211, 211);">
+          <p style="color: black;">Event Source</p>
+          <div class="section" style="color: black; background-color: rgb(211, 211, 211);">
+            <p style="color: black;">Example</p>
+            <pre class="lang-dart"><span class="kwd">var</span> <span class="var">source</span> = <span class="kwd">new</span> <span class="typ">EventSource</span>(<span class="str">'/the/url'</span>)
+  ..onError.listen((<span class="typ">Event</span> <span class="var">e</span>) =&gt; print(<span class="str">'Error: $e'</span>))
+  ..onOpen.listen((<span class="typ">Event</span> <span class="var">e</span>) =&gt; print(<span class="str">'Open'</span>))
+  ..onMessage.listen((<span class="typ">MessageEvent</span> <span class="var">me</span>) =&gt;
+          print(<span class="str">'Message: ${me.data}'</span>)
+    );
+              </pre>
+          </div>
+        </div>
+        <div id="web-rtc-section" class="section-container" style="color: black; background-color: rgb(211, 211, 211);">
+          <p style="color: black;">Web RTC</p>
+          <div class="section" style="color: black; background-color: rgb(211, 211, 211);">
+            <p style="color: black;">Example</p>
+            <pre class="lang-dart"><span class="var">window</span>.navigator
+  .getUserMedia(audio: <span class="kwd">true</span>, video: <span class="kwd">true</span>)
+  .then(_onStream);
+
+_onStream(<span class="var">stream</span>) {
+  <span class="kwd">var</span> <span class="var">video</span> = <span class="kwd">new</span> <span class="typ">VideoElement</span>()
+   ..autoplay = <span class="kwd">true</span>
+   ..src = <span class="typ">Url</span>.createObjectUrlFromStream(<span class="var">stream</span>)
+   ..onLoadedMetadata.listen((<span class="var">e</span>) {
+     <span class="com">// Ready</span>
+   });
+  <span class="var">document</span>.body.append(<span class="var">video</span>);
+}
+              </pre>
+          </div>
+        </div>
+        <div id="local-storage-section" class="section-container" style="color: black; background-color: rgb(211, 211, 211);">
+          <p style="color: black;">Local Storage</p>
+          <i>Storage is implemented as a Map&lt;String, String&gt;</i>
+          <div class="section" style="color: black; background-color: rgb(211, 211, 211);">
+            <p style="color: black;">Examples</p>
+            <ul class="section-content samples">
+              <li>var foo = window.localStorage['bar'];</li>
+              <li>window.localStorage['bar'] = "foo";</li>
+            </ul>
+          </div>
+        </div>
+        <div id="index-db-section" class="section-container" style="color: black; background-color: rgb(211, 211, 211);">
+          <p style="color: black;">Index DB</p>
+          <div class="section" style="color: black; background-color: rgb(211, 211, 211);">
+            <p style="color: black;">Example</p>
+            <pre class="lang-dart"><span class="typ">Future</span> open() {
+  <span class="kwd">return</span> <span class="var">window</span>.indexedDB.open(<span class="str">'myIndexedDB'</span>,
+      version: <span class="lit">1</span>,
+      onUpgradeNeeded: _initializeDatabase)
+    .then(_loadFromDB);
+}
+_initializeDatabase(<span class="typ">VersionChangeEvent</span> e) {
+  <span class="com">// Initialize your database</span>
+}
+<span class="typ">Future</span> _loadFromDB(<span class="typ">Database</span> db) {
+  <span class="com">// Load request</span>
+}
+                </pre>
+          </div>
+        </div>        
+        <div id="canvas-section" class="section-container" style="color: black; background-color: rgb(211, 211, 211);">
+          <p style="color: black;">Canvas Api</p>
+          <div class="section" style="color: black; background-color: rgb(211, 211, 211);">
+            <p style="color: black;">Example</p>
+            <pre class="lang-dart"><span class="typ">CanvasElement</span> <span class="var">canvas</span> =
+   <span class="kwd">new</span> <span class="typ">CanvasElement</span>(width: <span class="lit">600</span>, height: <span class="lit">600</span>);
+<span class="typ">CanvasRenderingContext2D</span> <span class="var">ctx</span> = <span class="var">canvas</span>.context2D;
+<span class="typ">ImageElement</span> <span class="var">img</span> = <span class="var">document</span>.querySelector(<span class="str">'img'</span>);
+
+<span class="var">ctx</span>.drawImage(img, <span class="lit">100</span>, <span class="lit">100</span>);
+                </pre>
+          </div>
+        </div>
+        <div id="history-section" class="section-container" style="color: black; background-color: rgb(211, 211, 211);">
+          <p style="color: black;">History</p>
+          <div class="section" style="color: black; background-color: rgb(211, 211, 211);">
+            <p style="color: black;">Properties</p>
+            <ul class="section-content">
+              <li>bool supportsState</li>
+              <li>int length</li>
+              <li>dynamic state</li>
+            </ul>
+          </div>
+          <div class="section" style="color: black; background-color: rgb(211, 211, 211);">
+            <p style="color: black;">Methods</p>
+            <ul class="section-content">
+              <li>back()</li>
+              <li>forward()</li>
+              <li>go(int distance)</li>
+              <li>pushState(Object data, String title)</li>
+              <li>replaceState(Object data, String title)</li>
+            </ul>
+          </div>
+        </div>
+        <div id="file-api-section" class="section-container" style="color: black; background-color: rgb(211, 211, 211);">
+          <p style="color: black;">File Api</p>
+          <div class="section" style="color: black; background-color: rgb(211, 211, 211);">
+            <p style="color: black;">File</p>
+            <ul class="section-content">
+              <li>DateTime lastModifiedDate</li>
+              <li>String name</li>
+              <li>String relativePath</li>
+              <li>int size</li>
+              <li>String type</li>
+            </ul>
+          </div>
+          <div class="section" style="color: black; background-color: rgb(211, 211, 211);">
+            <p style="color: black;">File Reader</p>
+            <ul class="section-content column2">
+              <li>int readyState</li>
+              <li>Object result</li>
+              <li>void abort()</li>
+              <li><b>readAs___(Blob blob)</b></li>
+              <li>ArrayBuffer</li>
+              <li>BinaryString</li>
+              <li>DataUrl</li>
+              <li>Text</li>
+              <li><b>EventStreamProvider</b></li>
+              <li>errorEvent</li>
+              <li>abortEvent</li>
+              <li>loadEndEvent</li>
+              <li>loadEvent</li>
+              <li>loadStartEvent</li>
+              <li>progressEvent</li>
+              <li><b>Stream on___</b></li>
+              <li>Abort</li>
+              <li>Error</li>
+              <li>Load</li>
+              <li>LoadEnd</li>
+              <li>LoadStart</li>
+              <li>Progress</li>
+            </ul>
+          </div>
+          <div class="section" style="color: black; background-color: rgb(211, 211, 211);">
+            <p style="color: black;">Example</p>
+            <pre class="lang-dart"><span class="kwd">var</span> <span class="var">reader</span> = <span class="kwd">new</span> <span class="typ">FileReader</span>();
+<span class="kwd">var</span> <span class="var">fileInput</span> = querySelector(<span class="str">'#fileInput'</span>)
+     ..onChange.listen(_onFileChange);
+
+_onFileChange(<span class="var">e</span>){
+  <span class="var">reader</span>..readAsText(fileInput.files[<span class="lit">0</span>])
+        ..onLoad.listen((<span class="var">e2</span>) {
+           print(reader.result);      
+        });
+}
+                </pre>
+          </div>
+          <div class="section" style="color: black; background-color: rgb(211, 211, 211);">
+            <p style="color: black;">File Writer</p>
+            <ul class="section-content column2">
+              <li>int position</li>
+              <li>int readyStage</li>
+              <li>abort()</li>
+              <li>seek(int position)</li>
+              <li>truncate(int size)</li>
+              <li>write(Blob data)</li>
+              <li><b>EventStreamProvider</b></li>
+              <li>errorEvent</li>
+              <li>abortEvent</li>
+              <li>progressEvent</li>
+              <li>writeEndEvent</li>
+              <li>writeEvent</li>
+              <li>writeStartEvent</li>
+              <li><b>Stream on___</b></li>
+              <li>Error</li>
+              <li>Abort</li>
+              <li>Progress</li>
+              <li>Write</li>
+              <li>WriteEnd</li>
+              <li>WriteStart</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="footer" style="color: black; background-color: rgb(211, 211, 211);">
+      <a href="https://plus.google.com/115816334172157652403">
+        <img src="./Dart Cheat Sheet [HTML]_files/dartlangfr.png" alt="Dartlang [FR] - ʕ๏̮๏ʔ">
+      </a>
+      <div style="color: black; background-color: rgb(211, 211, 211);">
+        +Made by <a href="http://plus.google.com/115049522200141162219"><span>Guillaume Girou</span></a>, <a href="http://plus.google.com/106226789128312528511"><span>Nicolas François</span></a> and <a href="http://plus.google.com/109253530406296308866"><span>Vincent Bostoen</span></a> from 
+        <a href="https://plus.google.com/115816334172157652403"><span>Dartlang [FR] - ʕ๏̮๏ʔ</span></a><br>
+        <em>Dart v1.7.2 - 20141117</em><br>
+      </div>
+    </div>
+    <!-- Google+ +1 button. -->
+    <script type="text/javascript" src="./Dart Cheat Sheet [HTML]_files/plusone.js" gapi_processed="true">
+      {parsetags: 'explicit'}
+    </script>
+    <script type="text/javascript">gapi.plusone.go("header");</script>
+  
+
+
+<iframe name="oauth2relay787193474" id="oauth2relay787193474" src="./Dart Cheat Sheet [HTML]_files/postmessageRelay.html" tabindex="-1" style="width: 1px; height: 1px; position: absolute; top: -100px;"></iframe></body></html>

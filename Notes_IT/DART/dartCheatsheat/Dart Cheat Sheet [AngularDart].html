@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<!-- saved from url=(0051)http://dartlangfr.net/dart-cheat-sheet/angular.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Dart Cheat Sheet [AngularDart]</title>
+    
+    <link href="http://dartlangfr.net/dart-cheat-sheet/favicon.ico" rel="icon" type="image/x-icon">
+    <link href="http://dartlangfr.net/dart-cheat-sheet/favicon.ico" rel="shortcut icon" type="image/x-icon">
+    <link href="http://dartlangfr.net/dart-cheat-sheet/css/main.css" rel="stylesheet">
+    <link href="http://dartlangfr.net/dart-cheat-sheet/css/angular.css" rel="stylesheet">
+    <link href="./Dart Cheat Sheet [AngularDart]_files/css" rel="stylesheet" type="text/css">
+    <meta name="description" content="The cheat sheet references main classes and methods from Dart SDK.">
+    <meta name="author" content="Guillaume Girou, Nicolas François, Vincent Bostoen">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <!-- Google Analytics -->
+    <script src="./Dart Cheat Sheet [AngularDart]_files/cb=gapi.loaded_1" async=""></script><script src="./Dart Cheat Sheet [AngularDart]_files/cb=gapi.loaded_0" async=""></script><script async="" src="./Dart Cheat Sheet [AngularDart]_files/analytics.js"></script><script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-42028125-2', 'dartlangfr.net');
+      ga('send', 'pageview');
+    </script>
+  <style type="text/css"></style></head>
+  <body style="color: black; background-color: rgb(211, 211, 211);">
+    <div id="header" style="color: black; background-color: rgb(211, 211, 211);">
+      <h1>
+        <img alt="Dart Logo" src="./Dart Cheat Sheet [AngularDart]_files/dart-logo.png">
+        AngularDart
+        <span class="noprint" style="display: inline">
+        <div id="___plusone_0" style="text-indent: 0px; margin: 0px; padding: 0px; border-style: none; float: none; line-height: normal; font-size: 1px; vertical-align: baseline; display: inline-block; width: 106px; height: 24px; background: transparent;"><iframe frameborder="0" hspace="0" marginheight="0" marginwidth="0" scrolling="no" style="position: static; top: 0px; width: 106px; margin: 0px; border-style: none; left: 0px; visibility: visible; height: 24px;" tabindex="0" vspace="0" width="100%" id="I0_1425393318429" name="I0_1425393318429" src="./Dart Cheat Sheet [AngularDart]_files/fastbutton.html" data-gapiattached="true" title="+1"></iframe></div>
+        </span>
+      </h1>
+      <div class="nav" style="color: black; background-color: rgb(211, 211, 211);">
+        <ul>
+          <li>
+            <div class="btn-group" style="color: black; background-color: rgb(211, 211, 211);">
+              <a href="http://dartlangfr.net/dart-cheat-sheet/core.html" class="btn btn-default"><img src="./Dart Cheat Sheet [AngularDart]_files/core32.png" alt="Core"> Core</a>
+              <a href="http://dartlangfr.net/dart-cheat-sheet/html.html" class="btn btn-default"><img src="./Dart Cheat Sheet [AngularDart]_files/html32.png" alt="HTML"> HTML</a>
+              <a href="./Dart Cheat Sheet [AngularDart]_files/Dart Cheat Sheet [AngularDart].html" class="btn btn-default active"><img src="./Dart Cheat Sheet [AngularDart]_files/angular32.png" alt="HTML"> AngularDart</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div id="content" style="color: black; background-color: rgb(211, 211, 211);">
+      <div class="grid" style="color: black; background-color: rgb(211, 211, 211);">
+        <div id="bootstrap-section" class="section-container" style="color: black; background-color: rgb(211, 211, 211);">
+          <p style="color: black;">Bootstrap</p>
+          <div class="section" style="color: black; background-color: rgb(211, 211, 211);">
+            <p style="color: black;">HTML</p>
+            <pre class="lang-html"><span class="tag">&lt;html</span><span class="pln"> </span><span class="atn">ng-app</span><span class="tag">&gt;</span><span class="pln">
+  </span><span class="tag">&lt;body&gt;</span><span class="pln">
+    ...
+    </span><span class="tag">&lt;script</span><span class="pln"> </span><span class="atn">src</span><span class="pun">=</span><span class="atv">"packages/shadow_dom/shadow_dom.min.js"</span><span class="tag">&gt;&lt;/script&gt;</span><span class="pln">
+    </span><span class="tag">&lt;script</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"application/dart"</span><span class="pln"> </span><span class="atn">src</span><span class="pun">=</span><span class="atv">"main.dart"</span><span class="tag">&gt;&lt;/script&gt;</span><span class="pln">
+    </span><span class="tag">&lt;script</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"text/javascript"</span><span class="pln"> </span><span class="atn">src</span><span class="pun">=</span><span class="atv">"packages/browser/dart.js"</span><span class="tag">&gt;&lt;/script&gt;</span><span class="pln">
+  </span><span class="tag">&lt;/body&gt;</span><span class="pln">
+</span><span class="tag">&lt;/html&gt;</span></pre>
+          </div>
+          <div class="section" style="color: black; background-color: rgb(211, 211, 211);">
+            <p style="color: black;">main.dart script</p>
+            <pre class="lang-dart"><span class="kwd">import</span><span class="pln"> </span><span class="str">'package:angular/angular.dart'</span><span class="pun">;</span><span class="pln">
+</span><span class="kwd">import</span><span class="pln"> </span><span class="str">'package:angular/application_factory.dart'</span><span class="pun">;</span><span class="pln">
+
+main</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+  applicationFactory</span><span class="pun">().</span><span class="pln">run</span><span class="pun">();</span><span class="pln">
+</span><span class="pun">}</span></pre>
+          </div>
+        </div>
+        <div id="module-section" class="section-container" style="color: black; background-color: rgb(211, 211, 211);">
+          <p style="color: black;">Module</p>
+          <div class="section" style="color: black; background-color: rgb(211, 211, 211);">
+            <p style="color: black;">Declaration:</p>
+            <pre class="lang-dart"><span class="kwd">class</span><span class="pln"> </span><span class="typ">MyAppModule</span><span class="pln"> </span><span class="kwd">extends</span><span class="pln"> </span><span class="typ">Module</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+  </span><span class="typ">MyAppModule</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+    install</span><span class="pun">(</span><span class="kwd">new</span><span class="pln"> </span><span class="typ">AnotherModule</span><span class="pun">());</span><span class="pln">
+    bind</span><span class="pun">(</span><span class="typ">TypeToBind</span><span class="pun">);</span><span class="pln">
+    bindByKey</span><span class="pun">(</span><span class="typ">KeyToBind</span><span class="pun">);</span><span class="pln">
+  </span><span class="pun">}</span><span class="pln">
+</span><span class="pun">}</span></pre>
+          </div>
+          <div class="section" style="color: black; background-color: rgb(211, 211, 211);">
+            <p style="color: black;">Registration:</p>
+            <pre class="lang-dart"><span class="pln">main</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+  applicationFactory</span><span class="pun">()</span><span class="pln">
+    </span><span class="pun">.</span><span class="pln">addModule</span><span class="pun">(</span><span class="kwd">new</span><span class="pln"> </span><span class="typ">MyAppModule</span><span class="pun">())</span><span class="pln">
+    </span><span class="pun">.</span><span class="pln">run</span><span class="pun">();</span><span class="pln">
+</span><span class="pun">}</span></pre>
+          </div>
+        </div>
+        <div id="binding-section" class="section-container" style="color: black; background-color: rgb(211, 211, 211);">
+          <p style="color: black;">Bindings</p>
+
+          <div class="section" style="color: black; background-color: rgb(211, 211, 211);">
+            <p style="color: black;">One-way binding:</p>
+            <pre class="lang-html"><span class="tag">&lt;span&gt;</span><span class="pln">{{ expr }}</span><span class="tag">&lt;/span&gt;</span><span class="pln">
+</span><span class="tag">&lt;span</span><span class="pln"> </span><span class="atn">ng-bind</span><span class="pun">=</span><span class="atv">" expr "</span><span class="tag">&gt;&lt;/span&gt;</span></pre>
+          </div>
+          <div class="section" style="color: black; background-color: rgb(211, 211, 211);">
+            <p style="color: black;">Two-way binding:</p>
+            <pre class="lang-html"><span class="tag">&lt;input</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"text"</span><span class="pln"> </span><span class="atn">ng-model</span><span class="pun">=</span><span class="atv">" expr "</span><span class="tag">&gt;</span></pre>
+          </div>
+        </div>
+        <div id="expressions-section" class="section-container" style="color: black; background-color: rgb(211, 211, 211);">
+          <p style="color: black;">Expressions</p>
+          <div class="section" style="color: black; background-color: rgb(211, 211, 211);">
+            <p style="color: black;">Statements:</p>
+            <pre class="lang-dart"><span class="pln">expr</span><span class="pun">;</span><span class="pln"> expr</span><span class="pun">;</span><span class="pln"> expr</span></pre>
+          </div>
+          <div class="section" style="color: black; background-color: rgb(211, 211, 211);">
+            <p style="color: black;">Member access:</p>
+            <pre class="lang-dart"><span class="pln">field
+nested</span><span class="pun">.</span><span class="pln">otherNested</span><span class="pun">.</span><span class="pln">field
+list</span><span class="pun">[</span><span class="lit">42</span><span class="pun">]</span><span class="pln">
+map</span><span class="pun">[</span><span class="str">'key'</span><span class="pun">]</span></pre>
+          </div>
+          <div class="section" style="color: black; background-color: rgb(211, 211, 211);">
+            <p style="color: black;">Function call:</p>
+            <pre class="lang-dart"><span class="pln">toggle()</span><span class="pln">
+obj</span><span class="pun">.</span><span class="pln">distance</span><span class="pun">(</span><span class="lit">42</span><span class="pun">,</span><span class="pln"> y</span><span class="pun">)</span></pre>
+          </div>
+          <div class="section" style="color: black; background-color: rgb(211, 211, 211);">
+            <p style="color: black;">List / Map literals:</p>
+            <pre class="lang-dart"><span class="pun">[</span><span class="lit">1</span><span class="pun">,</span><span class="pln"> </span><span class="lit">2</span><span class="pun">,</span><span class="pln"> </span><span class="lit">3</span><span class="pun">]</span><span class="pln">
+</span><span class="pun">{</span><span class="str">'question'</span><span class="pun">:</span><span class="pln"> </span><span class="str">'?'</span><span class="pun">,</span><span class="pln"> </span><span class="str">'response'</span><span class="pun">:</span><span class="pln"> </span><span class="lit">42</span><span class="pun">}</span></pre>
+          </div>
+          <div class="section" style="color: black; background-color: rgb(211, 211, 211);">
+            <p style="color: black;">Assignment:</p>
+            <pre class="lang-dart"><span class="pln">field </span><span class="pun">=</span><span class="pln"> value
+nested</span><span class="pun">.</span><span class="pln">field </span><span class="pun">=</span><span class="pln"> value
+list</span><span class="pun">[</span><span class="lit">42</span><span class="pun">]</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> value
+map</span><span class="pun">[</span><span class="str">'key'</span><span class="pun">]</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> value</span></pre>
+          </div>
+          <div class="section" style="color: black; background-color: rgb(211, 211, 211);">
+            <p style="color: black;">Ternary operator:</p>
+            <pre class="lang-dart"><span class="pln">a </span><span class="pun">?</span><span class="pln"> b </span><span class="pun">:</span><span class="pln"> c</span></pre>
+          </div>
+          <div class="section" style="color: black; background-color: rgb(211, 211, 211);">
+            <p style="color: black;">Filters:</p>
+            <pre class="lang-dart"><span class="pln">name </span><span class="pun">|</span><span class="pln"> uppercase
+items </span><span class="pun">|</span><span class="pln"> limitTo</span><span class="pun">:</span><span class="lit">2</span><span class="pln">
+items </span><span class="pun">|</span><span class="pln"> limitTo</span><span class="pun">:</span><span class="lit">2</span><span class="pln"> </span><span class="pun">|</span><span class="pln"> uppercase</span></pre>
+          </div>
+        </div>
+        <div id="model-section" class="section-container" style="color: black; background-color: rgb(211, 211, 211);">
+          <p style="color: black;">Model directives</p>
+          <div class="section" style="color: black; background-color: rgb(211, 211, 211);">
+            <p style="color: black;">Checkbox</p>
+            <pre class="lang-html"><span class="tag">&lt;input</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"checkbox"</span><span class="pln">
+  </span><span class="atn">ng-model</span><span class="pun">=</span><span class="atv">"expr"</span><span class="pln">
+  [</span><span class="atn">ng-true-value</span><span class="pun">=</span><span class="atv">"t_expr"</span><span class="pln">]
+  [</span><span class="atn">ng-false-value</span><span class="pun">=</span><span class="atv">"f_expr"</span><span class="pln">]</span><span class="tag">&gt;</span></pre>
+          </div>
+          <div class="section" style="color: black; background-color: rgb(211, 211, 211);">
+            <p style="color: black;">Date / Time</p>
+            <pre class="lang-html"><span class="tag">&lt;input</span><span class="pln">
+  </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"date|datetime|datetime-local|month|time|week"</span><span class="pln">
+  [</span><span class="atn">ng-bind-type</span><span class="pun">=</span><span class="atv">"date"</span><span class="pln">]
+  </span><span class="atn">ng-model</span><span class="pun">=</span><span class="atv">"myModel"</span><span class="tag">&gt;</span></pre>
+          </div>
+          <div class="section" style="color: black; background-color: rgb(211, 211, 211);">
+            <p style="color: black;">Numbers</p>
+            <pre class="lang-html"><span class="tag">&lt;input</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"number|range"</span><span class="pln"> </span><span class="atn">ng-model</span><span class="pun">=</span><span class="atv">"myModel"</span><span class="tag">&gt;</span></pre>
+          </div>
+          <div class="section" style="color: black; background-color: rgb(211, 211, 211);">
+            <p style="color: black;">Radio</p>
+            <pre class="lang-html"><span class="tag">&lt;input</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"radio"</span><span class="pln"> </span><span class="atn">name</span><span class="pun">=</span><span class="atv">"foo"</span><span class="pln"> </span><span class="atn">ng-model</span><span class="pun">=</span><span class="atv">"category"</span><span class="tag">&gt;</span></pre>
+          </div>
+          <div class="section" style="color: black; background-color: rgb(211, 211, 211);">
+            <p style="color: black;">Select</p>
+            <pre class="lang-html"><span class="tag">&lt;select</span><span class="pln"> </span><span class="atn">ng-model</span><span class="pun">=</span><span class="atv">"selectedValue"</span><span class="tag">&gt;</span><span class="pln">
+  ...
+</span><span class="tag">&lt;/select&gt;</span></pre>
+          </div>
+          <div class="section" style="color: black; background-color: rgb(211, 211, 211);">
+            <p style="color: black;">Texts</p>
+            <pre class="lang-html"><span class="tag">&lt;input</span><span class="pln">
+  </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"text|url|password|email|search|tel"</span><span class="pln">
+  </span><span class="atn">ng-model</span><span class="pun">=</span><span class="atv">"myModel"</span><span class="tag">&gt;</span><span class="pln">
+
+</span><span class="tag">&lt;textarea</span><span class="pln"> </span><span class="atn">ng-model</span><span class="pun">=</span><span class="atv">"myModel"</span><span class="tag">&gt;&lt;/textarea&gt;</span></pre>
+          </div>
+          <div class="section" style="color: black; background-color: rgb(211, 211, 211);">
+            <p style="color: black;">Content editable</p>
+            <pre class="lang-html"><span class="tag">&lt;span</span><span class="pln"> </span><span class="atn">contenteditable</span><span class="pln"> </span><span class="atn">ng-model</span><span class="pun">=</span><span class="atv">"name"</span><span class="tag">&gt;</span></pre>
+          </div>
+        </div>
+        <div id="attribute-section" class="section-container" style="color: black; background-color: rgb(211, 211, 211);">
+          <p style="color: black;">Attribute directives</p>
+          <div class="section" style="color: black; background-color: rgb(211, 211, 211);">
+            <p style="color: black;">Source attributes</p>
+            <div class="section-content" style="color: black; background-color: rgb(211, 211, 211);">
+              <pre class="lang-html"><span class="tag">&lt;img</span><span class="pln"> </span><span class="atn">ng-src</span><span class="pun">=</span><span class="atv">"{{username}}.png"</span><span class="tag">&gt;</span><span class="pln">.</span></pre>
+            </div>
+            <ul class="section-content column3">
+              <li>ng-href</li>
+              <li>ng-src</li>
+              <li>ng-srcset</li>
+            </ul>
+          </div>
+          <div class="section" style="color: black; background-color: rgb(211, 211, 211);">
+            <p style="color: black;">Boolean attributes</p>
+            <div class="section-content" style="color: black; background-color: rgb(211, 211, 211);">
+              <pre class="lang-html"><span class="tag">&lt;button</span><span class="pln"> </span><span class="atn">ng-disabled</span><span class="pun">=</span><span class="atv">"{{false}}"</span><span class="tag">&gt;</span></pre>
+            </div>
+            <ul class="section-content column3">
+              <li>ng-checked</li>
+              <li>ng-disabled</li>
+              <li>ng-multiple</li>
+              <li>ng-open</li>
+              <li>ng-readonly</li>
+              <li>ng-required</li>
+              <li>ng-selected</li>
+            </ul>
+          </div>
+          <div class="section" style="color: black; background-color: rgb(211, 211, 211);">
+            <p style="color: black;">Other attributes</p>
+            <pre class="lang-html"><span class="tag">&lt;svg&gt;</span><span class="pln">
+  </span><span class="tag">&lt;circle</span><span class="pln"> </span><span class="atn">ng-attr-cx</span><span class="pun">=</span><span class="atv">"{{cx}}"</span><span class="tag">&gt;&lt;/circle&gt;</span><span class="pln">
+</span><span class="tag">&lt;/svg&gt;</span></pre>
+          </div>
+        </div>
+        <div id="events-section" class="section-container" style="color: black; background-color: rgb(211, 211, 211);">
+          <p style="color: black;">Event directives</p>
+          <div class="section" style="color: black; background-color: rgb(211, 211, 211);">
+            <p style="color: black;">Element events</p>
+            <ul class="section-content column3">
+              <li>ng-abort</li>
+              <li>ng-beforecopy</li>
+              <li>ng-beforecut</li>
+              <li>ng-beforepaste</li>
+              <li>ng-blur</li>
+              <li>ng-change</li>
+              <li>ng-copy</li>
+              <li>ng-cut</li>
+              <li>ng-error</li>
+              <li>ng-focus</li>
+              <li>ng-fullscreenchange</li>
+              <li>ng-fullscreenerror</li>
+              <li>ng-input</li>
+              <li>ng-invalid</li>
+              <li>ng-load</li>
+              <li>ng-paste</li>
+              <li>ng-reset</li>
+              <li>ng-scroll</li>
+              <li>ng-search</li>
+              <li>ng-select</li>
+              <li>ng-selectstart</li>
+              <li>ng-submit</li>
+            </ul>
+          </div>
+          <div class="section" style="color: black; background-color: rgb(211, 211, 211);">
+            <p style="color: black;">Mouse events</p>
+            <ul class="section-content column3">
+              <li>ng-click</li>
+              <li>ng-doubleclick</li>
+              <li>ng-contextmenu</li>
+              <li>ng-drag</li>
+              <li>ng-dragstart</li>
+              <li>ng-dragend</li>
+              <li>ng-dragenter</li>
+              <li>ng-dragover</li>
+              <li>ng-dragleave</li>
+              <li>ng-drop</li>
+              <li>ng-mousedown</li>
+              <li>ng-mouseenter</li>
+              <li>ng-mouseleave</li>
+              <li>ng-mousemove</li>
+              <li>ng-mouseover</li>
+              <li>ng-mouseup</li>
+              <li>ng-mousewheel</li>
+              <li>ng-mouseout</li>
+            </ul>
+          </div>
+          <div class="section" style="color: black; background-color: rgb(211, 211, 211);">
+            <p style="color: black;">Keyboard events</p>
+            <ul class="section-content column3">
+              <li>ng-keydown</li>
+              <li>ng-keypress</li>
+              <li>ng-keyup</li>
+            </ul>
+          </div>
+          <div class="section" style="color: black; background-color: rgb(211, 211, 211);">
+            <p style="color: black;">Touch events</p>
+            <ul class="section-content column3">
+              <li>ng-toucheancel</li>
+              <li>ng-touchend</li>
+              <li>ng-touchenter</li>
+              <li>ng-touchleave</li>
+              <li>ng-touchmove</li>
+              <li>ng-touchstart</li>
+            </ul>
+          </div>
+          <div class="section" style="color: black; background-color: rgb(211, 211, 211);">
+            <p style="color: black;">Other events</p>
+            <ul class="section-content">
+              <li>ng-transitionend</li>
+            </ul>
+          </div>
+          <div class="section" style="color: black; background-color: rgb(211, 211, 211);">
+            <p style="color: black;">Examples</p>
+            <pre class="lang-html"><span class="tag">&lt;button</span><span class="pln"> </span><span class="atn">ng-click</span><span class="pun">=</span><span class="atv">" lastEvent = 'Click' "</span><span class="pln">
+  </span><span class="atn">ng-doubleclick</span><span class="pun">=</span><span class="atv">" lastEvent = 'DblClick' "</span><span class="tag">&gt;</span><span class="pln">
+    lastEvent: {{lastEvent}}
+</span><span class="tag">&lt;/button&gt;</span></pre>
+          </div>
+        </div>
+        <div id="template-section" class="section-container" style="color: black; background-color: rgb(211, 211, 211);">
+          <p style="color: black;">Template directives</p>
+          <div class="section" style="color: black; background-color: rgb(211, 211, 211);">
+            <p style="color: black;">ng-bind / ng-bind-html / ng-bind-template</p>
+            <pre class="lang-html"><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">ng-bind</span><span class="pun">=</span><span class="atv">"expression"</span><span class="tag">&gt;&lt;/div&gt;</span><span class="pln">
+
+</span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">ng-bind-html</span><span class="pun">=</span><span class="atv">"expression"</span><span class="tag">&gt;&lt;/div&gt;</span><span class="pln">
+
+</span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">ng-bind-template</span><span class="pun">=</span><span class="atv">"{{salutation}} {{name}}!"</span><span class="tag">&gt;</span></pre>
+          </div>
+          <div class="section" style="color: black; background-color: rgb(211, 211, 211);">
+            <p style="color: black;">ng-show / ng-hide</p>
+            <pre class="lang-html"><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">ng-show</span><span class="pun">=</span><span class="atv">"myValue"</span><span class="tag">&gt;&lt;/div&gt;</span></pre>
+            <pre class="lang-html"><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">ng-hide</span><span class="pun">=</span><span class="atv">"myValue"</span><span class="tag">&gt;&lt;/div&gt;</span></pre>
+          </div>
+          <div class="section" style="color: black; background-color: rgb(211, 211, 211);">
+            <p style="color: black;">ng-if / ng-unless</p>
+            <pre class="lang-html"><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">ng-if</span><span class="pun">=</span><span class="atv">"condition expression"</span><span class="tag">&gt;</span><span class="pln">
+  Removed from the DOM if ng-if is falsy
+</span><span class="tag">&lt;/div&gt;</span>
+<span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">ng-unless</span><span class="pun">=</span><span class="atv">"..."</span><span class="tag">&gt;</span><span class="pln">
+  Removed from the DOM if ng-unless is truthy
+</span><span class="tag">&lt;/div&gt;</span></pre>
+          </div>
+          <div class="section" style="color: black; background-color: rgb(211, 211, 211);">
+            <p style="color: black;">ng-switch</p>
+            <pre class="lang-html"><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">ng-switch</span><span class="pun">=</span><span class="atv">"selection"</span><span class="tag">&gt;</span><span class="pln">
+  </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">ng-switch-when</span><span class="pun">=</span><span class="atv">"settings"</span><span class="tag">&gt;</span><span class="pln">Settings Div</span><span class="tag">&lt;/div&gt;</span><span class="pln">
+  </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">ng-switch-when</span><span class="pun">=</span><span class="atv">"home"</span><span class="tag">&gt;</span><span class="pln">Home Span</span><span class="tag">&lt;/div&gt;</span><span class="pln">
+  </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">ng-switch-default</span><span class="tag">&gt;</span><span class="pln">default</span><span class="tag">&lt;/div&gt;</span><span class="pln">
+</span><span class="tag">&lt;/div&gt;</span></pre>
+          </div>
+          <div class="section" style="color: black; background-color: rgb(211, 211, 211);">
+            <p style="color: black;">ng-repeat</p>
+            <pre class="lang-html"><span class="tag">&lt;ul&gt;</span><span class="pln">
+  </span><span class="tag">&lt;li</span><span class="pln"> </span><span class="atn">ng-repeat</span><span class="pun">=</span><span class="atv">"item in ['foo', 'bar', 'baz']"</span><span class="tag">&gt;</span><span class="pln">
+    {{$index}} : {{item}}
+  </span><span class="tag">&lt;/li&gt;</span><span class="pln">
+</span><span class="tag">&lt;/ul&gt;</span></pre>
+          </div>
+          <div class="section" style="color: black; background-color: rgb(211, 211, 211);">
+            <p style="color: black;">ng-pluralize</p>
+            <pre class="lang-html"><span class="tag">&lt;ng-pluralize</span><span class="pln"> </span><span class="atn">count</span><span class="pun">=</span><span class="atv">"personCount"</span><span class="pln">
+  </span><span class="atn">when</span><span class="pun">=</span><span class="atv">"{'0': 'Nobody is viewing.',
+    'one': '1 person is viewing.',
+    'other': '{} people are viewing.'}"</span><span class="tag">&gt;</span><span class="pln">
+</span><span class="tag">&lt;/ng-pluralize&gt;</span></pre>
+          </div>
+          <div class="section" style="color: black; background-color: rgb(211, 211, 211);">
+            <p style="color: black;">ng-include</p>
+            <pre class="lang-html"><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">ng-include</span><span class="pun">=</span><span class="atv">"{{templateUrl}}"</span><span class="tag">&gt;&lt;/div&gt;</span></pre>
+          </div>
+        </div>
+        <div id="style-section" class="section-container" style="color: black; background-color: rgb(211, 211, 211);">
+          <p style="color: black;">Style directives</p>
+          <div class="section" style="color: black; background-color: rgb(211, 211, 211);">
+            <p style="color: black;">ng-base-css</p>
+            <pre class="lang-html"><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">ng-base-css</span><span class="pun">=</span><span class="atv">"my_application.css"</span><span class="tag">&gt;</span></pre>
+          </div>
+          <div class="section" style="color: black; background-color: rgb(211, 211, 211);">
+            <p style="color: black;">ng-class</p>
+            <pre class="lang-html"><span class="tag">&lt;p</span><span class="pln"> </span><span class="atn">ng-class</span><span class="pun">=</span><span class="atv">"style"</span><span class="tag">&gt;</span><span class="pln">String Syntax</span><span class="tag">&lt;/p&gt;</span></pre>
+            <pre class="lang-html"><span class="tag">&lt;p</span><span class="pln"> </span><span class="atn">ng-class</span><span class="pun">=</span><span class="atv">"[style1, style2, style3]"</span><span class="tag">&gt;</span><span class="pln">Array Syntax</span><span class="tag">&lt;/p&gt;</span></pre>
+            <pre class="lang-html"><span class="tag">&lt;p</span><span class="pln"> </span><span class="atn">ng-class</span><span class="pun">=</span><span class="atv">"{
+    'text-remove': deleted,
+    'strong': bold,
+    'alert': caution}"</span><span class="tag">&gt;</span><span class="pln">Map Syntax</span><span class="tag">&lt;/p&gt;</span></pre>
+          </div>
+          <div class="section" style="color: black; background-color: rgb(211, 211, 211);">
+            <p style="color: black;">ng-style</p>
+            <pre class="lang-html"><span class="tag">&lt;span</span><span class="pln"> </span><span class="atn">ng-style</span><span class="pun">=</span><span class="atv">"{color: 'red'}"</span><span class="tag">&gt;</span><span class="pln">Sample Text</span><span class="tag">&lt;/span&gt;</span></pre>
+          </div>
+          <div class="section" style="color: black; background-color: rgb(211, 211, 211);">
+            <p style="color: black;">ng-class-odd / ng-class-even</p>
+            <pre class="lang-html"><span class="tag">&lt;li</span><span class="pln"> </span><span class="atn">ng-repeat</span><span class="pun">=</span><span class="atv">"name in ['John', 'Mary', 'Cate', 'Suz']"</span><span class="tag">&gt;</span><span class="pln">
+  </span><span class="tag">&lt;span</span><span class="pln"> </span><span class="atn">ng-class-odd</span><span class="pun">=</span><span class="atv">" 'odd' "</span><span class="pln"> </span><span class="atn">ng-class-even</span><span class="pun">=</span><span class="atv">" 'even' "</span><span class="tag">&gt;</span><span class="pln">
+    {{name}}
+  </span><span class="tag">&lt;/span&gt;</span><span class="pln">
+</span><span class="tag">&lt;/li&gt;</span></pre>
+          </div>
+          <div class="section" style="color: black; background-color: rgb(211, 211, 211);">
+            <p style="color: black;">ng-cloak</p>
+            <pre class="lang-css"><span class="pun">[</span><span class="pln">ng-cloak</span><span class="pun">],</span><span class="pln"> </span><span class="pun">[</span><span class="pln">data-ng-cloak</span><span class="pun">],</span><span class="pln"> </span><span class="pun">.</span><span class="pln">ng-cloak </span><span class="pun">{</span><span class="pln">
+  </span><span class="kwd">display</span><span class="pun">:</span><span class="pln"> none </span><span class="kwd">!important</span><span class="pun">;</span><span class="pln">
+</span><span class="pun">}</span></pre>
+            <pre class="lang-html"><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">ng-cloak</span><span class="tag">&gt;</span></pre>
+          </div>
+        </div>
+        <div id="http-section" class="section-container" style="color: black; background-color: rgb(211, 211, 211);">
+          <p style="color: black;">Http Service</p>
+            <div class="section" style="color: black; background-color: rgb(211, 211, 211);">
+                <p style="color: black;">Methods</p>
+                <ul class="section-content column2">
+                    <li>call(url, method, data, params, headers)</li>
+                    <li>delete(url)</li>
+                    <li>get(url)</li>
+                    <li>head(url)</li>
+                    <li>jsonp(url)</li>
+                    <li>post(url, data)</li>
+                    <li>put(url, data)</li>
+                </ul>
+            </div>
+          <div class="section" style="color: black; background-color: rgb(211, 211, 211);">
+            <p style="color: black;">Example</p>
+            <pre class="lang-dart"><span class="pln">http</span><span class="pun">.</span><span class="kwd">get</span><span class="pun">(</span><span class="str">'recipes.json'</span><span class="pun">)</span><span class="pln">
+  </span><span class="pun">.</span><span class="kwd">then</span><span class="pun">((</span><span class="typ">HttpResponse</span><span class="pln"> response</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"> </span>
+    <span class="pun">...</span><span class="pln">
+  </span><span class="pun">});</span></pre>
+          </div>
+        </div>
+        <div id="routing-section" class="section-container" style="color: black; background-color: rgb(211, 211, 211);">
+          <p style="color: black;">Routing</p>
+          <div class="section" style="color: black; background-color: rgb(211, 211, 211);">
+            <p style="color: black;">Insertion Point</p>
+            <pre class="lang-html"><span class="tag">&lt;ng-view&gt;&lt;/ng-view&gt;</span></pre>
+          </div>
+          <div class="section" style="color: black; background-color: rgb(211, 211, 211);">
+            <p style="color: black;">Routes configuration</p>
+            <pre class="lang-dart"><span class="pln">initRoutes</span><span class="pun">(</span><span class="typ">Router</span><span class="pln"> router</span><span class="pun">,</span><span class="pln"> </span><span class="typ">RouteViewFactory</span><span class="pln"> views</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+  views</span><span class="pun">.</span><span class="pln">configure</span><span class="pun">({</span><span class="pln">
+    </span><span class="str">'recipes'</span><span class="pun">:</span><span class="pln"> ngRoute</span><span class="pun">(</span><span class="pln">
+      path</span><span class="pun">:</span><span class="pln"> </span><span class="str">'/recipes'</span><span class="pun">,</span><span class="pln">
+      view</span><span class="pun">:</span><span class="pln"> </span><span class="str">'recipes.html'</span><span class="pun">),</span><span class="pln">
+    </span><span class="str">'viewRecipe'</span><span class="pun">:</span><span class="pln"> ngRoute</span><span class="pun">(</span><span class="pln">
+      path</span><span class="pun">:</span><span class="pln"> </span><span class="str">'/recipe/:recipeId/view'</span><span class="pun">,</span><span class="pln">
+      view</span><span class="pun">:</span><span class="pln"> </span><span class="str">'recipe.html'</span><span class="pun">),</span><span class="pln">
+  </span><span class="pun">});</span><span class="pln">
+</span><span class="pun">}</span></pre>
+          </div>
+          <div class="section" style="color: black; background-color: rgb(211, 211, 211);">
+            <p style="color: black;">Module registration</p>
+            <pre class="lang-dart"><span class="pln">bind</span><span class="pun">(</span><span class="typ">RouteInitializerFn</span><span class="pun">,</span><span class="pln"> toValue</span><span class="pun">:</span><span class="pln"> initRoutes</span><span class="pun">);</span><span class="pln">
+bind</span><span class="pun">(</span><span class="typ">NgRoutingUsePushState</span><span class="pun">,</span><span class="pln"> toValue</span><span class="pun">:</span><span class="pln">
+  </span><span class="pln"> </span><span class="kwd">new</span><span class="pln"> </span><span class="typ">NgRoutingUsePushState</span><span class="pun">.</span><span class="pln">value</span><span class="pun">(</span><span class="kwd">false</span><span class="pun">));</span></pre>
+          </div>
+        </div>
+        <div id="custom-section" class="section-container" style="color: black; background-color: rgb(211, 211, 211);">
+          <p style="color: black;">Custom Components</p>
+          <div class="section" style="color: black; background-color: rgb(211, 211, 211);">
+            <p style="color: black;">Decorator</p>
+            <pre class="lang-dart"><span class="lit">@Decorator</span><span class="pun">(</span><span class="pln">
+  selector</span><span class="pun">:</span><span class="pln"> </span><span class="str">'[tooltip]'</span><span class="pun">,</span><span class="pln">
+  map</span><span class="pun">:</span><span class="pln"> </span><span class="kwd">const</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+    </span><span class="str">'tooltip'</span><span class="pun">:</span><span class="pln"> </span><span class="str">'@text'</span><span class="pln">
+  </span><span class="pun">})</span><span class="pln">
+</span><span class="kwd">class</span><span class="pln"> </span><span class="typ">Tooltip</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+  </span><span class="kwd">final</span><span class="pln"> </span><span class="typ">Element</span><span class="pln"> element</span><span class="pun">;</span><span class="pln">
+  </span><span class="typ">String</span><span class="pln"> text</span><span class="pun">;</span><span class="pln">
+
+  </span><span class="typ">Tooltip</span><span class="pun">(</span><span class="kwd">this</span><span class="pun">.</span><span class="pln">element</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+    </span><span class="pun">...</span><span class="pln">
+  </span><span class="pun">}</span><span class="pln">
+</span><span class="pun">}</span></pre>
+            <pre class="lang-html"><span class="tag">&lt;span</span><span class="pln"> </span><span class="atn">tooltip</span><span class="pun">=</span><span class="atv">"Hello World!"</span><span class="tag">&gt;</span><span class="pln">...</span><span class="tag">&lt;/span&gt;</span></pre>
+          </div>
+          <div class="section" style="color: black; background-color: rgb(211, 211, 211);">
+            <p style="color: black;">Component</p>
+            <pre class="lang-dart"><span class="lit">@Component</span><span class="pun">(</span><span class="pln">
+  selector</span><span class="pun">:</span><span class="pln"> </span><span class="str">'rating'</span><span class="pun">,</span><span class="pln">
+  templateUrl</span><span class="pun">:</span><span class="pln"> </span><span class="str">'rating_component.html'</span><span class="pun">,</span><span class="pln">
+  cssUrl</span><span class="pun">:</span><span class="pln"> </span><span class="str">'rating_component.css'</span><span class="pun">,</span><span class="pln">
+  map</span><span class="pun">:</span><span class="pln"> </span><span class="kwd">const</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+    </span><span class="str">'rating'</span><span class="pun">:</span><span class="pln"> </span><span class="str">'&lt;=&gt;rating'</span><span class="pun">,</span><span class="pln">
+    </span><span class="str">'max-rating'</span><span class="pun">:</span><span class="pln"> </span><span class="str">'=&gt;maxRating'</span><span class="pln">
+  </span><span class="pun">}</span><span class="pun">)</span><span class="pln">
+</span><span class="kwd">class</span><span class="pln"> </span><span class="typ">RatingComponent</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+  </span><span class="pun">...</span><span class="pln">
+</span><span class="pun">}</span></pre>
+            <pre class="lang-html"><span class="tag">&lt;rating</span><span class="pln"> </span><span class="atn">rating</span><span class="pun">=</span><span class="atv">"ctrl.rating"</span><span class="pln"> </span><span class="atn">max-rating</span><span class="pun">=</span><span class="atv">"5"</span><span class="tag">&gt;&lt;/rating&gt;</span></pre>
+          </div>
+        </div>
+        <div id="formatters-section" class="section-container" style="color: black; background-color: rgb(211, 211, 211);">
+          <p style="color: black;">Formatters /  Filters</p>
+          <div class="section" style="color: black; background-color: rgb(211, 211, 211);">
+            <p style="color: black;">Built-in Formatters</p>
+            <ul class="section-content column1">
+              <li>arrayify</li>
+              <li>currency[:symbol[:leading]]</li>
+              <li>date[:format]</li>
+              <li>filter:expression[:comparator]</li>
+              <li>json</li>
+              <li>limitTo:number</li>
+              <li>lowercase</li>
+              <li>number[:fractionSize]</li>
+              <li>orderBy:predicate[:true]</li>
+              <li>stringify</li>
+              <li>uppercase</li>
+            </ul>
+          </div>
+          <div class="section" style="color: black; background-color: rgb(211, 211, 211);">
+            <p style="color: black;">Usage</p>
+            <pre>{{ item in items | limitTo:2 }}</pre>
+            <pre class="lang-html"><span class="tag">&lt;li</span><span class="pln"> </span><span class="atn">ng-repeat</span><span class="pun">=</span><span class="atv">"item in items | limitTo:2"</span><span class="tag">&gt;</span><span class="tag">&lt;/li&gt;</span></pre>
+            <p style="color: black;">Chaining</p>
+            <pre>{{ item in items | limitTo:2 | uppercase }}</pre>
+          </div>
+          <div class="section" style="color: black; background-color: rgb(211, 211, 211);">
+            <p style="color: black;">Custom formaters</p>
+            <pre class="lang-dart"><span class="lit">@Formatter</span><span class="pun">(</span><span class="pln">name</span><span class="pun">:</span><span class="pln"> </span><span class="str">'camelCase'</span><span class="pun">)</span><span class="pln">
+</span><span class="kwd">class</span><span class="pln"> </span><span class="typ">CamelCaseFormatter</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+   call</span><span class="pun">(</span><span class="typ">String</span><span class="pln"> text</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+      </span><span class="pun">...</span><span class="pln">
+   </span><span class="pun">}</span><span class="pln">
+</span><span class="pun">}</span></pre>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="footer" style="color: black; background-color: rgb(211, 211, 211);">
+      <a href="https://plus.google.com/115816334172157652403">
+      <img src="./Dart Cheat Sheet [AngularDart]_files/dartlangfr.png" alt="Dartlang [FR] - ʕ๏̮๏ʔ">
+      </a>
+      <div style="color: black; background-color: rgb(211, 211, 211);">
+        +Made by <a href="http://plus.google.com/115049522200141162219"><span>Guillaume Girou</span></a>, <a href="http://plus.google.com/106226789128312528511"><span>Nicolas François</span></a> and <a href="http://plus.google.com/109253530406296308866"><span>Vincent Bostoen</span></a> from
+        <a href="https://plus.google.com/115816334172157652403"><span>Dartlang [FR] - ʕ๏̮๏ʔ</span></a><br>
+        <em>AngularDart v1.0.0 - 20141117</em><br>
+      </div>
+    </div>
+    <!-- Google+ +1 button. -->
+    <script type="text/javascript" src="./Dart Cheat Sheet [AngularDart]_files/plusone.js" gapi_processed="true">
+      {parsetags: 'explicit'}
+    </script>
+    <script type="text/javascript">gapi.plusone.go("header");</script>
+  
+
+<iframe name="oauth2relay448029869" id="oauth2relay448029869" src="./Dart Cheat Sheet [AngularDart]_files/postmessageRelay.html" tabindex="-1" style="width: 1px; height: 1px; position: absolute; top: -100px;"></iframe></body></html>

@@ -1,0 +1,5 @@
+no options
+File type Go
+Scope Project Files
+Program /home/raz/.gvm/pkgsets/go1.7.3/global/bin/goimports
+Arguments -w $FilePath$

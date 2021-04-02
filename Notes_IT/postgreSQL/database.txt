@@ -1,0 +1,17 @@
+database 
+1NF
+	- Each of your columns and each of your tables should contain one value just one value
+	and there should not be any repeating groups.
+
+	- (One value) One value per field. (Not id125,id847)
+	- (Repeating group column) Don't do columns like ComputerID1, ComputerID2, ComputerID3
+	if for example it might be needed later to add ComputerID4 column to the database.
+
+2NF
+ - Only applies on tables with composite keys.
+ - Can I figure out any of the values in the row from parts of the composite key.
+
+3NF
+ - No non-key field is dependent on any other non-key field.
+ - Can I figure any values from this row from any other values from this row.
+

@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Encoding=UTF-8
+Name=gitPush1
+Comment=Pushes projects to github
+Exec=/home/raz/raz_IT/scriptsExtensions/ShellScripts/gitPush1/gitPush1.sh
+Icon=/home/raz/raz_IT/scriptsExtensions/ShellScripts/gitPush1/download.png
+Terminal=true;

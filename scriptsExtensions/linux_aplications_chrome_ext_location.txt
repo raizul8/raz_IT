@@ -1,0 +1,5 @@
+linux applications
+~/.local/share/applications
+
+chrome extensions
+~/.config/google-chrome/Default/Extensions/<Extension ID>

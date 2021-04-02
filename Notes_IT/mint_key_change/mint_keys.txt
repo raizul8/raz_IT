@@ -1,0 +1,11 @@
+/usr/share/X11/xkb/symbols$ sudo nano pc
+
+right alt :108 (keysym 0xffea, Alt_R)
+menu key/application key: 135 (keysym 0xff67, Menu)
+
+altR to Menu
+xmodmap -e "keycode 108 = Menu"
+Menu to alt_r
+xmodmap -e "keycode 135 = Alt_R"
+
+/home/raz/raz_IT/scriptsExtensions/ShellScripts/change_keys.sh

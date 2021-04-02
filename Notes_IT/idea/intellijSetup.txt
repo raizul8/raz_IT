@@ -1,0 +1,12 @@
+To set up intellij for go edit .profile add GOROOT and GOPATH
+
+.profile ex
+export GOPATH=$HOME/go:$HOME/go2:$HOME/go/p1:$HOME/go/p2:$HOME/IdeaProjects/FirstGo
+export GOROOT=/usr/lib/go
+
+.bashrc ex
+export GOPATH=$HOME/IdeaProjects/FirstGo:$HOME/go/p1
+export PATH=/usr/lib/lightdm/lightdm:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/lib/go//bin:${GOPATH//://bin:}/bin
+
+# the most important
+${GOPATH//://bin:}/bin

@@ -1,0 +1,1137 @@
+<!DOCTYPE html>
+<!-- saved from url=(0076)http://www.davidpashley.com/articles/writing-robust-shell-scripts/#id2382181 -->
+<html lang="en-US" prefix="og: http://ogp.me/ns#"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width">
+
+<title>Writing Robust Bash Shell Scripts - David Pashley.com</title>
+
+<link rel="profile" href="http://gmpg.org/xfn/11">
+
+<link rel="pingback" href="http://www.davidpashley.com/xmlrpc.php">
+
+
+<!-- This site is optimized with the Yoast WordPress SEO plugin v1.6.3 - https://yoast.com/wordpress/plugins/seo/ -->
+<link rel="canonical" href="http://www.davidpashley.com/articles/writing-robust-shell-scripts/">
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Writing Robust Bash Shell Scripts - David Pashley.com">
+<meta property="og:description" content="Many people hack together shell scripts quickly to do simple tasks, but these soon take on a life of their Read More...">
+<meta property="og:url" content="http://www.davidpashley.com/articles/writing-robust-shell-scripts/">
+<meta property="og:site_name" content="David Pashley.com">
+<!-- / Yoast WordPress SEO plugin. -->
+
+<link rel="alternate" type="application/rss+xml" title="David Pashley.com » Feed" href="http://www.davidpashley.com/feed/">
+<link rel="alternate" type="application/rss+xml" title="David Pashley.com » Comments Feed" href="http://www.davidpashley.com/comments/feed/">
+<link rel="alternate" type="application/rss+xml" title="David Pashley.com » Writing Robust Bash Shell Scripts Comments Feed" href="http://www.davidpashley.com/articles/writing-robust-shell-scripts/feed/">
+<link rel="stylesheet" id="newtek-font-css" href="./Writing Robust Bash Shell Scripts - David Pashley.com_files/css" type="text/css" media="all">
+<link rel="stylesheet" id="newtek-style-css" href="./Writing Robust Bash Shell Scripts - David Pashley.com_files/style.css" type="text/css" media="all">
+<link rel="stylesheet" id="amazon-link-style-css" href="./Writing Robust Bash Shell Scripts - David Pashley.com_files/Amazon.css" type="text/css" media="all">
+<script id="twitter-wjs" src="./Writing Robust Bash Shell Scripts - David Pashley.com_files/widgets.js"></script><script type="text/javascript" async="" src="./Writing Robust Bash Shell Scripts - David Pashley.com_files/ga.js"></script><script async="" src="./Writing Robust Bash Shell Scripts - David Pashley.com_files/prum.min.js"></script><script type="text/javascript" src="./Writing Robust Bash Shell Scripts - David Pashley.com_files/jquery.js"></script><style type="text/css"></style>
+<script type="text/javascript" src="./Writing Robust Bash Shell Scripts - David Pashley.com_files/jquery-migrate.js"></script>
+<script type="text/javascript" src="./Writing Robust Bash Shell Scripts - David Pashley.com_files/external-tracking.js"></script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://www.davidpashley.com/xmlrpc.php?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://www.davidpashley.com/wp-includes/wlwmanifest.xml"> 
+<meta name="generator" content="WordPress 4.0">
+<link rel="shortlink" href="http://wp.me/P3XzXq-5r">
+<script src="./Writing Robust Bash Shell Scripts - David Pashley.com_files/saved_resource" type="text/javascript"></script>
+<script>
+var _prum = [['id', '51daee64abe53dcc17000000'],
+             ['mark', 'firstbyte', (new Date()).getTime()]];
+(function() {
+    var s = document.getElementsByTagName('script')[0]
+      , p = document.createElement('script');
+    p.async = 'async';
+    p.src = '//rum-static.pingdom.net/prum.min.js';
+    s.parentNode.insertBefore(p, s);
+})();
+</script>
+
+	<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+<!-- Google Analytics Tracking by Google Analyticator 6.4.8: http://www.videousermanuals.com/google-analyticator/ -->
+<script type="text/javascript">
+    var analyticsFileTypes = [''];
+    var analyticsSnippet = 'enabled';
+    var analyticsEventTracking = 'enabled';
+</script>
+<script type="text/javascript">
+	var _gaq = _gaq || [];
+  
+	_gaq.push(['_setAccount', 'UA-261983-1']);
+    _gaq.push(['_addDevId', 'i9k95']); // Google Analyticator App ID with Google
+	_gaq.push(['_trackPageview']);
+
+	(function() {
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		                ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	})();
+</script>
+<link rel="stylesheet" type="text/css" id="gravatar-card-css" href="./Writing Robust Bash Shell Scripts - David Pashley.com_files/hovercard.css"><link rel="stylesheet" type="text/css" id="gravatar-card-services-css" href="./Writing Robust Bash Shell Scripts - David Pashley.com_files/services.css"></head>
+
+<body class="page page-id-337 page-child parent-pageid-336 page-template-default" data-twttr-rendered="true" style="color: black; background-color: rgb(211, 211, 211);">
+
+<div id="container3" style="color: black; background-color: rgb(211, 211, 211);">
+<div class="navtop" style="color: black; background-color: rgb(211, 211, 211);">
+<div class="navmenu" style="color: black; background-color: rgb(211, 211, 211);"><ul id="menu-main-menu" class="navmenu"><li id="menu-item-341" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-341"><a href="http://www.davidpashley.com/">Home</a></li>
+<li id="menu-item-416" class="menu-item menu-item-type-post_type menu-item-object-page current-page-ancestor current-menu-ancestor current-menu-parent current-page-parent current_page_parent current_page_ancestor menu-item-has-children menu-item-416"><a href="http://www.davidpashley.com/articles/">Articles</a>
+<ul class="sub-menu">
+	<li id="menu-item-417" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-417"><a href="http://www.davidpashley.com/articles/dial-on-demand-with-wvdial/">Dial On Demand with WVDial</a></li>
+	<li id="menu-item-418" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-337 current_page_item menu-item-418"><a href="http://www.davidpashley.com/articles/writing-robust-shell-scripts/">Writing Robust Bash Shell Scripts</a></li>
+	<li id="menu-item-419" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-419"><a href="http://www.davidpashley.com/articles/postgresql-user-administration/">PostgreSQL User Administration</a></li>
+	<li id="menu-item-420" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-420"><a href="http://www.davidpashley.com/articles/network-troubleshooting/">Network Troubleshooting</a></li>
+	<li id="menu-item-421" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-421"><a href="http://www.davidpashley.com/articles/becoming-a-x-509-certificate-authority/">Becoming a X.509 Certificate Authority</a></li>
+	<li id="menu-item-422" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-422"><a href="http://www.davidpashley.com/articles/automatic-proxy-configuration-with-wpad/">Automatic Proxy Configuration with WPAD</a></li>
+	<li id="menu-item-423" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-423"><a href="http://www.davidpashley.com/articles/ldap-basics/">LDAP Basics</a></li>
+	<li id="menu-item-424" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-424"><a href="http://www.davidpashley.com/articles/bash-prompts/">Bash Prompts</a></li>
+</ul>
+</li>
+</ul></div></div>
+</div>
+
+<div id="container" style="color: black; background-color: rgb(211, 211, 211);">
+<div id="header" style="color: black; background-color: rgb(211, 211, 211);">
+    
+        <div class="site-title" style="color: black; background-color: rgb(211, 211, 211);"><a href="http://www.davidpashley.com/" title="David Pashley.com" rel="home">David Pashley.com</a>
+    </div>
+
+<div id="search" style="color: black; background-color: rgb(211, 211, 211);">
+                  <form role="search" method="get" id="searchform" action="http://www.davidpashley.com/">
+    <div style="color: black; background-color: rgb(211, 211, 211);"><label class="screen-reader-text" for="s"></label>
+        <input type="text" value="Search..." name="s" id="s" onfocus="if(this.value==this.defaultValue)this.value=&#39;&#39;;" onblur="if(this.value==&#39;&#39;)this.value=this.defaultValue;">        
+    </div>
+</form>         </div>
+</div>
+
+</div>
+
+<div id="wrapper" style="color: black; background-color: rgb(211, 211, 211);">
+<div id="main" style="color: black; background-color: rgb(211, 211, 211);">
+
+<div id="content" style="color: black; background-color: rgb(211, 211, 211);">
+
+
+<div class="post-title" style="color: black; background-color: rgb(211, 211, 211);"><a href="http://www.davidpashley.com/articles/writing-robust-shell-scripts/" title="Writing Robust Bash Shell Scripts">Writing Robust Bash Shell Scripts</a></div>
+
+
+<div id="post-337" class="post-337 page type-page status-publish hentry" style="color: black; background-color: rgb(211, 211, 211);">
+
+<p style="color: black;">Many people hack together shell scripts quickly to do simple tasks, but these soon take on a life of their own. Unfortunately shell scripts are full of subtle effects which result in scripts failing in unusual ways. It’s possible to write scripts which minimise these problems. In this article, I explain several techniques for writing robust bash scripts.</p>
+<div style="color: black; background-color: rgb(211, 211, 211);">
+<h2><a id="idm8411360"></a>Use set -u</h2>
+</div>
+<p style="color: black;">How often have you written a script that broke because a variable wasn’t set? I know I have, many times.</p>
+<pre>chroot=$1
+...
+rm -rf $chroot/usr/share/doc</pre>
+<p style="color: black;">If you ran the script above and accidentally forgot to give a parameter, you would have just deleted all of your system documentation rather than making a smaller chroot. So what can you do about it? Fortunately bash provides you with&nbsp;<tt>set -u</tt>, which will exit your script if you try to use an uninitialised variable. You can also use the slightly more readable&nbsp;<tt>set -o nounset</tt>.</p>
+<pre>david% bash /tmp/shrink-chroot.sh
+$chroot=
+david% bash -u /tmp/shrink-chroot.sh
+/tmp/shrink-chroot.sh: line 3: $1: unbound variable
+david%</pre>
+<div style="color: black; background-color: rgb(211, 211, 211);">
+<h2><a id="idm5413512"></a>Use set -e</h2>
+</div>
+<p style="color: black;">Every script you write should include&nbsp;<tt>set -e</tt>&nbsp;at the top. This tells bash that it should exit the script if any statement returns a non-true return value. The benefit of using -e is that it prevents errors snowballing into serious issues when they could have been caught earlier. Again, for readability you may want to use&nbsp;<tt>set -o errexit</tt>.</p>
+<p style="color: black;">Using -e gives you error checking for free. If you forget to check something, bash will do it or you. Unfortunately it means you can’t check $? as bash will never get to the checking code if it isn’t zero. There are other constructs you could use:</p>
+<pre>command
+if [ "$?"-ne 0]; then echo "command failed"; exit 1; fi</pre>
+<p style="color: black;">could be replaced with</p>
+<pre>command || { echo "command failed"; exit 1; }</pre>
+<p style="color: black;">or</p>
+<pre>if ! command; then echo "command failed"; exit 1; fi</pre>
+<p style="color: black;">What if you have a command that returns non-zero or you are not interested in its return value? You can use&nbsp;<tt>command || true</tt>, or if you have a longer section of code, you can turn off the error checking, but I recommend you use this sparingly.</p>
+<pre>set +e
+command1
+command2
+set -e</pre>
+<p style="color: black;">On a slightly related note, by default bash takes the error status of the last item in a pipeline, which may not be what you want. For example,&nbsp;<tt>false | true</tt>&nbsp;will be considered to have succeeded. If you would like this to fail, then you can use&nbsp;<tt>set -o pipefail</tt>&nbsp;to make it fail.</p>
+<div style="color: black; background-color: rgb(211, 211, 211);">
+<h2><a id="idp257344"></a>Program defensively – expect the unexpected</h2>
+</div>
+<p style="color: black;">Your script should take into account of the unexpected, like files missing or directories not being created. There are several things you can do to prevent errors in these situations. For example, when you create a directory, if the parent directory doesn’t exist,&nbsp;<b>mkdir</b>&nbsp;will return an error. If you add a&nbsp;<tt>-p</tt>&nbsp;option then&nbsp;<b>mkdir</b>&nbsp;will create all the parent directories before creating the requested directory. Another example is&nbsp;<b>rm</b>. If you ask rm to delete a non-existent file, it will complain and your script will terminate. (You are using -e, right?) You can fix this by using&nbsp;<tt>-f</tt>, which will silently continue if the file didn’t exist.</p>
+<div style="color: black; background-color: rgb(211, 211, 211);">
+<h2><a id="idm6594064"></a>Be prepared for spaces in filenames</h2>
+</div>
+<p style="color: black;">Someone will always use spaces in filenames or command line arguments and you should keep this in mind when writing shell scripts. In particular you should use quotes around variables.</p>
+<pre>if [ $filename = "foo" ];</pre>
+<p style="color: black;">will fail if $filename contains a space. This can be fixed by using:</p>
+<pre>if [ "$filename" = "foo" ];</pre>
+<p style="color: black;">When using $@ variable, you should always quote it or any arguments containing a space will be expanded in to separate words.</p>
+<pre>david% foo() { for i in $@; do printf "%s\n" "$i"; done }; foo bar "baz quux"
+bar
+baz
+quux
+david% foo() { for i in "$@"; do printf "%s\n" "$i"; done }; foo bar "baz quux"
+bar
+baz quux</pre>
+<p style="color: black;">I can not think of a single place where you shouldn’t use “$@” over $@, so when in doubt, use quotes.</p>
+<p style="color: black;">If you use&nbsp;<b>find</b>&nbsp;and&nbsp;<b>xargs</b>&nbsp;together, you should use&nbsp;<tt>-print0</tt>&nbsp;to separate filenames with a null character rather than new lines. You then need to use&nbsp;<tt>-0</tt>&nbsp;with xargs.</p>
+<pre>david% touch "foo bar"
+david% find | xargs ls
+ls: ./foo: No such file or directory
+ls: bar: No such file or directory
+david% find -print0 | xargs -0 ls
+./foo bar</pre>
+<div style="color: black; background-color: rgb(211, 211, 211);">
+<h2><a id="idm5150200"></a>Setting traps</h2>
+</div>
+<p style="color: black;">Often you write scripts which fail and leave the filesystem in an inconsistent state; things like lock files, temporary files or you’ve updated one file and there is an error updating the next file. It would be nice if you could fix these problems, either by deleting the lock files or by rolling back to a known good state when your script suffers a problem. Fortunately bash provides a way to run a command or function when it receives a unix signal using the&nbsp;<b>trap&nbsp;</b>command.</p>
+<pre>trap command signal [signal ...]</pre>
+<p style="color: black;">There are many signals you can trap (you can get a list of them by running&nbsp;<b>kill -l</b>), but for cleaning up after problems there are only 3 we are interested in:&nbsp;<tt>INT</tt>,&nbsp;<tt>TERM</tt>&nbsp;and&nbsp;<tt>EXIT</tt>. You can also reset traps back to their default by using&nbsp;<tt>-</tt>&nbsp;as the command.</p>
+<div style="color: black; background-color: rgb(211, 211, 211);">
+<table>
+<caption>&nbsp;</caption>
+<thead>
+<tr>
+<th>Signal</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><tt>INT</tt></td>
+<td>Interrupt – This signal is sent when someone kills the script by pressing ctrl-c.</td>
+</tr>
+<tr>
+<td><tt>TERM</tt></td>
+<td>Terminate – this signal is sent when someone sends the TERM signal using the kill command.</td>
+</tr>
+<tr>
+<td><tt>EXIT</tt></td>
+<td>Exit – this is a pseudo-signal and is triggered when your script exits, either through reaching the end of the script, an exit command or by a command failing when using<tt>set -e</tt>.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p style="color: black;">Usually, when you write something using a lock file you would use something like:</p>
+<pre>if [ ! -e $lockfile ]; then
+   touch $lockfile
+   critical-section
+   rm $lockfile
+else
+   echo "critical-section is already running"
+fi</pre>
+<p style="color: black;">What happens if someone kills your script while&nbsp;<tt>critical-section</tt>&nbsp;is running? The lockfile will be left there and your script won’t run again until it’s been deleted. The fix is to use:</p>
+<pre>if [ ! -e $lockfile ]; then
+   trap "rm -f $lockfile; exit" INT TERM EXIT
+   touch $lockfile
+   critical-section
+   rm $lockfile
+   trap - INT TERM EXIT
+else
+   echo "critical-section is already running"
+fi</pre>
+<p style="color: black;">Now when you kill the script it will delete the lock file too. Notice that we explicitly exit from the script at the end of trap command, otherwise the script will resume from the point that the signal was received.</p>
+<div style="color: black; background-color: rgb(211, 211, 211);">
+<h2>Race conditions</h2>
+<p style="color: black;">It’s worth pointing out that there is a slight race condition in the above lock example between the time we test for the lockfile and the time we create it. A possible solution to this is to use IO redirection and bash’s noclobber mode, which won’t redirect to an existing file. We can use something similar to:</p>
+<pre>if ( set -o noclobber; echo "$$" &gt; "$lockfile") 2&gt; /dev/null; 
+then
+   trap 'rm -f "$lockfile"; exit $?' INT TERM EXIT
+
+   critical-section
+
+   rm -f "$lockfile"
+   trap - INT TERM EXIT
+else
+   echo "Failed to acquire lockfile: $lockfile." 
+   echo "Held by $(cat $lockfile)"
+fi</pre>
+</div>
+<p style="color: black;">A slightly more complicated problem is where you need to update a bunch of files and need the script to fail gracefully if there is a problem in the middle of the update. You want to be certain that something either happened correctly or that it appears as though it didn’t happen at all.Say you had a script to add users.</p>
+<pre>add_to_passwd $user
+cp -a /etc/skel /home/$user
+chown $user /home/$user -R</pre>
+<p style="color: black;">There could be problems if you ran out of diskspace or someone killed the process. In this case you’d want the user to not exist and all their files to be removed.</p>
+<pre>rollback() {
+   del_from_passwd $user
+   if [ -e /home/$user ]; then
+      rm -rf /home/$user
+   fi
+   exit
+}
+
+trap rollback INT TERM EXIT
+add_to_passwd $user
+cp -a /etc/skel /home/$user
+chown $user /home/$user -R
+trap - INT TERM EXIT</pre>
+<p style="color: black;">We needed to remove the trap at the end or the&nbsp;<b>rollback</b>&nbsp;function would have been called as we exited, undoing all the script’s hard work.</p>
+<div style="color: black; background-color: rgb(211, 211, 211);">
+<h2><a id="idm6635216"></a>Be atomic</h2>
+</div>
+<p style="color: black;">Sometimes you need to update a bunch of files in a directory at once, say you need to rewrite urls form one host to another on your website. You might write:</p>
+<pre>for file in $(find /var/www -type f -name "*.html"); do
+   perl -pi -e 's/www.example.net/www.example.com/' $file
+done</pre>
+<p style="color: black;">Now if there is a problem with the script you could have half the site referring to www.example.com and the rest referring to www.example.net. You could fix this using a backup and a trap, but you also have the problem that the site will be inconsistent during the upgrade too.</p>
+<p style="color: black;">The solution to this is to make the changes an (almost) atomic operation. To do this make a copy of the data, make the changes in the copy, move the original out of the way and then move the copy back into place. You need to make sure that both the old and the new directories are moved to locations that are on the same partition so you can take advantage of the property of most unix filesystems that moving directories is very fast, as they only have to update the inode for that directory.</p>
+<pre>cp -a /var/www /var/www-tmp
+for file in $(find /var/www-tmp -type f -name "*.html"); do
+   perl -pi -e 's/www.example.net/www.example.com/' $file
+done
+mv /var/www /var/www-old
+mv /var/www-tmp /var/www</pre>
+<p style="color: black;">This means that if there is a problem with the update, the live system is not affected. Also the time where it is affected is reduced to the time between the two&nbsp;<b>mv</b>s, which should be very minimal, as the filesystem just has to change two entries in the inodes rather than copying all the data around.</p>
+<p style="color: black;">The disadvantage of this technique is that you need to use twice as much disk space and that any process that keeps files open for a long time will still have the old files open and not the new ones, so you would have to restart those processes if this is the case. In our example this isn’t a problem as apache opens the files every request. You can check for files with files open by using&nbsp;<b>lsof</b>. An advantage is that you now have a backup before you made your changes in case you need to revert.</p>
+
+</div>
+
+<div class="commentstext" style="color: black; background-color: rgb(211, 211, 211);"><a href="http://www.davidpashley.com/articles/writing-robust-shell-scripts/#comments" class="comments-link" title="Comment on Writing Robust Bash Shell Scripts">32 comments</a></div>
+
+<div class="breaker" style="color: black; background-color: rgb(211, 211, 211);"></div>
+
+
+
+			<h2>
+			32 thoughts on “<span>Writing Robust Bash Shell Scripts</span>”		</h2>
+
+		<ol class="comment-list">
+					<li id="comment-493" class="comment even thread-even depth-1">
+			<article id="div-comment-493" class="comment-body" style="background-color: rgb(211, 211, 211);">
+				<footer class="comment-meta">
+					<div class="comment-author vcard" style="color: black; background-color: rgb(211, 211, 211);">
+						<img alt="" src="./Writing Robust Bash Shell Scripts - David Pashley.com_files/1a524c04b46e9c51e76b68c605f2d8ea" class="avatar avatar-30 photo grav-hashed grav-hijack" height="30" width="30" id="grav-1a524c04b46e9c51e76b68c605f2d8ea-0">						<b class="fn">Jordi</b> <span class="says">says:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata" style="color: black; background-color: rgb(211, 211, 211);">
+						<a href="http://www.davidpashley.com/articles/writing-robust-shell-scripts/#comment-493">
+							<time datetime="2013-07-10T14:40:44+00:00">
+								July 10, 2013 at 2:40 pm							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content" style="color: black; background-color: rgb(211, 211, 211);">
+					<p style="color: black;">Very interesting post. Thanks for posting it.</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply" style="color: black; background-color: rgb(211, 211, 211);">
+					<a class="comment-reply-link" href="http://www.davidpashley.com/articles/writing-robust-shell-scripts/?replytocom=493#respond" onclick="return addComment.moveForm(&quot;div-comment-493&quot;, &quot;493&quot;, &quot;respond&quot;, &quot;337&quot;)">Reply</a>				</div><!-- .reply -->
+			</article><!-- .comment-body -->
+</li><!-- #comment-## -->
+		<li id="comment-496" class="comment odd alt thread-odd thread-alt depth-1">
+			<article id="div-comment-496" class="comment-body" style="background-color: rgb(211, 211, 211);">
+				<footer class="comment-meta">
+					<div class="comment-author vcard" style="color: black; background-color: rgb(211, 211, 211);">
+						<img alt="" src="./Writing Robust Bash Shell Scripts - David Pashley.com_files/cee2441ba1a36804b932b265c8511281" class="avatar avatar-30 photo grav-hashed grav-hijack" height="30" width="30" id="grav-cee2441ba1a36804b932b265c8511281-0">						<b class="fn">dj</b> <span class="says">says:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata" style="color: black; background-color: rgb(211, 211, 211);">
+						<a href="http://www.davidpashley.com/articles/writing-robust-shell-scripts/#comment-496">
+							<time datetime="2013-07-10T23:27:27+00:00">
+								July 10, 2013 at 11:27 pm							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content" style="color: black; background-color: rgb(211, 211, 211);">
+					<p style="color: black;">Got here from “http://fvue.nl/wiki/Bash:_Error_handling”.</p>
+<p style="color: black;">Regarding “chroot=$1″, you could also do some parameter expansion like:</p>
+<p style="color: black;">chroot=”${1:?Missing Input}”</p>
+<p style="color: black;">Great article on file names and spaces and other characters here:<br>
+“http://www.dwheeler.com/essays/fixing-unix-linux-filenames.html”</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply" style="color: black; background-color: rgb(211, 211, 211);">
+					<a class="comment-reply-link" href="http://www.davidpashley.com/articles/writing-robust-shell-scripts/?replytocom=496#respond" onclick="return addComment.moveForm(&quot;div-comment-496&quot;, &quot;496&quot;, &quot;respond&quot;, &quot;337&quot;)">Reply</a>				</div><!-- .reply -->
+			</article><!-- .comment-body -->
+</li><!-- #comment-## -->
+		<li id="comment-514" class="comment even thread-even depth-1">
+			<article id="div-comment-514" class="comment-body" style="background-color: rgb(211, 211, 211);">
+				<footer class="comment-meta">
+					<div class="comment-author vcard" style="color: black; background-color: rgb(211, 211, 211);">
+						<img alt="" src="./Writing Robust Bash Shell Scripts - David Pashley.com_files/57d07fa82584b144bd20686f4b45daf9" class="avatar avatar-30 photo grav-hashed grav-hijack" height="30" width="30" id="grav-57d07fa82584b144bd20686f4b45daf9-0">						<b class="fn">Mr Roos</b> <span class="says">says:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata" style="color: black; background-color: rgb(211, 211, 211);">
+						<a href="http://www.davidpashley.com/articles/writing-robust-shell-scripts/#comment-514">
+							<time datetime="2013-07-13T17:22:12+00:00">
+								July 13, 2013 at 5:22 pm							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content" style="color: black; background-color: rgb(211, 211, 211);">
+					<p style="color: black;">Very intressting, I’ve lerned a lot by reading this. Thanks for the many fine code examples as well. Keep up the good work.</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply" style="color: black; background-color: rgb(211, 211, 211);">
+					<a class="comment-reply-link" href="http://www.davidpashley.com/articles/writing-robust-shell-scripts/?replytocom=514#respond" onclick="return addComment.moveForm(&quot;div-comment-514&quot;, &quot;514&quot;, &quot;respond&quot;, &quot;337&quot;)">Reply</a>				</div><!-- .reply -->
+			</article><!-- .comment-body -->
+</li><!-- #comment-## -->
+		<li id="comment-578" class="comment odd alt thread-odd thread-alt depth-1">
+			<article id="div-comment-578" class="comment-body" style="background-color: rgb(211, 211, 211);">
+				<footer class="comment-meta">
+					<div class="comment-author vcard" style="color: black; background-color: rgb(211, 211, 211);">
+						<img alt="" src="./Writing Robust Bash Shell Scripts - David Pashley.com_files/880cdcf0fc4b534f5498c27c61e34ae3" class="avatar avatar-30 photo grav-hashed grav-hijack" height="30" width="30" id="grav-880cdcf0fc4b534f5498c27c61e34ae3-0">						<b class="fn">mike</b> <span class="says">says:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata" style="color: black; background-color: rgb(211, 211, 211);">
+						<a href="http://www.davidpashley.com/articles/writing-robust-shell-scripts/#comment-578">
+							<time datetime="2013-08-04T18:19:18+00:00">
+								August 4, 2013 at 6:19 pm							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content" style="color: black; background-color: rgb(211, 211, 211);">
+					<p style="color: black;">“need to use twice as much disk space”? No more the case, with btrfs + either cp –reflink or btrfs subvolume snapshot.</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply" style="color: black; background-color: rgb(211, 211, 211);">
+					<a class="comment-reply-link" href="http://www.davidpashley.com/articles/writing-robust-shell-scripts/?replytocom=578#respond" onclick="return addComment.moveForm(&quot;div-comment-578&quot;, &quot;578&quot;, &quot;respond&quot;, &quot;337&quot;)">Reply</a>				</div><!-- .reply -->
+			</article><!-- .comment-body -->
+</li><!-- #comment-## -->
+		<li id="comment-635" class="comment even thread-even depth-1">
+			<article id="div-comment-635" class="comment-body" style="background-color: rgb(211, 211, 211);">
+				<footer class="comment-meta">
+					<div class="comment-author vcard" style="color: black; background-color: rgb(211, 211, 211);">
+						<img alt="" src="./Writing Robust Bash Shell Scripts - David Pashley.com_files/331e9cb514212729b45bb6388ee2d71b" class="avatar avatar-30 photo grav-hashed grav-hijack" height="30" width="30" id="grav-331e9cb514212729b45bb6388ee2d71b-0">						<b class="fn">Toby</b> <span class="says">says:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata" style="color: black; background-color: rgb(211, 211, 211);">
+						<a href="http://www.davidpashley.com/articles/writing-robust-shell-scripts/#comment-635">
+							<time datetime="2013-09-01T20:10:24+00:00">
+								September 1, 2013 at 8:10 pm							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content" style="color: black; background-color: rgb(211, 211, 211);">
+					<p style="color: black;">This is hands-down the most useful thing I’ve read all week.</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply" style="color: black; background-color: rgb(211, 211, 211);">
+					<a class="comment-reply-link" href="http://www.davidpashley.com/articles/writing-robust-shell-scripts/?replytocom=635#respond" onclick="return addComment.moveForm(&quot;div-comment-635&quot;, &quot;635&quot;, &quot;respond&quot;, &quot;337&quot;)">Reply</a>				</div><!-- .reply -->
+			</article><!-- .comment-body -->
+</li><!-- #comment-## -->
+		<li id="comment-691" class="comment odd alt thread-odd thread-alt depth-1">
+			<article id="div-comment-691" class="comment-body" style="background-color: rgb(211, 211, 211);">
+				<footer class="comment-meta">
+					<div class="comment-author vcard" style="color: black; background-color: rgb(211, 211, 211);">
+						<img alt="" src="./Writing Robust Bash Shell Scripts - David Pashley.com_files/a93c419e563a3b3a83754c3f1f36f8b0" class="avatar avatar-30 photo grav-hashed grav-hijack" height="30" width="30" id="grav-a93c419e563a3b3a83754c3f1f36f8b0-0">						<b class="fn">Edwin Pujols</b> <span class="says">says:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata" style="color: black; background-color: rgb(211, 211, 211);">
+						<a href="http://www.davidpashley.com/articles/writing-robust-shell-scripts/#comment-691">
+							<time datetime="2013-10-01T19:50:04+00:00">
+								October 1, 2013 at 7:50 pm							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content" style="color: black; background-color: rgb(211, 211, 211);">
+					<p style="color: black;">Thanks for the info <img src="./Writing Robust Bash Shell Scripts - David Pashley.com_files/icon_smile.gif" alt=":-)" class="wp-smiley"></p>
+				</div><!-- .comment-content -->
+
+				<div class="reply" style="color: black; background-color: rgb(211, 211, 211);">
+					<a class="comment-reply-link" href="http://www.davidpashley.com/articles/writing-robust-shell-scripts/?replytocom=691#respond" onclick="return addComment.moveForm(&quot;div-comment-691&quot;, &quot;691&quot;, &quot;respond&quot;, &quot;337&quot;)">Reply</a>				</div><!-- .reply -->
+			</article><!-- .comment-body -->
+</li><!-- #comment-## -->
+		<li id="comment-713" class="comment even thread-even depth-1">
+			<article id="div-comment-713" class="comment-body" style="background-color: rgb(211, 211, 211);">
+				<footer class="comment-meta">
+					<div class="comment-author vcard" style="color: black; background-color: rgb(211, 211, 211);">
+						<img alt="" src="./Writing Robust Bash Shell Scripts - David Pashley.com_files/3cfce21d5697832868e053f62366af56" class="avatar avatar-30 photo grav-hashed grav-hijack" height="30" width="30" id="grav-3cfce21d5697832868e053f62366af56-0">						<b class="fn">Frode</b> <span class="says">says:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata" style="color: black; background-color: rgb(211, 211, 211);">
+						<a href="http://www.davidpashley.com/articles/writing-robust-shell-scripts/#comment-713">
+							<time datetime="2013-10-13T23:42:45+00:00">
+								October 13, 2013 at 11:42 pm							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content" style="color: black; background-color: rgb(211, 211, 211);">
+					<p style="color: black;">Hi,</p>
+<p style="color: black;">I just wanted to drop a quick note of thanks here.<br>
+I have this post bookmarked, and refer back to it every time I write a shell script that’s not ‘single use’.</p>
+<p style="color: black;">Thanks for making these tips available!</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply" style="color: black; background-color: rgb(211, 211, 211);">
+					<a class="comment-reply-link" href="http://www.davidpashley.com/articles/writing-robust-shell-scripts/?replytocom=713#respond" onclick="return addComment.moveForm(&quot;div-comment-713&quot;, &quot;713&quot;, &quot;respond&quot;, &quot;337&quot;)">Reply</a>				</div><!-- .reply -->
+			</article><!-- .comment-body -->
+</li><!-- #comment-## -->
+		<li id="comment-717" class="pingback odd alt thread-odd thread-alt depth-1">
+			<div class="comment-body" style="color: black; background-color: rgb(211, 211, 211);">
+				Pingback: <a href="http://www.unix.com/shell-programming-scripting/238195-how-check-status-script-every-5-min.html#post302863847" rel="external nofollow" class="url">How to check the status of script for every 5 min? - The UNIX and Linux Forums</a> 			</div>
+</li><!-- #comment-## -->
+		<li id="comment-750" class="comment even thread-even depth-1">
+			<article id="div-comment-750" class="comment-body" style="background-color: rgb(211, 211, 211);">
+				<footer class="comment-meta">
+					<div class="comment-author vcard" style="color: black; background-color: rgb(211, 211, 211);">
+						<img alt="" src="./Writing Robust Bash Shell Scripts - David Pashley.com_files/f85d19965ba1b5338b8cf559fb654242" class="avatar avatar-30 photo grav-hashed grav-hijack" height="30" width="30" id="grav-f85d19965ba1b5338b8cf559fb654242-0">						<b class="fn">David Conrad</b> <span class="says">says:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata" style="color: black; background-color: rgb(211, 211, 211);">
+						<a href="http://www.davidpashley.com/articles/writing-robust-shell-scripts/#comment-750">
+							<time datetime="2013-10-30T18:17:29+00:00">
+								October 30, 2013 at 6:17 pm							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content" style="color: black; background-color: rgb(211, 211, 211);">
+					<p style="color: black;">These tips are tremendous and have proved extremely helpful to me. Thank you!</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply" style="color: black; background-color: rgb(211, 211, 211);">
+					<a class="comment-reply-link" href="http://www.davidpashley.com/articles/writing-robust-shell-scripts/?replytocom=750#respond" onclick="return addComment.moveForm(&quot;div-comment-750&quot;, &quot;750&quot;, &quot;respond&quot;, &quot;337&quot;)">Reply</a>				</div><!-- .reply -->
+			</article><!-- .comment-body -->
+</li><!-- #comment-## -->
+		<li id="comment-819" class="comment odd alt thread-odd thread-alt depth-1 parent">
+			<article id="div-comment-819" class="comment-body" style="background-color: rgb(211, 211, 211);">
+				<footer class="comment-meta">
+					<div class="comment-author vcard" style="color: black; background-color: rgb(211, 211, 211);">
+						<img alt="" src="./Writing Robust Bash Shell Scripts - David Pashley.com_files/4a1f42a59e40446158ce872818a963a3" class="avatar avatar-30 photo grav-hashed grav-hijack" height="30" width="30" id="grav-4a1f42a59e40446158ce872818a963a3-0">						<b class="fn"><a href="https://www.mirbsd.org/mksh.htm" rel="external nofollow" class="url">mirabilos</a></b> <span class="says">says:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata" style="color: black; background-color: rgb(211, 211, 211);">
+						<a href="http://www.davidpashley.com/articles/writing-robust-shell-scripts/#comment-819">
+							<time datetime="2013-12-02T11:29:07+00:00">
+								December 2, 2013 at 11:29 am							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content" style="color: black; background-color: rgb(211, 211, 211);">
+					<p style="color: black;">All of these things are not specific to GNU bash, by the way.</p>
+<p style="color: black;">Absolutely do not use set -u (in production, feel free to use it in testing). Also, dogmatically applying set -e (as in Debian) just leads to people writing worse scripts; IME it’s better to use explicit error handling like in C (and not let newbies write scripts).</p>
+<p style="color: black;">You forgot to mention things like: never use [ or test, always use [[ for secure string handling (but still quote the RHS of a comparison because it’s taken as glob otherwise).</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply" style="color: black; background-color: rgb(211, 211, 211);">
+					<a class="comment-reply-link" href="http://www.davidpashley.com/articles/writing-robust-shell-scripts/?replytocom=819#respond" onclick="return addComment.moveForm(&quot;div-comment-819&quot;, &quot;819&quot;, &quot;respond&quot;, &quot;337&quot;)">Reply</a>				</div><!-- .reply -->
+			</article><!-- .comment-body -->
+<ol class="children">
+		<li id="comment-1991" class="comment even depth-2 parent">
+			<article id="div-comment-1991" class="comment-body" style="background-color: rgb(211, 211, 211);">
+				<footer class="comment-meta">
+					<div class="comment-author vcard" style="color: black; background-color: rgb(211, 211, 211);">
+						<img alt="" src="./Writing Robust Bash Shell Scripts - David Pashley.com_files/09c9803de4bab8c6943a823c0b64864e" class="avatar avatar-30 photo grav-hashed grav-hijack" height="30" width="30" id="grav-09c9803de4bab8c6943a823c0b64864e-0">						<b class="fn">Gunstick</b> <span class="says">says:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata" style="color: black; background-color: rgb(211, 211, 211);">
+						<a href="http://www.davidpashley.com/articles/writing-robust-shell-scripts/#comment-1991">
+							<time datetime="2014-10-01T20:18:40+00:00">
+								October 1, 2014 at 8:18 pm							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content" style="color: black; background-color: rgb(211, 211, 211);">
+					<p style="color: black;">Can you point me to a webpage/article explaining why [[ is good and [ is bad?</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply" style="color: black; background-color: rgb(211, 211, 211);">
+					<a class="comment-reply-link" href="http://www.davidpashley.com/articles/writing-robust-shell-scripts/?replytocom=1991#respond" onclick="return addComment.moveForm(&quot;div-comment-1991&quot;, &quot;1991&quot;, &quot;respond&quot;, &quot;337&quot;)">Reply</a>				</div><!-- .reply -->
+			</article><!-- .comment-body -->
+<ol class="children">
+		<li id="comment-2001" class="comment odd alt depth-3">
+			<article id="div-comment-2001" class="comment-body" style="background-color: rgb(211, 211, 211);">
+				<footer class="comment-meta">
+					<div class="comment-author vcard" style="color: black; background-color: rgb(211, 211, 211);">
+						<img alt="" src="./Writing Robust Bash Shell Scripts - David Pashley.com_files/4a1f42a59e40446158ce872818a963a3" class="avatar avatar-30 photo grav-hashed grav-hijack" height="30" width="30" id="grav-4a1f42a59e40446158ce872818a963a3-1">						<b class="fn"><a href="https://www.mirbsd.org/mksh.htm" rel="external nofollow" class="url">mirabilos</a></b> <span class="says">says:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata" style="color: black; background-color: rgb(211, 211, 211);">
+						<a href="http://www.davidpashley.com/articles/writing-robust-shell-scripts/#comment-2001">
+							<time datetime="2014-10-02T13:16:34+00:00">
+								October 2, 2014 at 1:16 pm							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content" style="color: black; background-color: rgb(211, 211, 211);">
+					<p style="color: black;">15:03⎜«pgas:#ksh» <a href="http://mywiki.wooledge.org/BashFAQ/031" rel="nofollow">http://mywiki.wooledge.org/BashFAQ/031</a></p>
+				</div><!-- .comment-content -->
+
+				<div class="reply" style="color: black; background-color: rgb(211, 211, 211);">
+					<a class="comment-reply-link" href="http://www.davidpashley.com/articles/writing-robust-shell-scripts/?replytocom=2001#respond" onclick="return addComment.moveForm(&quot;div-comment-2001&quot;, &quot;2001&quot;, &quot;respond&quot;, &quot;337&quot;)">Reply</a>				</div><!-- .reply -->
+			</article><!-- .comment-body -->
+</li><!-- #comment-## -->
+</ol><!-- .children -->
+</li><!-- #comment-## -->
+</ol><!-- .children -->
+</li><!-- #comment-## -->
+		<li id="comment-869" class="comment even thread-even depth-1">
+			<article id="div-comment-869" class="comment-body" style="background-color: rgb(211, 211, 211);">
+				<footer class="comment-meta">
+					<div class="comment-author vcard" style="color: black; background-color: rgb(211, 211, 211);">
+						<img alt="" src="./Writing Robust Bash Shell Scripts - David Pashley.com_files/fd57d86b630a67483d68aca4396a11d1" class="avatar avatar-30 photo grav-hashed grav-hijack" height="30" width="30" id="grav-fd57d86b630a67483d68aca4396a11d1-0">						<b class="fn">JRW</b> <span class="says">says:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata" style="color: black; background-color: rgb(211, 211, 211);">
+						<a href="http://www.davidpashley.com/articles/writing-robust-shell-scripts/#comment-869">
+							<time datetime="2013-12-19T14:19:42+00:00">
+								December 19, 2013 at 2:19 pm							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content" style="color: black; background-color: rgb(211, 211, 211);">
+					<p style="color: black;">Noclobber doesn’t protect against race conditions in all shells (see <a href="http://mywiki.wooledge.org/BashFAQ/045" rel="nofollow">http://mywiki.wooledge.org/BashFAQ/045</a>).  -e is less than useful since it doesn’t indicate why the script aborted, or even that it aborted; it just aborts.</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply" style="color: black; background-color: rgb(211, 211, 211);">
+					<a class="comment-reply-link" href="http://www.davidpashley.com/articles/writing-robust-shell-scripts/?replytocom=869#respond" onclick="return addComment.moveForm(&quot;div-comment-869&quot;, &quot;869&quot;, &quot;respond&quot;, &quot;337&quot;)">Reply</a>				</div><!-- .reply -->
+			</article><!-- .comment-body -->
+</li><!-- #comment-## -->
+		<li id="comment-918" class="comment odd alt thread-odd thread-alt depth-1 parent">
+			<article id="div-comment-918" class="comment-body" style="background-color: rgb(211, 211, 211);">
+				<footer class="comment-meta">
+					<div class="comment-author vcard" style="color: black; background-color: rgb(211, 211, 211);">
+						<img alt="" src="./Writing Robust Bash Shell Scripts - David Pashley.com_files/a73ad583d743a0d6e67e1f599de18bd3" class="avatar avatar-30 photo grav-hashed grav-hijack" height="30" width="30" id="grav-a73ad583d743a0d6e67e1f599de18bd3-0">						<b class="fn"><a href="http://matthias.urlichs.de/" rel="external nofollow" class="url">Matthias Urlichs</a></b> <span class="says">says:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata" style="color: black; background-color: rgb(211, 211, 211);">
+						<a href="http://www.davidpashley.com/articles/writing-robust-shell-scripts/#comment-918">
+							<time datetime="2014-01-10T07:58:23+00:00">
+								January 10, 2014 at 7:58 am							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content" style="color: black; background-color: rgb(211, 211, 211);">
+					<p style="color: black;">You should use xargs -0r. This prevents running the program with no arguments when there’s no input, which is almost always not what you want. For instance</p>
+<p style="color: black;">find . -name foo\*bar -print0 | xargs -0 ls -l</p>
+<p style="color: black;">will do something quite unexpected when there happens to be no matching file.</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply" style="color: black; background-color: rgb(211, 211, 211);">
+					<a class="comment-reply-link" href="http://www.davidpashley.com/articles/writing-robust-shell-scripts/?replytocom=918#respond" onclick="return addComment.moveForm(&quot;div-comment-918&quot;, &quot;918&quot;, &quot;respond&quot;, &quot;337&quot;)">Reply</a>				</div><!-- .reply -->
+			</article><!-- .comment-body -->
+<ol class="children">
+		<li id="comment-919" class="comment byuser comment-author-dpashley bypostauthor even depth-2">
+			<article id="div-comment-919" class="comment-body" style="background-color: rgb(211, 211, 211);">
+				<footer class="comment-meta">
+					<div class="comment-author vcard" style="color: black; background-color: rgb(211, 211, 211);">
+						<img alt="" src="./Writing Robust Bash Shell Scripts - David Pashley.com_files/369dff8a2fdbd03c23cf94beee522170" class="avatar avatar-30 photo grav-hashed grav-hijack" height="30" width="30" id="grav-369dff8a2fdbd03c23cf94beee522170-0">						<b class="fn">David Pashley</b> <span class="says">says:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata" style="color: black; background-color: rgb(211, 211, 211);">
+						<a href="http://www.davidpashley.com/articles/writing-robust-shell-scripts/#comment-919">
+							<time datetime="2014-01-10T08:29:40+00:00">
+								January 10, 2014 at 8:29 am							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content" style="color: black; background-color: rgb(211, 211, 211);">
+					<p style="color: black;">Useful tip. Thank you.</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply" style="color: black; background-color: rgb(211, 211, 211);">
+					<a class="comment-reply-link" href="http://www.davidpashley.com/articles/writing-robust-shell-scripts/?replytocom=919#respond" onclick="return addComment.moveForm(&quot;div-comment-919&quot;, &quot;919&quot;, &quot;respond&quot;, &quot;337&quot;)">Reply</a>				</div><!-- .reply -->
+			</article><!-- .comment-body -->
+</li><!-- #comment-## -->
+</ol><!-- .children -->
+</li><!-- #comment-## -->
+		<li id="comment-1015" class="comment odd alt thread-even depth-1">
+			<article id="div-comment-1015" class="comment-body" style="background-color: rgb(211, 211, 211);">
+				<footer class="comment-meta">
+					<div class="comment-author vcard" style="color: black; background-color: rgb(211, 211, 211);">
+						<img alt="" src="./Writing Robust Bash Shell Scripts - David Pashley.com_files/6ec92500553d542d652b61766c1c5897" class="avatar avatar-30 photo grav-hashed grav-hijack" height="30" width="30" id="grav-6ec92500553d542d652b61766c1c5897-0">						<b class="fn">Malc</b> <span class="says">says:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata" style="color: black; background-color: rgb(211, 211, 211);">
+						<a href="http://www.davidpashley.com/articles/writing-robust-shell-scripts/#comment-1015">
+							<time datetime="2014-02-15T23:35:19+00:00">
+								February 15, 2014 at 11:35 pm							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content" style="color: black; background-color: rgb(211, 211, 211);">
+					<p style="color: black;">Some excellent tips there, thankyou</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply" style="color: black; background-color: rgb(211, 211, 211);">
+					<a class="comment-reply-link" href="http://www.davidpashley.com/articles/writing-robust-shell-scripts/?replytocom=1015#respond" onclick="return addComment.moveForm(&quot;div-comment-1015&quot;, &quot;1015&quot;, &quot;respond&quot;, &quot;337&quot;)">Reply</a>				</div><!-- .reply -->
+			</article><!-- .comment-body -->
+</li><!-- #comment-## -->
+		<li id="comment-1016" class="comment even thread-odd thread-alt depth-1 parent">
+			<article id="div-comment-1016" class="comment-body" style="background-color: rgb(211, 211, 211);">
+				<footer class="comment-meta">
+					<div class="comment-author vcard" style="color: black; background-color: rgb(211, 211, 211);">
+						<img alt="" src="./Writing Robust Bash Shell Scripts - David Pashley.com_files/6ec92500553d542d652b61766c1c5897" class="avatar avatar-30 photo grav-hashed grav-hijack" height="30" width="30" id="grav-6ec92500553d542d652b61766c1c5897-1">						<b class="fn">Malc</b> <span class="says">says:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata" style="color: black; background-color: rgb(211, 211, 211);">
+						<a href="http://www.davidpashley.com/articles/writing-robust-shell-scripts/#comment-1016">
+							<time datetime="2014-02-15T23:48:30+00:00">
+								February 15, 2014 at 11:48 pm							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content" style="color: black; background-color: rgb(211, 211, 211);">
+					<p style="color: black;">Your find/xargs tip is heaps better than my old habit (xargs -i … “{}”).<br>
+In this example (ls): the print0 version has the output sorted so I don’t have to pipe in to sort with special key spec. Also, all the columns line up:</p>
+<pre>Sun Feb 16-10:40:57 mcb@ken007:~/bin/gdata 2154$ find . -type f -print0 | xargs -0 ls -la
+-rw------- 1 mcb mcb  127095 May 16  2012 ./gdata-client-1.0.jar
+-rw------- 1 mcb mcb    1421 May 16  2012 ./gdata-client-meta-1.0.jar
+-rw------- 1 mcb mcb 1039559 May 16  2012 ./gdata-core-1.0.jar
+-rw------- 1 mcb mcb  121296 May 16  2012 ./gdata-docs-3.0.jar
+-rw------- 1 mcb mcb    4554 May 16  2012 ./gdata-docs-meta-3.0.jar
+-rw------- 1 mcb mcb   68596 May 16  2012 ./gdata-media-1.0.jar
+-rw------- 1 mcb mcb   51629 May 16  2012 ./gdata-spreadsheet-3.0.jar
+-rw------- 1 mcb mcb    2427 May 16  2012 ./gdata-spreadsheet-meta-3.0.jar
+-rw-r--r-- 1 mcb mcb  548821 Apr  6  2009 ./google-collect-1.0-rc1.jar
+-rwxr-xr-x 1 mcb mcb 2288505 Feb 16 00:06 ./google-docs-upload-1.4.7.jar
+-rw------- 1 mcb mcb 1648200 Feb 16 09:51 ./guava-11.0.2.jar
+-rw-r--r-- 1 mcb mcb  494975 Oct 19  2011 ./java-mail-1.4.4.jar
+-rw------- 1 mcb mcb   33017 Apr 16  2012 ./jsr305.jar
+Sun Feb 16-10:41:08 mcb@ken007:~/bin/gdata 2155$ find . -type f | xargs -i ls -la "{}"
+-rw------- 1 mcb mcb 51629 May 16  2012 ./gdata-spreadsheet-3.0.jar
+-rw------- 1 mcb mcb 121296 May 16  2012 ./gdata-docs-3.0.jar
+-rw------- 1 mcb mcb 1039559 May 16  2012 ./gdata-core-1.0.jar
+-rw------- 1 mcb mcb 127095 May 16  2012 ./gdata-client-1.0.jar
+-rw------- 1 mcb mcb 33017 Apr 16  2012 ./jsr305.jar
+-rw------- 1 mcb mcb 1648200 Feb 16 09:51 ./guava-11.0.2.jar
+-rw------- 1 mcb mcb 4554 May 16  2012 ./gdata-docs-meta-3.0.jar
+-rw-r--r-- 1 mcb mcb 494975 Oct 19  2011 ./java-mail-1.4.4.jar
+-rw------- 1 mcb mcb 68596 May 16  2012 ./gdata-media-1.0.jar
+-rw-r--r-- 1 mcb mcb 548821 Apr  6  2009 ./google-collect-1.0-rc1.jar
+-rwxr-xr-x 1 mcb mcb 2288505 Feb 16 00:06 ./google-docs-upload-1.4.7.jar
+-rw------- 1 mcb mcb 1421 May 16  2012 ./gdata-client-meta-1.0.jar
+-rw------- 1 mcb mcb 2427 May 16  2012 ./gdata-spreadsheet-meta-3.0.jar</pre>
+				</div><!-- .comment-content -->
+
+				<div class="reply" style="color: black; background-color: rgb(211, 211, 211);">
+					<a class="comment-reply-link" href="http://www.davidpashley.com/articles/writing-robust-shell-scripts/?replytocom=1016#respond" onclick="return addComment.moveForm(&quot;div-comment-1016&quot;, &quot;1016&quot;, &quot;respond&quot;, &quot;337&quot;)">Reply</a>				</div><!-- .reply -->
+			</article><!-- .comment-body -->
+<ol class="children">
+		<li id="comment-1019" class="comment byuser comment-author-dpashley bypostauthor odd alt depth-2">
+			<article id="div-comment-1019" class="comment-body" style="background-color: rgb(211, 211, 211);">
+				<footer class="comment-meta">
+					<div class="comment-author vcard" style="color: black; background-color: rgb(211, 211, 211);">
+						<img alt="" src="./Writing Robust Bash Shell Scripts - David Pashley.com_files/369dff8a2fdbd03c23cf94beee522170" class="avatar avatar-30 photo grav-hashed grav-hijack" height="30" width="30" id="grav-369dff8a2fdbd03c23cf94beee522170-1">						<b class="fn">David Pashley</b> <span class="says">says:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata" style="color: black; background-color: rgb(211, 211, 211);">
+						<a href="http://www.davidpashley.com/articles/writing-robust-shell-scripts/#comment-1019">
+							<time datetime="2014-02-17T13:05:06+00:00">
+								February 17, 2014 at 1:05 pm							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content" style="color: black; background-color: rgb(211, 211, 211);">
+					<p style="color: black;">If you’re using GNU find, you might also find the following useful:</p>
+<pre>find . -type f -exec ls -la {} +</pre>
+<p style="color: black;">This effectively does the same thing as the <tt>-print0 | xargs -0</tt></p>
+				</div><!-- .comment-content -->
+
+				<div class="reply" style="color: black; background-color: rgb(211, 211, 211);">
+					<a class="comment-reply-link" href="http://www.davidpashley.com/articles/writing-robust-shell-scripts/?replytocom=1019#respond" onclick="return addComment.moveForm(&quot;div-comment-1019&quot;, &quot;1019&quot;, &quot;respond&quot;, &quot;337&quot;)">Reply</a>				</div><!-- .reply -->
+			</article><!-- .comment-body -->
+</li><!-- #comment-## -->
+</ol><!-- .children -->
+</li><!-- #comment-## -->
+		<li id="comment-1018" class="pingback even thread-even depth-1">
+			<div class="comment-body" style="color: black; background-color: rgb(211, 211, 211);">
+				Pingback: <a href="http://natenom.name/2014/02/linkdump-2014-1/" rel="external nofollow" class="url">Linkdump 2014-1 | Natenom´s Blog</a> 			</div>
+</li><!-- #comment-## -->
+		<li id="comment-1093" class="comment odd alt thread-odd thread-alt depth-1">
+			<article id="div-comment-1093" class="comment-body" style="background-color: rgb(211, 211, 211);">
+				<footer class="comment-meta">
+					<div class="comment-author vcard" style="color: black; background-color: rgb(211, 211, 211);">
+						<img alt="" src="./Writing Robust Bash Shell Scripts - David Pashley.com_files/e97d59c91c30d56d2142d0c5dba5ed64" class="avatar avatar-30 photo grav-hashed grav-hijack" height="30" width="30" id="grav-e97d59c91c30d56d2142d0c5dba5ed64-0">						<b class="fn"><a href="http://rpocklin.wordpress.com/" rel="external nofollow" class="url">Rob</a></b> <span class="says">says:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata" style="color: black; background-color: rgb(211, 211, 211);">
+						<a href="http://www.davidpashley.com/articles/writing-robust-shell-scripts/#comment-1093">
+							<time datetime="2014-03-18T05:14:30+00:00">
+								March 18, 2014 at 5:14 am							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content" style="color: black; background-color: rgb(211, 211, 211);">
+					<p style="color: black;">Awesome post, been doing scripts for awhile and learned a lot from this.  Quality stuff thanks.</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply" style="color: black; background-color: rgb(211, 211, 211);">
+					<a class="comment-reply-link" href="http://www.davidpashley.com/articles/writing-robust-shell-scripts/?replytocom=1093#respond" onclick="return addComment.moveForm(&quot;div-comment-1093&quot;, &quot;1093&quot;, &quot;respond&quot;, &quot;337&quot;)">Reply</a>				</div><!-- .reply -->
+			</article><!-- .comment-body -->
+</li><!-- #comment-## -->
+		<li id="comment-1373" class="comment even thread-even depth-1">
+			<article id="div-comment-1373" class="comment-body" style="background-color: rgb(211, 211, 211);">
+				<footer class="comment-meta">
+					<div class="comment-author vcard" style="color: black; background-color: rgb(211, 211, 211);">
+						<img alt="" src="./Writing Robust Bash Shell Scripts - David Pashley.com_files/34d4437e0683078c89db66a656f27e61" class="avatar avatar-30 photo grav-hashed grav-hijack" height="30" width="30" id="grav-34d4437e0683078c89db66a656f27e61-0">						<b class="fn">Mrts</b> <span class="says">says:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata" style="color: black; background-color: rgb(211, 211, 211);">
+						<a href="http://www.davidpashley.com/articles/writing-robust-shell-scripts/#comment-1373">
+							<time datetime="2014-06-10T13:27:34+00:00">
+								June 10, 2014 at 1:27 pm							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content" style="color: black; background-color: rgb(211, 211, 211);">
+					<p style="color: black;">Great stuff, thanks for sharing!</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply" style="color: black; background-color: rgb(211, 211, 211);">
+					<a class="comment-reply-link" href="http://www.davidpashley.com/articles/writing-robust-shell-scripts/?replytocom=1373#respond" onclick="return addComment.moveForm(&quot;div-comment-1373&quot;, &quot;1373&quot;, &quot;respond&quot;, &quot;337&quot;)">Reply</a>				</div><!-- .reply -->
+			</article><!-- .comment-body -->
+</li><!-- #comment-## -->
+		<li id="comment-1470" class="comment odd alt thread-odd thread-alt depth-1 parent">
+			<article id="div-comment-1470" class="comment-body" style="background-color: rgb(211, 211, 211);">
+				<footer class="comment-meta">
+					<div class="comment-author vcard" style="color: black; background-color: rgb(211, 211, 211);">
+						<img alt="" src="./Writing Robust Bash Shell Scripts - David Pashley.com_files/b72bbbf9d6adde772be8fdd187e577cd" class="avatar avatar-30 photo grav-hashed grav-hijack" height="30" width="30" id="grav-b72bbbf9d6adde772be8fdd187e577cd-0">						<b class="fn">Sven</b> <span class="says">says:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata" style="color: black; background-color: rgb(211, 211, 211);">
+						<a href="http://www.davidpashley.com/articles/writing-robust-shell-scripts/#comment-1470">
+							<time datetime="2014-07-08T18:58:16+00:00">
+								July 8, 2014 at 6:58 pm							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content" style="color: black; background-color: rgb(211, 211, 211);">
+					<p style="color: black;">echo is bad. Don’t use it. Instead of echo “$value” use printf “%s” “$value”. The example with the for loop over “$@” should be fixed.</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply" style="color: black; background-color: rgb(211, 211, 211);">
+					<a class="comment-reply-link" href="http://www.davidpashley.com/articles/writing-robust-shell-scripts/?replytocom=1470#respond" onclick="return addComment.moveForm(&quot;div-comment-1470&quot;, &quot;1470&quot;, &quot;respond&quot;, &quot;337&quot;)">Reply</a>				</div><!-- .reply -->
+			</article><!-- .comment-body -->
+<ol class="children">
+		<li id="comment-1471" class="comment byuser comment-author-dpashley bypostauthor even depth-2 parent">
+			<article id="div-comment-1471" class="comment-body" style="background-color: rgb(211, 211, 211);">
+				<footer class="comment-meta">
+					<div class="comment-author vcard" style="color: black; background-color: rgb(211, 211, 211);">
+						<img alt="" src="./Writing Robust Bash Shell Scripts - David Pashley.com_files/369dff8a2fdbd03c23cf94beee522170" class="avatar avatar-30 photo grav-hashed grav-hijack" height="30" width="30" id="grav-369dff8a2fdbd03c23cf94beee522170-2">						<b class="fn">David Pashley</b> <span class="says">says:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata" style="color: black; background-color: rgb(211, 211, 211);">
+						<a href="http://www.davidpashley.com/articles/writing-robust-shell-scripts/#comment-1471">
+							<time datetime="2014-07-08T19:01:36+00:00">
+								July 8, 2014 at 7:01 pm							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content" style="color: black; background-color: rgb(211, 211, 211);">
+					<p style="color: black;">Out of interest, what’s the problem with using echo? What does using printf fix?</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply" style="color: black; background-color: rgb(211, 211, 211);">
+					<a class="comment-reply-link" href="http://www.davidpashley.com/articles/writing-robust-shell-scripts/?replytocom=1471#respond" onclick="return addComment.moveForm(&quot;div-comment-1471&quot;, &quot;1471&quot;, &quot;respond&quot;, &quot;337&quot;)">Reply</a>				</div><!-- .reply -->
+			</article><!-- .comment-body -->
+<ol class="children">
+		<li id="comment-1472" class="comment odd alt depth-3 parent">
+			<article id="div-comment-1472" class="comment-body" style="background-color: rgb(211, 211, 211);">
+				<footer class="comment-meta">
+					<div class="comment-author vcard" style="color: black; background-color: rgb(211, 211, 211);">
+						<img alt="" src="./Writing Robust Bash Shell Scripts - David Pashley.com_files/b72bbbf9d6adde772be8fdd187e577cd" class="avatar avatar-30 photo grav-hashed grav-hijack" height="30" width="30" id="grav-b72bbbf9d6adde772be8fdd187e577cd-1">						<b class="fn">Sven</b> <span class="says">says:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata" style="color: black; background-color: rgb(211, 211, 211);">
+						<a href="http://www.davidpashley.com/articles/writing-robust-shell-scripts/#comment-1472">
+							<time datetime="2014-07-08T19:05:17+00:00">
+								July 8, 2014 at 7:05 pm							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content" style="color: black; background-color: rgb(211, 211, 211);">
+					<p style="color: black;">Think of value=”-n”.<br>
+printf “%s\n” “$value” will work as expected.<br>
+echo “$value” will not.</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply" style="color: black; background-color: rgb(211, 211, 211);">
+					<a class="comment-reply-link" href="http://www.davidpashley.com/articles/writing-robust-shell-scripts/?replytocom=1472#respond" onclick="return addComment.moveForm(&quot;div-comment-1472&quot;, &quot;1472&quot;, &quot;respond&quot;, &quot;337&quot;)">Reply</a>				</div><!-- .reply -->
+			</article><!-- .comment-body -->
+<ol class="children">
+		<li id="comment-1473" class="comment byuser comment-author-dpashley bypostauthor even depth-4">
+			<article id="div-comment-1473" class="comment-body" style="background-color: rgb(211, 211, 211);">
+				<footer class="comment-meta">
+					<div class="comment-author vcard" style="color: black; background-color: rgb(211, 211, 211);">
+						<img alt="" src="./Writing Robust Bash Shell Scripts - David Pashley.com_files/369dff8a2fdbd03c23cf94beee522170" class="avatar avatar-30 photo grav-hashed grav-hijack" height="30" width="30" id="grav-369dff8a2fdbd03c23cf94beee522170-3">						<b class="fn">David Pashley</b> <span class="says">says:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata" style="color: black; background-color: rgb(211, 211, 211);">
+						<a href="http://www.davidpashley.com/articles/writing-robust-shell-scripts/#comment-1473">
+							<time datetime="2014-07-08T19:07:09+00:00">
+								July 8, 2014 at 7:07 pm							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content" style="color: black; background-color: rgb(211, 211, 211);">
+					<p style="color: black;">You’re quite right. Thank you. I’ll update the article to remove references to echo.</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply" style="color: black; background-color: rgb(211, 211, 211);">
+					<a class="comment-reply-link" href="http://www.davidpashley.com/articles/writing-robust-shell-scripts/?replytocom=1473#respond" onclick="return addComment.moveForm(&quot;div-comment-1473&quot;, &quot;1473&quot;, &quot;respond&quot;, &quot;337&quot;)">Reply</a>				</div><!-- .reply -->
+			</article><!-- .comment-body -->
+</li><!-- #comment-## -->
+</ol><!-- .children -->
+</li><!-- #comment-## -->
+</ol><!-- .children -->
+</li><!-- #comment-## -->
+</ol><!-- .children -->
+</li><!-- #comment-## -->
+		<li id="comment-1474" class="comment odd alt thread-even depth-1 parent">
+			<article id="div-comment-1474" class="comment-body" style="background-color: rgb(211, 211, 211);">
+				<footer class="comment-meta">
+					<div class="comment-author vcard" style="color: black; background-color: rgb(211, 211, 211);">
+						<img alt="" src="./Writing Robust Bash Shell Scripts - David Pashley.com_files/4a1f42a59e40446158ce872818a963a3" class="avatar avatar-30 photo grav-hashed grav-hijack" height="30" width="30" id="grav-4a1f42a59e40446158ce872818a963a3-2">						<b class="fn"><a href="https://www.mirbsd.org/mksh.htm" rel="external nofollow" class="url">mirabilos</a></b> <span class="says">says:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata" style="color: black; background-color: rgb(211, 211, 211);">
+						<a href="http://www.davidpashley.com/articles/writing-robust-shell-scripts/#comment-1474">
+							<time datetime="2014-07-08T20:17:47+00:00">
+								July 8, 2014 at 8:17 pm							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content" style="color: black; background-color: rgb(211, 211, 211);">
+					<p style="color: black;">No, printf(1) is bad because it is an external utility and thus slow.</p>
+<p style="color: black;">Use the print built-in if you can make use of<br>
+basic Korn shell features, i.e. if you know you<br>
+are running under ksh88, pdksh, mksh, ksh93, MKS ksh.<br>
+Avoid scripting for just POSIX then…</p>
+<p style="color: black;">That being said, if you must write for POSIX sh,<br>
+or GNU bash (slower and less free than Korn Shell),<br>
+you should indeed prefer printf over echo.</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply" style="color: black; background-color: rgb(211, 211, 211);">
+					<a class="comment-reply-link" href="http://www.davidpashley.com/articles/writing-robust-shell-scripts/?replytocom=1474#respond" onclick="return addComment.moveForm(&quot;div-comment-1474&quot;, &quot;1474&quot;, &quot;respond&quot;, &quot;337&quot;)">Reply</a>				</div><!-- .reply -->
+			</article><!-- .comment-body -->
+<ol class="children">
+		<li id="comment-1478" class="comment even depth-2">
+			<article id="div-comment-1478" class="comment-body" style="background-color: rgb(211, 211, 211);">
+				<footer class="comment-meta">
+					<div class="comment-author vcard" style="color: black; background-color: rgb(211, 211, 211);">
+						<img alt="" src="./Writing Robust Bash Shell Scripts - David Pashley.com_files/b72bbbf9d6adde772be8fdd187e577cd" class="avatar avatar-30 photo grav-hashed grav-hijack" height="30" width="30" id="grav-b72bbbf9d6adde772be8fdd187e577cd-2">						<b class="fn">Sven</b> <span class="says">says:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata" style="color: black; background-color: rgb(211, 211, 211);">
+						<a href="http://www.davidpashley.com/articles/writing-robust-shell-scripts/#comment-1478">
+							<time datetime="2014-07-09T08:05:49+00:00">
+								July 9, 2014 at 8:05 am							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content" style="color: black; background-color: rgb(211, 211, 211);">
+					<p style="color: black;">printf is not an external utility, it is one of bash’s built-in command. I don’t know how to check whether it’s built-in for POSIX sh as well, but then again on most systems bash is linked to sh.  Also, for an article like this, I would personally avoid ksh. It’s too specific.</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply" style="color: black; background-color: rgb(211, 211, 211);">
+					<a class="comment-reply-link" href="http://www.davidpashley.com/articles/writing-robust-shell-scripts/?replytocom=1478#respond" onclick="return addComment.moveForm(&quot;div-comment-1478&quot;, &quot;1478&quot;, &quot;respond&quot;, &quot;337&quot;)">Reply</a>				</div><!-- .reply -->
+			</article><!-- .comment-body -->
+</li><!-- #comment-## -->
+		<li id="comment-1583" class="comment odd alt depth-2">
+			<article id="div-comment-1583" class="comment-body" style="background-color: rgb(211, 211, 211);">
+				<footer class="comment-meta">
+					<div class="comment-author vcard" style="color: black; background-color: rgb(211, 211, 211);">
+						<img alt="" src="./Writing Robust Bash Shell Scripts - David Pashley.com_files/3029240fb0f19189c06f1339b6ce9cc7" class="avatar avatar-30 photo grav-hashed grav-hijack" height="30" width="30" id="grav-3029240fb0f19189c06f1339b6ce9cc7-0">						<b class="fn">Bash</b> <span class="says">says:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata" style="color: black; background-color: rgb(211, 211, 211);">
+						<a href="http://www.davidpashley.com/articles/writing-robust-shell-scripts/#comment-1583">
+							<time datetime="2014-07-31T23:47:03+00:00">
+								July 31, 2014 at 11:47 pm							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content" style="color: black; background-color: rgb(211, 211, 211);">
+					<p style="color: black;">Printf is a Bash builtin.</p>
+<p style="color: black;">$ type -a printf<br>
+printf is a shell builtin<br>
+printf is /usr/bin/printf<br>
+printf is /bin/printf</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply" style="color: black; background-color: rgb(211, 211, 211);">
+					<a class="comment-reply-link" href="http://www.davidpashley.com/articles/writing-robust-shell-scripts/?replytocom=1583#respond" onclick="return addComment.moveForm(&quot;div-comment-1583&quot;, &quot;1583&quot;, &quot;respond&quot;, &quot;337&quot;)">Reply</a>				</div><!-- .reply -->
+			</article><!-- .comment-body -->
+</li><!-- #comment-## -->
+</ol><!-- .children -->
+</li><!-- #comment-## -->
+		<li id="comment-1797" class="comment even thread-odd thread-alt depth-1">
+			<article id="div-comment-1797" class="comment-body" style="background-color: rgb(211, 211, 211);">
+				<footer class="comment-meta">
+					<div class="comment-author vcard" style="color: black; background-color: rgb(211, 211, 211);">
+						<img alt="" src="./Writing Robust Bash Shell Scripts - David Pashley.com_files/94feeeb7b9197083cc2f77b4b3dcd852" class="avatar avatar-30 photo grav-hashed grav-hijack" height="30" width="30" id="grav-94feeeb7b9197083cc2f77b4b3dcd852-0">						<b class="fn">Shlomo Computer</b> <span class="says">says:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata" style="color: black; background-color: rgb(211, 211, 211);">
+						<a href="http://www.davidpashley.com/articles/writing-robust-shell-scripts/#comment-1797">
+							<time datetime="2014-09-04T19:53:26+00:00">
+								September 4, 2014 at 7:53 pm							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content" style="color: black; background-color: rgb(211, 211, 211);">
+					<p style="color: black;">“If you ask rm to delete a non-existent file, it will complain and your script will terminate. (You are using -e, right?) You can fix this by using -f, which will silently continue if the file didn’t exist.”</p>
+<p style="color: black;">WTF.</p>
+<p style="color: black;">#! /usr/bin/env bash<br>
+set -e<br>
+rm -rf $FOO/$BAR<br>
+# This will even succeed even if $FOO/$BAR even doesn’t even exist</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply" style="color: black; background-color: rgb(211, 211, 211);">
+					<a class="comment-reply-link" href="http://www.davidpashley.com/articles/writing-robust-shell-scripts/?replytocom=1797#respond" onclick="return addComment.moveForm(&quot;div-comment-1797&quot;, &quot;1797&quot;, &quot;respond&quot;, &quot;337&quot;)">Reply</a>				</div><!-- .reply -->
+			</article><!-- .comment-body -->
+</li><!-- #comment-## -->
+		<li id="comment-1842" class="pingback odd alt thread-even depth-1">
+			<div class="comment-body" style="color: black; background-color: rgb(211, 211, 211);">
+				Pingback: <a href="http://www.fixruntimeerror.net/gdata-client-1-0-jar.php" rel="external nofollow" class="url">Fix Gdata-client-1.0.jar Errors - Windows XP, Vista, 7 &amp; 8</a> 			</div>
+</li><!-- #comment-## -->
+		<li id="comment-2177" class="pingback even thread-odd thread-alt depth-1">
+			<div class="comment-body" style="color: black; background-color: rgb(211, 211, 211);">
+				Pingback: <a href="http://www.fixruntimeerror.net/gdata-docs-meta-3-0-jar.php" rel="external nofollow" class="url">Fix Gdata-docs-meta-3.0.jar Errors - Windows XP, Vista, 7 &amp; 8</a> 			</div>
+</li><!-- #comment-## -->
+		<li id="comment-2324" class="pingback odd alt thread-even depth-1">
+			<div class="comment-body" style="color: black; background-color: rgb(211, 211, 211);">
+				Pingback: <a href="http://www.fixruntimeerror.net/gdata-spreadsheet-3-0-jar.php" rel="external nofollow" class="url">Fix Gdata-spreadsheet-3.0.jar Errors - Windows XP, Vista, 7 &amp; 8</a> 			</div>
+</li><!-- #comment-## -->
+		</ol><!-- .comment-list -->
+
+		
+		
+	
+									<div id="respond" class="comment-respond" style="color: black; background-color: rgb(211, 211, 211);">
+				<h3 id="reply-title" class="comment-reply-title">Leave a Reply <small><a rel="nofollow" id="cancel-comment-reply-link" href="http://www.davidpashley.com/articles/writing-robust-shell-scripts/#respond" style="display:none;">Cancel reply</a></small></h3>
+									<form action="http://www.davidpashley.com/wp-comments-post.php" method="post" id="commentform" class="comment-form" novalidate="">
+																			<p class="comment-notes" style="color: black;">Your email address will not be published. Required fields are marked <span class="required">*</span></p>							<p class="comment-form-author" style="color: black;"><label for="author">Name <span class="required">*</span></label> <input id="author" name="author" type="text" value="" size="30" aria-required="true"></p>
+<p class="comment-form-email" style="color: black;"><label for="email">Email <span class="required">*</span></label> <input id="email" name="email" type="email" value="" size="30" aria-required="true"></p>
+<p class="comment-form-url" style="color: black;"><label for="url">Website</label> <input id="url" name="url" type="url" value="" size="30"></p>
+<p class="cptch_block" style="color: black;"><br>		<input type="hidden" name="cptch_result" value="7Yw=">
+		<input type="hidden" name="cptch_time" value="1415692022">
+		<input type="hidden" value="Version: 2.4">
+		<input id="cptch_input" type="text" autocomplete="off" name="cptch_number" value="" maxlength="2" size="2" aria-required="true" required="required" style="margin-bottom:0;display:inline;font-size: 12px;width: 40px;"> + eight = 14	</p>												<p class="comment-form-comment" style="color: black;"><label for="comment">Comment</label> <textarea id="comment" name="comment" cols="45" rows="8" aria-required="true"></textarea></p>						<p class="form-allowed-tags" style="color: black;">You may use these <abbr title="HyperText Markup Language">HTML</abbr> tags and attributes:  <code>&lt;a href="" title=""&gt; &lt;abbr title=""&gt; &lt;acronym title=""&gt; &lt;b&gt; &lt;blockquote cite=""&gt; &lt;cite&gt; &lt;code&gt; &lt;del datetime=""&gt; &lt;em&gt; &lt;i&gt; &lt;q cite=""&gt; &lt;strike&gt; &lt;strong&gt; </code></p>						<p class="form-submit" style="color: black;">
+							<input name="submit" type="submit" id="submit" value="Post Comment">
+							<input type="hidden" name="comment_post_ID" value="337" id="comment_post_ID">
+<input type="hidden" name="comment_parent" id="comment_parent" value="0">
+						</p>
+						<p style="display: none; color: black;"><input type="hidden" id="akismet_comment_nonce" name="akismet_comment_nonce" value="75ec2d8a08"></p><p class="comment-subscription-form" style="color: black;"><input type="checkbox" name="subscribe_comments" id="subscribe_comments" value="subscribe" style="width: auto; -moz-appearance: checkbox; -webkit-appearance: checkbox;"> <label class="subscribe-label" id="subscribe-label" for="subscribe_comments">Notify me of follow-up comments by email.</label></p><p class="comment-subscription-form" style="color: black;"><input type="checkbox" name="subscribe_blog" id="subscribe_blog" value="subscribe" style="width: auto; -moz-appearance: checkbox; -webkit-appearance: checkbox;"> <label class="subscribe-label" id="subscribe-blog-label" for="subscribe_blog">Notify me of new posts by email.</label></p><p style="display: none; color: black;"></p>					<input type="hidden" id="ak_js" name="ak_js" value="1415694309925"></form>
+							</div><!-- #respond -->
+			
+<!-- #comments --> 
+
+</div>
+
+	<div id="sidebar" style="color: black; background-color: rgb(211, 211, 211);">
+		<h5 class="sidebarhd">About me</h5>			<div class="textwidget" style="color: black; background-color: rgb(211, 211, 211);">I'm a geek, as you can probably tell by the contents on this site, but I have turned my back on the geek life and headed out to explore the world. You can read more about my adventures at <a href="http://www.experimentalnomad.com/">Experimental Nomad</a></div>
+		<br><h5 class="sidebarhd">Recent Tweets</h5><iframe id="twitter-widget-0" scrolling="no" frameborder="0" allowtransparency="true" class="twitter-timeline twitter-timeline-rendered" allowfullscreen="" style="border: none; max-width: 100%; min-width: 180px; width: 225px;" title="Twitter Timeline" height="835"></iframe><br><h5 class="sidebarhd">Recent Comments</h5><ul id="recentcomments"><li class="recentcomments"><span class="comment-author-link">Neil</span> on <a href="http://www.davidpashley.com/articles/becoming-a-x-509-certificate-authority/#comment-2522">Becoming a X.509 Certificate Authority</a></li><li class="recentcomments"><span class="comment-author-link"><a href="http://www.fixruntimeerror.net/gdata-spreadsheet-3-0-jar.php" rel="external nofollow" class="url">Fix Gdata-spreadsheet-3.0.jar Errors - Windows XP, Vista, 7 &amp; 8</a></span> on <a href="http://www.davidpashley.com/articles/writing-robust-shell-scripts/#comment-2324">Writing Robust Bash Shell Scripts</a></li><li class="recentcomments"><span class="comment-author-link"><a href="http://allaboutcloud.info/" rel="external nofollow" class="url">Rodney</a></span> on <a href="http://www.davidpashley.com/articles/becoming-a-x-509-certificate-authority/#comment-2258">Becoming a X.509 Certificate Authority</a></li><li class="recentcomments"><span class="comment-author-link"><a href="http://www.twedev.com/" rel="external nofollow" class="url">Scott</a></span> on <a href="http://www.davidpashley.com/articles/becoming-a-x-509-certificate-authority/#comment-2245">Becoming a X.509 Certificate Authority</a></li><li class="recentcomments"><span class="comment-author-link"><a href="http://www.fixruntimeerror.net/gdata-docs-meta-3-0-jar.php" rel="external nofollow" class="url">Fix Gdata-docs-meta-3.0.jar Errors - Windows XP, Vista, 7 &amp; 8</a></span> on <a href="http://www.davidpashley.com/articles/writing-robust-shell-scripts/#comment-2177">Writing Robust Bash Shell Scripts</a></li></ul><br>				
+			</div>
+
+</div>
+
+<div class="delimiter" style="color: black; background-color: rgb(211, 211, 211);"></div>
+
+</div>
+
+<div id="container2" style="color: black; background-color: rgb(211, 211, 211);">
+<div id="footer" style="color: black; background-color: rgb(211, 211, 211);">
+
+<div id="footer-sidebar" style="color: black; background-color: rgb(211, 211, 211);">        
+                </div>
+
+<div class="footer-copyright" style="color: black; background-color: rgb(211, 211, 211);">© 2014 David Pashley.com | </div>
+<div class="toplink" style="color: black; background-color: rgb(211, 211, 211);"><a href="http://www.davidpashley.com/articles/writing-robust-shell-scripts/#">Back to Top ↑</a></div>
+</div>
+</div>
+	<div style="display: none; color: black; background-color: rgb(211, 211, 211);">
+	<div class="grofile-hash-map-1a524c04b46e9c51e76b68c605f2d8ea" style="color: black; background-color: rgb(211, 211, 211);">
+	</div>
+	<div class="grofile-hash-map-cee2441ba1a36804b932b265c8511281" style="color: black; background-color: rgb(211, 211, 211);">
+	</div>
+	<div class="grofile-hash-map-57d07fa82584b144bd20686f4b45daf9" style="color: black; background-color: rgb(211, 211, 211);">
+	</div>
+	<div class="grofile-hash-map-880cdcf0fc4b534f5498c27c61e34ae3" style="color: black; background-color: rgb(211, 211, 211);">
+	</div>
+	<div class="grofile-hash-map-331e9cb514212729b45bb6388ee2d71b" style="color: black; background-color: rgb(211, 211, 211);">
+	</div>
+	<div class="grofile-hash-map-a93c419e563a3b3a83754c3f1f36f8b0" style="color: black; background-color: rgb(211, 211, 211);">
+	</div>
+	<div class="grofile-hash-map-3cfce21d5697832868e053f62366af56" style="color: black; background-color: rgb(211, 211, 211);">
+	</div>
+	<div class="grofile-hash-map-f85d19965ba1b5338b8cf559fb654242" style="color: black; background-color: rgb(211, 211, 211);">
+	</div>
+	<div class="grofile-hash-map-4a1f42a59e40446158ce872818a963a3" style="color: black; background-color: rgb(211, 211, 211);">
+	</div>
+	<div class="grofile-hash-map-09c9803de4bab8c6943a823c0b64864e" style="color: black; background-color: rgb(211, 211, 211);">
+	</div>
+	<div class="grofile-hash-map-fd57d86b630a67483d68aca4396a11d1" style="color: black; background-color: rgb(211, 211, 211);">
+	</div>
+	<div class="grofile-hash-map-a73ad583d743a0d6e67e1f599de18bd3" style="color: black; background-color: rgb(211, 211, 211);">
+	</div>
+	<div class="grofile-hash-map-369dff8a2fdbd03c23cf94beee522170" style="color: black; background-color: rgb(211, 211, 211);">
+	</div>
+	<div class="grofile-hash-map-6ec92500553d542d652b61766c1c5897" style="color: black; background-color: rgb(211, 211, 211);">
+	</div>
+	<div class="grofile-hash-map-e97d59c91c30d56d2142d0c5dba5ed64" style="color: black; background-color: rgb(211, 211, 211);">
+	</div>
+	<div class="grofile-hash-map-34d4437e0683078c89db66a656f27e61" style="color: black; background-color: rgb(211, 211, 211);">
+	</div>
+	<div class="grofile-hash-map-b72bbbf9d6adde772be8fdd187e577cd" style="color: black; background-color: rgb(211, 211, 211);">
+	</div>
+	<div class="grofile-hash-map-3029240fb0f19189c06f1339b6ce9cc7" style="color: black; background-color: rgb(211, 211, 211);">
+	</div>
+	<div class="grofile-hash-map-94feeeb7b9197083cc2f77b4b3dcd852" style="color: black; background-color: rgb(211, 211, 211);">
+	</div>
+	</div>
+		<script type="text/javascript">
+			!function(d,s,id){
+				var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';
+				if(!d.getElementById(id)){
+					js=d.createElement(s);
+					js.id=id;js.src=p+"://platform.twitter.com/widgets.js";
+					fjs.parentNode.insertBefore(js,fjs);
+				}
+			}(document,"script","twitter-wjs");
+		</script>
+		<script type="text/javascript" src="./Writing Robust Bash Shell Scripts - David Pashley.com_files/form.js"></script>
+<script type="text/javascript" src="./Writing Robust Bash Shell Scripts - David Pashley.com_files/devicepx-jetpack.js"></script>
+<script type="text/javascript" src="./Writing Robust Bash Shell Scripts - David Pashley.com_files/gprofiles.js"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var WPGroHo = {"my_hash":""};
+/* ]]> */
+</script>
+<script type="text/javascript" src="./Writing Robust Bash Shell Scripts - David Pashley.com_files/wpgroho.js"></script>
+<script type="text/javascript" src="./Writing Robust Bash Shell Scripts - David Pashley.com_files/comment-reply.js"></script>
+
+	<script src="./Writing Robust Bash Shell Scripts - David Pashley.com_files/e-201446.js" type="text/javascript"></script>
+	<script type="text/javascript">
+	st_go({v:'ext',j:'1:3.2',blog:'58528584',post:'337',tz:'0'});
+	var load_cmc = function(){linktracker_init(58528584,337,2);};
+	if ( typeof addLoadEvent != 'undefined' ) addLoadEvent(load_cmc);
+	else load_cmc();
+	</script><img id="wpstats" src="./Writing Robust Bash Shell Scripts - David Pashley.com_files/g.gif" alt="">
+<!-- Performance optimized by W3 Total Cache. Learn more: http://www.w3-edge.com/wordpress-plugins/
+
+Page Caching using memcached
+Database Caching 59/71 queries in 0.021 seconds using memcached
+
+ Served from: www.davidpashley.com @ 2014-11-11 07:47:02 by W3 Total Cache -->
+
+<!-- W3 Total Cache: Minify debug info:
+Engine:             memcached
+Theme:              5d7d7
+Template:           page
+--><iframe id="rufous-sandbox" scrolling="no" frameborder="0" allowtransparency="true" style="display: none;"></iframe></body></html>

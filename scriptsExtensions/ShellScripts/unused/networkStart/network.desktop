@@ -1,0 +1,8 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=NetworkStart
+Comment=restarts network
+Exec=/home/raz2/razIT/scriptsExtensions/ShellScripts/networkStart/networkStart.sh
+Icon=/home/raz2/razIT/scriptsExtensions/ShellScripts/networkStart/n5.jpg
+Terminal=false;

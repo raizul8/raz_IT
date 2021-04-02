@@ -1,0 +1,13 @@
+web security
+
+run the risk of breaking out of the data context and entering the code context when you
+use input from user and use it just as it is(not validated).
+
+validate url if you are going to use it(sanitize it so it has only allowed characters)
+
+if output context is a web page, we can easily encode for HTML
+var name = Server.HtmlEncode(txtName.Text);
+var message = "Thank you " + name;
+lblSignupComplete.Text = message;
+
+So the real XSS defence here is that any text entered into the name field will now be rendered precisely in the UI, not precisely in the code. If we tried any of the strings from the earlier exploits, they’d fail to offer any leverage to the attacker.

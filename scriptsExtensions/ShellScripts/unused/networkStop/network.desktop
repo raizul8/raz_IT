@@ -1,0 +1,8 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Network_Stop
+Comment=restarts network
+Exec=/home/raz2/razIT/scriptsExtensions/ShellScripts/networkStop/networkStop.sh
+Icon=/home/raz2/razIT/scriptsExtensions/ShellScripts/networkStop/n_stop.jpg
+Terminal=false;

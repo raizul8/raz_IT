@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Encoding=UTF-8
+Name=GoPath
+Comment=Go Path
+Exec=/home/raz2/razIT/scriptsExtensions/ShellScripts/goPath/goPath.bash
+Icon=/home/raz2/razIT/scriptsExtensions/ShellScripts/goPath/go.png
+Terminal=false;

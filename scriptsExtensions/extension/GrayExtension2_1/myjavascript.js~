@@ -1,0 +1,66 @@
+var sites = ["jekyllrb.com","leveluptuts","myline-eon.ro","mangafox","mangareader","play.google.com","127.0.0.1","twitter.com","moqups","imdb","localhost:8080","http://dillinger.io/","http://daringfireball.net/","http://armorgames.com/","http://compass-style.org/","urban-rivals","http://css3please.com/","fantasy-faction.com","http://www.adobe.com/","www.pinterest.com","github.com/raizul8","www.youtube.com","http://www.pornhub.com/","http://compass-recipes.moox.fr/","http://www.tryfoundation.io/","http://codepen.io/","http://css-tricks.com/","http://www.compileonline.com/","http://runnable.com/","http://www.gorillatoolkit.org/","https://docs.google.com"]; // -sites 
+
+window.onload = gray();
+
+function gray()
+{
+
+    var lightGray = "lightgray";
+    var black = "black";
+
+    var find = window.location.href;
+
+    // if( find.indexOf("youtube") >= 0 ) {
+	   //  document.body.style.backgroundColor = black;
+	   //  document.body.style.color = "white";
+
+	   //  var divs = document.getElementsByTagName("div");
+    //     var inputs = document.getElementsByTagName("input");
+
+    //     for (var i = 0; i < inputs.length; i++) {
+    //         inputs[i].style.color = "white";
+    //     }
+
+	   //  for (var i = 0; i < divs.length; i++) {
+	   //      divs[i].style.backgroundColor = black;
+	   //      divs[i].style.color = "white";
+	   //  }
+
+	   //  var allP = document.getElementsByTagName("p");
+	   //  for (var i = 0; i < allP.length; i++) {
+	   //      allP[i].style.color = "white";
+	   //  }
+
+	  	// return;
+    // }
+
+    for (var i = 0; i < sites.length; i++) {    
+        if ( find.indexOf(sites[i]) >= 0) {       
+            return;
+        }
+    };
+
+    //alert(dmtUrl);
+    document.body.style.backgroundColor = lightGray;
+    document.body.style.color = "black";
+
+    var divs = document.getElementsByTagName("div");
+
+
+    for (var i = 0; i < divs.length; i++) {
+        divs[i].style.backgroundColor = lightGray;
+        divs[i].style.color = "black";
+    }
+
+    var allP = document.getElementsByTagName("p");
+    for (var i = 0; i < allP.length; i++) {
+        allP[i].style.color = "black";
+    }
+
+    var articles = document.getElementsByTagName("article"):
+    for (var i = 0; i < articles.length; i++) {
+        articles[i].style.backgroundColor = lightGray;
+//        articles[i].style.color = "black";
+    }
+
+}

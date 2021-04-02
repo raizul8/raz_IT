@@ -1,0 +1,1 @@
+echo razvan88 | sudo -S nmcli nm sleep true

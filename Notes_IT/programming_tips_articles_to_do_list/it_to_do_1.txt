@@ -1,0 +1,158 @@
+
+0 - z, s, soft c - "z" is the first letter of zero. The others have a similar sound
+1 - d, t - t has one downstroke d has as similar sound (some variants include th)
+2 - n - n has two downstrokes.
+3 - m - three downstrokes, also "3" looks like "m" on its side
+4 - r - last letter of four
+5 - l - L is the Roman numeral for 50
+6 - j, sh, ch, soft g - a script j has a lower loop / g is almost a 6 rolled around
+7 - k, hard c, hard g, q, qu - capital K contains two sevens
+8 - f, v - script f looks like a figure-8 (some variants include th)
+9 - b, p - P is a mirror-image 9, b sounds similar
+
+ledge" = 56 (sound rather than spelling)
+"Editing Memorize Numbers (section)" = 1123340239400762
+
+// algorithms and data structures for rust
+// rust design patterns, there is an online book now
+// learn words useful for programming names
+
+//**********************
+to learn
+simple drawing like for children
+link picture with meaning, start to think in pictures, pictures must make sense to you, simple pictures are just fine.
+This will make your learning potential increase.
+
+// To learn 
+* exercise improves brain functions, even dancing a few steps
+* short study sessions, learn for about 1 hour take break, move in the break if you can
+
+*reading over and over is counter productive, test your knowledge between study sessions, if you can find 
+study partner and test one another, reflect on what you learned, talk with someone that has knowledge on the subject,
+remember when you learn you stuff that information in the short term memory, if you stuff too much you are going to erase other information
+
+* if you can take a nap everyday, helps brain organize what you learn + sleep well at night as much as 
+possible, ALL NIGHT study session does not work it hinder the ability to learn of the brain, information overload is just overbearing, it may take up to 4 days to recover
+
+* strike a pose like superhero to reduce catabolic hormone like cortisol
+//
+A software program has three parts
+Input/Inputs -> Processes -> Output/Outputs
+
+//
+PlantUML
+- Flowcharts(*** these are important)
+•	System flow chart
+•	Data flow chart
+•	Document flow chart
+•	Program flow chart
+
+- software engineering
+
+- audio bryan tracy
+
+Mockingbird wireframe tool
+8 SWEEBOK, software development methodology, behaviour d dev or tdd, continuous integration
+9 Schedule, learn stuff fast
+11 exercism.io
+13 Google fonts, www.colorcombos.com
+18 learn dotfiles http://dotfiles.github.io/
+20 interaction flow modeling languace (designing data-intensive web applications)
+css Tailwind interesting utility framework
+insomnia organizer for rest and graphQl 
+figma, design and prototype
+
+// diverse IT
+-- book domain driven design
+
+// programming books
+code complete, mythical man month, pragmatic programer from jr to master
+Structure and Interpretation of Computer Programs
+Introduction to Algorithms by Cormen, Leiserson, Rivest & Stein
+Design Patterns by the Gang of Four
+Refactoring: Improving the Design of Existing Code
+
+// books again
+Enterprise Integration patterns
+
+great mnemonic technique
+
+numbers. code simplicity book
+7184 9761 37
+
+---------////////////////-------------------/////////////////////----------------
+
+If you are doing games and graphics, you of course are going to need vector and matrix math, as well as some calculus and probably some statistics.
+http://en.wikipedia.org/wiki/Foundations_of_mathematics
+Algebra
+
+Same theory : Logic, Category theory, Type theory.
+
+Set theory, Algebraic types, Algebra of types
+
+Somehow do programming stuff every day.
+
+html, dataflow diagrams, sysadmin, regex book
+
+
+
+// diverse
+crc cards + UML
+
+make or find prg that makes programming easier, (ex: like a visualization tool that makes diagrams 
+from your code, create diagrams and have them generate code(maybe is a good idea maybe not), look for that programming lg for kids that uses visualization(scratch))
+
+create, find, assemble prg to make web dev faster easier
+
+The subject of Category Theory doesn't exactly make for an easy read, but Bartosz's posts are the best ones I've found so far.
+
+<---------
+lambda calculus, type theory, functional programming, 
+algorithms + data structures,algebra,calculus,discrete foundational math,courses Brilliant, sites that solve and show you how they solved math problem
+learn how to design,plan programs
+Angular, RxJS, css Tailwind
+postgreSQL, intro to db design, git
+bryan tracy, 20h learn everything, nightingale
+
+site that teaches Math and Alg, exercism.io, site to learn git Books(code complete, func prog for dummies etc),database,graphql,dataloader,TDD,learn how to design code, golden files testing, 
+How to make reports(similar crystal reports), spreadsheets from database data, 
+
+
+PlantUML
+
+ GraphQLHub
+
+UML vids,don't use chanels go,jsonplaceholder site returns json resp
+
+
+ -------------/>
+
+
+learn how to name things, variables functions etc., maybe there is a tutorial or something
+
+Math:
+	*Type Theory(a must)
+	Discrete mathematics
+	Cartesian geometry (coordinates)
+	Basic calculus (limits)
+	Statistics
+	Linear algebra
+	Abstract algebra
+	Information theory (or Information entropy not sure)
+	Euclidean geometry
+	Differential and integral calculus (the rest of Calc I or business calc, plus some of Calc 2)
+	Probability
+	Analytical geometry (calculus with trigonometry)
+	Analysis
+	Differential equations
+
+
+// Regular expression helper: Regex 101 (This is a tool)
+Chrome extension daily.dev News for Busy Developers
+
+
+
+
+
+
+

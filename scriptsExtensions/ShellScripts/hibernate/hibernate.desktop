@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Encoding=UTF-8
+Name=Hibernate
+Comment=Hibs comp
+Exec=sudo /home/raz2/razIT/scriptsExtensions/ShellScripts/hibernate/hibernate.sh
+Icon=/home/raz2/razIT/scriptsExtensions/ShellScripts/hibernate/hibernate.jpg
+Terminal=false
+Categories=RazApps;

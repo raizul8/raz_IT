@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=IntelliJ IDEA
+Type=Application
+Exec=/home/raz/ideaC/idea-IC-171.4694.70/bin/idea.sh
+Terminal=false
+Icon=/home/raz/razIT/Notes/idea/PYH
+Comment=Integrated Development Environment
+NoDisplay=false
+Categories=Development;IDE;
+Name[en]=IntelliJ IDEA

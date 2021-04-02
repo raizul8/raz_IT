@@ -1,0 +1,31 @@
+{
+  "manifest_version": 2,
+
+  "name": "Grey",
+  "description": "This extension will make some webpages with grey background.",
+  "version": "1.0",
+  "update_url": "file:///home/razvan/IT/extension/GrayExtension1.crx",
+
+  "icons": { "16": "icon16.png",
+			 "48": "icon48.png",
+			 "128": "icon128.png"
+  },
+
+	"permissions": [
+		"storage"
+  ],
+  
+  "browser_action": {
+    "default_icon": "icon19.png",
+	"default_popup": "popup.html"
+  },
+  
+  "content_scripts": [
+    {
+      "matches": ["*://*/*"],
+	  //"matches": ["http://en.wikipedia.org/wiki/Main_Page"],
+	  //"css": ["mystyles.css"],
+      "js": ["myjavascript.js"]
+    }
+  ]
+}

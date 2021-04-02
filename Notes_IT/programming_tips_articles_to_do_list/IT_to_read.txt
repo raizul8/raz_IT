@@ -1,0 +1,70 @@
+Algebra,linear algebra, calculus,discrete foundational math or discrete math,statistics
+For programmers, the most useful branch of discrete math is probability theory. It's the first thing they should teach you after arithmetic, in grade school.
+
+The pragmatic programmer
+* Domain driven design Eric Evans
+INTRODUCTION TO ALGORITHMS
+code complete
+clean code bob martin
+the clean coder bob martin
+clean architecture bob martin
+test driven development by example Kent Beck
+cracking the coding interview , sites that teach interview
+Working Effectively with Legacy Code by Michael C. Feathers
+The Complete Software Developer's Career Guide john sonmez
+the mythical man-month: Essays on Software Engineering
+user story mapping book
+Refactoring Improving the design of existing code martin fowler
+How to design programs http://www.ccs.neu.edu/home/matthias/HtDP2e/index.html
+Soft skills the software developer manual john sonmez
+
+Tools of titans Tim Ferriss
+Propaganda The public mind in the making Edward L.Bernays
+Nudge : Richard H. Thaler
+Beyond freedom and dignity B.F. Skinner
+7 habits of highly effective people
+Boundaries when to say yes when to say no to take control of your life Dr Henry Cloud, Dr John Towsend
+Come as You Are  Emily Nagoski The Surprising New Science that Will Transform Your S life
+
+design patterns: elements of reusable object-oriented software or head first design patterns, gang of four
+structure and interpretation of computer programs
+
+The algorithm design manual
+Algorithms robert sedgewick, kevin wayne
+refactoring: improving the design of existing code
+art of computer programming donald ervin knuth
+
+- Don’t Make Me Think!: A Common Sense Approach to Web Usability,Second
+EditionSteve Krug (New Riders, 2006, ISBN-13: 978-0-321-34475-5
+- Mastering Regular Expressions,Third Edition
+Jeffrey E.F. Friedl (O’Reilly, 2006, ISBN-13: 978-0-596-52812-6)
+- Domain-Driven Design: Tackling Complexity in the Heart of Software
+Eric Evans (Addison-Wesley, 2004, ISBN-13: 978-0-321-12521-7)
+
+Planning Extreme Programming Kent Beck, Martin Fowler
+designing data-intensive web applications
+
+Applying UML and Patterns craig larman, UML distilled
+
+Patterns of Software: Tales from the Software Community
+
+Getting Real http://gettingreal.37signals.com/ 		
+You Have Too Much S**t by Chris Thomas
+
+Steve McConnell - Rapid Development - Taming Wild Software Schedules
+steve-krug-dont-make-me-think-second-edition
+softwareArchitectureInPractice
+structure_and_interpretation_of_computer_programs
+
+// maybe
+Google Web Fundamentals: An Essential Handbook For Designers and Developers
+Designing for the Web by Mark Boulton
+web style guide 3rd edition by Patrick J. Lynch and Sarah Horton
+
+
+
+Computer Science Reconsidered: The Invocation Model of Process Expression Karl M. Fant
+
+Description:
+The Invocation Model of Process Expression argues that mathematics does not provide the most appropriate conceptual foundations for computer science, but, rather, that these foundations are a primary source of unnecessary complexity and confusion.  It supports that there is a more appropriate conceptual model that unifies forms of expression considered quite disparate and simplifies issues considered complex and intractable.  This book presents that this model of process expression is alternative theory of computer science that is both valid and practical.
+

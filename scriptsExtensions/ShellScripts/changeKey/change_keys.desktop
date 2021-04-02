@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Encoding=UTF-8
+Name=KeyChange
+Comment=Changes Key
+Exec=/home/raz/raz_IT/scriptsExtensions/ShellScripts/changeKey/change_keys.sh
+Icon=/home/raz/raz_IT/scriptsExtensions/ShellScripts/changeKey/key.jpg
+Terminal=false;

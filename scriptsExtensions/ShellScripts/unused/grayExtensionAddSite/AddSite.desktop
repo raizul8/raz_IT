@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Encoding=UTF-8
+Name=AddSite
+Comment=Add site to GrayExtension
+Exec=dart /home/raz2/razIT/scriptsExtensions/ShellScripts/grayExtensionAddSite/GrayAddSite/bin/GrayAddSite.dart
+Icon=/home/raz2/razIT/scriptsExtensions/ShellScripts/grayExtensionAddSite/addSite.jpg
+Terminal=true
+Categories=RazApps;

@@ -1,0 +1,9 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Timer
+Comment=Starts a timer
+Exec=sudo /home/raz/raz_IT/scriptsExtensions/ShellScripts/timer/timer.sh
+Icon=/home/raz/raz_IT/scriptsExtensions/ShellScripts/timer/clock1.jpg
+Terminal=true
+Categories=RazApps;

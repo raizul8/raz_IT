@@ -1,0 +1,567 @@
+wireframe tools
+
+<link rel="stylesheet" type="text/css" href="mystyle.css">
+
+This is a good idea. To use element then id then pseudoselector.
+input#submit:hover{}
+
+Aligning text inputs.
+For the text inputs, the
+title is in the <label> element.
+For the radio buttons, the title is
+in a <span> element. Both have
+a class attribute with a value of
+title .
+
+By setting the width property
+on those elements, we know that
+the titles will each take up the
+same width. Therefore, the form
+controls next to them will line up.
+
+The text-align property is
+used to align the titles to the
+right, and padding is used
+to make sure there is a gap
+between the text in the title
+boxes and the form controls.
+
+.title {
+     float: left;
+     width: 100px;
+     text-align: right;
+     padding-right: 10px;}
+
+input[type="text"]:focus,
+input[type="text"]:hover {}
+
+
+//table css 
+table#t1, #t1 th, #t1 td{
+	border: 4px solid black;
+}
+
+
+// cellpadding
+th, td { padding: 5px; }
+
+/* cellspacing */
+table { border-collapse:separate; border-spacing: 5px; } // cellspacing="5"
+table { border-collapse:collapse; border-spacing: 0; }   // cellspacing="0"
+
+// valign
+th, td { vertical-align:middle;}
+
+/* align (center) */
+table { margin: 0 auto; }
+
+/*caption for table*/
+caption {caption-side:bottom;}
+
+h1.hidden {visibility:hidden;}
+h1.hidden {display:none;}
+
+Changing the display type of an element changes only how the element is displayed, NOT what kind 
+of element it is. For example: An inline element set to display:block is not allowed to have a block 
+element nested inside of it.
+
+makes a tr invisible
+tr.collapse {visibility:collapse;}
+
+If two positioned elements overlap, without a z-index specified, the element positioned last in the HTML 
+code will be shown on top.
+
+This example demonstrates how to set the shape of an element. The element is clipped into this shape, and displayed.
+img 
+{
+    position:absolute;
+    clip:rect(0px,60px,200px,0px);
+}
+
+// center a div
+{
+    margin:auto;
+    width:70%;
+    background-color:#b0e0e6;
+}
+
+When aligning elements like this, it is always a good idea to predefine margin and padding for the <body> 
+element. This is to avoid visual differences in different browser
+.right
+{
+    position:absolute;
+    right:0px;
+    width:300px;
+    background-color:#b0e0e6;
+}
+
+One method of aligning elements is to use the float property:
+.right
+{
+float:right;
+width:300px;
+background-color:#b0e0e6;
+}
+
+CSS - The :before Pseudo-element
+The ":before" pseudo-element can be used to insert some content before the content of an element.
+
+The following example inserts an image before each <h1> element
+
+h1:before 
+{
+    content:url(smiley.gif);
+}
+
+display:block - Displaying the links as block elements makes the whole link area clickable (not just the text), and it allows us to specify the width
+width:60px - Block elements take up the full width available by default. We want to specify a 60 px width
+
+a
+{
+    display:block;
+    width:60px;
+}
+
+// Styling links
+a:link {color:#FF0000;}      /* unvisited link */
+a:visited {color:#00FF00;}  /* visited link */
+a:focus {color: yellow;} /* ready for input */
+a:hover {color:#FF00FF;}  /* mouse over link */
+a:active {color:#0000FF;}  /* selected link */
+
+// css atributes selector
+input[type="text"]:hover
+{
+    background-color:red;
+}
+input[type="text"]
+{
+    width:150px;
+    display:block;
+    margin-bottom:10px;
+    background-color:yellow;
+}
+input[type="button"]
+{
+    width:120px;
+    margin-left:35px;
+    display:block;
+}
+
+// division sign
+font: 14/1.31em, which is a short-hand, to set the font-size and line-height
+
+
+// > sign
+> Means the direct child of a selector, so
+
+li > a will ONLY match and 'a' which is directly inside an li for example.
+
+If the html was <li><p><a> the 'a' would not be matched.
+
+The space in between will match any 'a' nested inside a li, irrespective of other things around it, so li a would match the 'a' in
+
+<li><a> but also <li><p><a> for example
+
+/*The attribute selectors can be useful for styling forms without class or ID:*/
+input[type="text"] {
+    width: 150px;
+    display: block;
+    margin-bottom: 10px;
+    background-color: yellow;
+}
+
+input[type="button"] {
+    width: 120px;
+    margin-left: 35px;
+    display: block;
+}
+
+/*table styling*/
+table,th,td
+{
+    border:1px solid black;
+    border-collapse:collapse
+}
+
+tr:nth-child(even) {background: darkgreen; color: white;}
+tr:nth-child(odd) {background: lightblue; color: darkgreen;}
+
+td:nth-child(even) {
+    background-color: lightblue;
+    color: darkgreen;
+}
+
+td:nth-child(odd) {
+    background-color: darkgreen;
+    color: white;
+}
+
+/*
+You can compare this with
+the background-color or
+border properties; they are not
+inherited by child elements. If
+these were inherited by all child
+elements then the page could
+look quite messy.
+
+You can force a lot of properties
+to inherit values from their
+parent elements by using
+inherit for the value of the
+properties. In this example, the
+<div> element with a class
+called page inherits the padding
+size from the CSS rule that
+applies to the <body> element.*/
+body {
+     font-family: Arial, Verdana, sans-serif;
+     color: #665544;
+     padding: 10px;}
+.page {
+     border: 1px solid #665544;
+     background-color: #efefef;
+     padding: inherit;}
+
+
+/*@font-face allows you to use
+a font, even if it is not installed
+on the computer of the person
+browsing, by allowing you to
+specify a path to a copy of the
+font, which will be downloaded if
+it is not on the user's machine*/
+
+@font-face {
+     font-family: 'ChunkFiveRegular';
+     src: url('fonts/chunkfive.eot');}
+h1, h2 {
+     font-family: ChunkFiveRegular, Georgia, serif;}
+
+
+/*image in h1*/
+h1 {
+     background-image: url("images/logo.gif");
+     background-repeat: no-repeat;
+     text-indent: -9999px;}
+
+
+When pseudo-classes are
+used, they should appear in this
+order: :link , :visited , :hover ,
+:focus , :active .
+
+
+p[class]
+Targets any <p> element with an
+attribute called class
+
+p[class="dog"]
+Targets any <p> element with
+an attribute called class whose
+value is dog
+
+
+p[class~="dog"]
+Targets any <p> element with
+an attribute called class whose
+value is a list of space-separated
+words, one of which is dog
+
+p[attr^"d"]
+Targets any <p> element with
+an attribute whose value begins
+with the letter "d"
+
+p[attr*"do"]
+Targets any <p> element with an
+attribute whose value contains
+the letters "do"
+
+p[attr$"g"]
+Targets any <p> element with an
+attribute whose value ends with
+the letter "g"
+
+/*
+Inside of this is a paragraph
+that is 75% of the width and
+height of the containing element.*/
+p {
+     height: 75%;
+     width: 75%;
+}
+
+min-width: 450px;
+max-width: 650px;
+
+
+/*The overflow property tells the
+browser what to do if the content
+contained within a box is larger
+than the box itself. It can have
+one of two values:*/
+
+/*hidden
+This property simply hides any
+extra content that does not fit in
+the box.
+
+scrool
+This property adds a scrollbar to
+the box so that users can scroll
+to see the missing content.*/
+
+p.one {
+     overflow: hidden;}
+p.two {
+     overflow: scroll;}
+
+
+thin
+medium
+thick
+
+border-top-width
+border-right-width
+border-bottom-width
+border-left-width
+
+p.one {
+     border-width: 2px;}
+p.two {
+     border-width: thick;}
+p.three {
+     border-width: 1px 4px 12px 4px;}
+
+border: 3px dotted #0088dd;
+
+
+display:
+
+inline
+This causes a block-level
+element to act like an inline
+element.
+
+block
+This causes an inline element to
+act like a block-level element.
+
+inline-block
+This causes a block-level
+element to flow like an inline
+element, while retaining other
+features of a block-level element.
+
+none
+This hides an element from the
+page. In this case, the element
+acts as though it is not on the
+page at all (although a user could
+still see the content of the box if
+they used the view source option
+in their browser).
+
+The visibility property allows
+you to hide boxes from users
+but It leaves a space where the
+element would have been.
+
+hidden
+This hides the element.
+
+visible
+This shows the element.
+
+
+CSS3 introduces the ability to
+create rounded corners on any
+box, using a property called
+border-radius . The value
+indicates the size of the radius
+in pixels.
+
+/*show
+This shows the borders of any
+empty cells.
+
+hide
+This hides the borders of any
+empty cells.*/
+
+td {
+     border: 1px solid #0088dd;
+     padding: 15px;}
+table.one {
+     empty-cells: show;}
+table.two {
+     empty-cells: hide;}
+
+
+/*The border-spacing property
+allows you to control the
+distance between adjacent cells.
+You
+can specify two values if desired
+to specify separate numbers for
+horizontal and vertical spacing.*/
+
+table.one {
+     border-spacing: 5px 15px;}
+
+
+/* collapse
+Borders are collapsed into a
+single border where possible.
+( border-spacing will be
+ignored and cells pushed
+together, and empty-cells
+properties will be ignored.)  */  
+table.two {
+     border-collapse: collapse;}
+separate
+Borders are detached from each
+other. ( border-spacing and
+empty-cells will be obeyed.)
+
+
+
+The :focus pseudo-class is
+used to change the background
+color of the text input when it
+is being used, and the :hover
+psuedo-class applies the same
+styles when the user hovers over
+them.
+input:focus {
+     background-color: #ffffff;
+     border: 1px solid #b1e1e4;}
+
+
+
+auto
+crosshair
+default
+pointer
+move
+text
+wait
+help
+url("cursor.gif");
+a {
+     cursor: move;}
+
+
+
+The clear property allows you
+to say that no element (within
+the same containing element)
+should touch the left or right-
+hand sides of a box. It can take
+the following values:
+
+left
+The left-hand side of the box
+should not touch any other
+elements appearing in the same
+containing element.
+
+right
+The right-hand side of the
+box will not touch elements
+appearing in the same containing
+element.
+
+both
+Neither the left nor right-hand
+sides of the box will touch
+elements appearing in the same
+containing element.
+
+none
+Elements can touch either side.
+
+
+
+The border colapsed when the div only has inside floated elements. Below is the css fix.
+
+The overflow property is
+given a value auto .
+The width property is set to
+100% .
+div {
+     border: 1px solid #665544;
+     overflow: auto;
+     width: 100%;}
+
+
+@import url("tables.css");
+@import url("typography.css");
+
+/*center image*/
+img.align-center {
+     display: block;
+     margin: 0px auto;}
+
+Body
+The background-attachment
+property specifies whether a
+background image should stay in
+one position or move as the user
+scrolls up and down the page. It
+can have one of two values:
+
+fixed
+The background image stays in
+the same position on the page.
+
+scroll
+The background image moves
+up and down as the user scrolls
+up and down the page.
+
+/*When a single image is used
+for several different parts of an
+interface, it is known as a sprite.*/
+a#framing-options:hover {
+     background-position: -175px -40px;}
+a#add-to-basket:active {
+     background-position: 0px -80px;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

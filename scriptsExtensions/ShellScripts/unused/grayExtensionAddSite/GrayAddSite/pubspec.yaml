@@ -1,0 +1,4 @@
+name: CA8
+description: A sample command-line application
+dependencies:
+  json_object: any

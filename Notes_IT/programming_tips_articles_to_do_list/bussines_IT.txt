@@ -1,0 +1,4 @@
+1. Find the right timing ex: 
+	there was a time when photographers were interested in time lapse technology but there was no good software, so somebody built it and and announced it on the site where the photographers had their discussions.
+2. Try to use the Internet to reach as many people as possible. A restaurant will reach only a few people.
+3. Use programming to automate things.

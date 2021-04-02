@@ -1,0 +1,2 @@
+// Create folder in Use ex: myThemeMonokai inside have custom theme ex: Monokai.tmTheme
+/home/raz/.config/sublime-text-3/Packages/User/myThemeMonokai/Monokai.tmTheme
