@@ -151,8 +151,22 @@ Math:
 Chrome extension daily.dev News for Busy Developers
 
 
+//
+web development
+make black jack ,poker or other game, stock prices, or just build sites as fast as possible
+build maze and use algorithms to solve it
+
+api key
+api token
 
 
-
+// books to read
+Algorithms + Data Structures
+The mythical man Month,
+The algorithm design manual
+pragmatic programer
+just enough s analysis
+Don't Make Me Think by Steve Krug
+Domain Modeling Made Functional
 
 

@@ -23,6 +23,13 @@ cargo run
 // have folder bin in src folder, if you have rust files with main you execute them like this
 cargo run --bin vector_operations // vector_operations is vector_operations.rs
 
+// or have this in Cargo.toml
+// you execute it like this 
+// cargo run --bin tst1
+[[bin]]
+name ="tst1"
+path = "src/tst1.rs"
+
 // to use cargo run with backtrace
 export RUST_BACKTRACE=1
 
