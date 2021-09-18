@@ -121,7 +121,7 @@
 
     luscious net Raizul br2@gmail R88
     instagram  br2@gmail johndoe8728 R88 this doesn't work
-    instagram  fckbook br@gmail full name: John Doe userName: Johny_2415 psw:R88
+    instagram  fckbook br@gmail full name: John Doe userName: Johny_2415 psw:R88 This does work.
     lnmtl raizul r88 br2@gmail
 
     quay.io log with br2@gmail 
@@ -135,6 +135,13 @@
     myelectrica:
         marcelabogatean@yahoo.com
         r_188
+
+    myelectrica: neactivat 
+        cod client 30141295
+        nlc 2596132
+        bogarazvan2@gmail.com
+        R88
+
 
     electrica: 
         // don't know if they are good

@@ -1,7 +1,11 @@
 Algebra,linear algebra, calculus,discrete foundational math or discrete math,statistics
 For programmers, the most useful branch of discrete math is probability theory. It's the first thing they should teach you after arithmetic, in grade school.
 
+The algorithm design manual Skiena
+Domain Modeling Made Functional
 The pragmatic programmer
+Continuous Delivery
+
 * Domain driven design Eric Evans
 INTRODUCTION TO ALGORITHMS
 code complete
@@ -17,6 +21,7 @@ user story mapping book
 Refactoring Improving the design of existing code martin fowler
 How to design programs http://www.ccs.neu.edu/home/matthias/HtDP2e/index.html
 Soft skills the software developer manual john sonmez
+
 
 Tools of titans Tim Ferriss
 Propaganda The public mind in the making Edward L.Bernays
@@ -55,11 +60,6 @@ Steve McConnell - Rapid Development - Taming Wild Software Schedules
 steve-krug-dont-make-me-think-second-edition
 softwareArchitectureInPractice
 structure_and_interpretation_of_computer_programs
-
-// maybe
-Google Web Fundamentals: An Essential Handbook For Designers and Developers
-Designing for the Web by Mark Boulton
-web style guide 3rd edition by Patrick J. Lynch and Sarah Horton
 
 
 

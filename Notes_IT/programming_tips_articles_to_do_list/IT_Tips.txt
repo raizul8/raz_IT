@@ -202,5 +202,53 @@ When you write code you have to be twice as smart to debug it.
 
 Testing create new types from existing ones and stub out the things that are unnecessary for the test.
 
+//********************************* BDD ********************************************
+<bdd> 
+
+					Behavior driven development
+
+
+Spec not Test
+Scenario Not Test Case
+
+Given, When, Then
+Given these start conditions, when we carry out these actions, then we expect this outcome
+
+Start specs with 'Should' instead of Test
+ShouldAddTwoNumber vs TestAddTwoNumbers
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</bdd>
 
 

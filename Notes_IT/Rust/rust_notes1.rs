@@ -3,7 +3,12 @@
 // learn clippy tool that tells you what you shouldn't do
 // wireframe tool for web development
 
+
+// As of Rust 1.41.0, you can use the following command to update crates to their latest version:
+cargo install <crate>
+
 // update rust and cargo
+// cargo update uses Toml file
 rustup update && cargo update
 rustup default nightly
 
@@ -54,20 +59,6 @@ cargo install --force cargo-web
 // documentation, cargo creates documentation for your project and shows it in browser
  cargo doc --open
 
-// - will build your project, start an embedded webserver and will continuously rebuild it if necessary; supports automatic reloading with --auto-reload.
-cargo web start 
-cargo web start --auto-reload
-
-cargo web start --target wasm32-unknown-emscripten
-cargo web start --target=wasm32-unknown-unknown
-
-// To run an optimised build instead of a debug build use:
-cargo web start --release --target=wasm32-unknown-unknown
-
-cargo web deploy
-// will build your project and emit all of the necessary files so that you can easily serve them statically.
-
-
 rustup show
 
  stable-x86_64-unknown-linux-gnu updated - rustc 1.45.0 (5c1f21c3b 2020-07-13) (from rustc 1.41.0 (5e1a79984 2020-01-27))
@@ -117,6 +108,7 @@ struct SemanticDirection;
 // Add a crate-level allow attribute; notice the !:
 #![allow(dead_code)]
 #![allow(unused_imports)]
+#![allow(dead_code, unused_variables)]
 
 // wont compile if you have missing docs
 #![deny(missing_docs)]
@@ -141,6 +133,45 @@ cargo install cargo-readme
 version = "2.4.1"
 default-features = false
 features = ["release_max_level_debug", "max_level_debug"]
+
+// rust has conditional compilation
+
+// Use dbg! instead of println
+fn fibonacci(n: u32) -> u32 {
+    if dbg!(n <= 2) {
+        dbg!(1)
+    } else {
+        dbg!(fibonacci(n - 1) + fibonacci(n - 2))
+    }
+}
+
+// Output is:
+[main.rs:6] n <= 2 = false
+[main.rs:6] n <= 2 = false
+[main.rs:6] n <= 2 = false
+[main.rs:6] n <= 2 = true
+[main.rs:7] 1 = 1
+[main.rs:6] n <= 2 = true
+[main.rs:7] 1 = 1
+[main.rs:9] fibonacci(n - 1) + fibonacci(n - 2) = 2
+[main.rs:6] n <= 2 = true
+[main.rs:7] 1 = 1
+[main.rs:9] fibonacci(n - 1) + fibonacci(n - 2) = 3
+[main.rs:6] n <= 2 = false
+[main.rs:6] n <= 2 = true
+[main.rs:7] 1 = 1
+[main.rs:6] n <= 2 = true
+[main.rs:7] 1 = 1
+[main.rs:9] fibonacci(n - 1) + fibonacci(n - 2) = 2
+[main.rs:9] fibonacci(n - 1) + fibonacci(n - 2) = 5
+
+// casting
+// as for casting is an anti-pattern in most cases. You should write xx::from(yy) or xx::try_from(yy) instead. E.g.
+u32::try_from(todo.title.len()))
+
+// Alternatives are 
+xx = yy.into() and xx = yy.try_into() 
+// - they are as safe as their (Try)From counterparts however they make the code LESS READABLE because you often have to guess the type.
 
 //for loop
 	let a = [10, 20, 30, 40, 50];
@@ -681,6 +712,16 @@ enum Message {
 }
 // Defining an enum with variants like the ones in Listing 6-2 is similar to defining different kinds of struct definitions except the enum doesn’t use the struct keyword and all the variants are grouped together under the Message type.
 
+// Interesting use of map with Option
+// Maps an Option<T> to Option<U> by applying a function to a contained value.
+// basicaly you turn Option<&SelectedTodo> into Option<Ulid>
+
+fn fc1(todos: &BTreeMap<Ulid, Todo>, selected_todo: Option<&SelectedTodo>) {
+    todos.map(|todo| {
+            let id = todo.id;
+            let is_selected = Some(id) == selected_todo.map(|selected_todo| selected_todo.id);
+
+}
 
 // take from Option 
 let mut xx = Some(2);
@@ -1095,6 +1136,16 @@ fn read_username_from_file() -> Result<String, io::Error> {
     }
 }
 
+//
+// Create my own Tresult and TError, to handle all kinds of errors
+type Tresult<T> = result::Result<T, TError>;
+type TError = Box<dyn error::Error>;
+
+// .into transforms the error into type of Tresult<String>
+fn read_file(p: &str) -> Tresult<String> {
+    read_to_string(p).map_err(|e| e.into())
+}
+
 // A Shortcut for Propagating Errors: ?
 // ? Can Only Be Used in Functions That Return Result
 fn read_username_from_file() -> Result<String, io::Error> {
@@ -1222,6 +1273,10 @@ pub fn match_fn1() {
         .fold(0.0, |total, next| total + next);
 
  
+// drain does not consume the iterator
+let v1 = vec![0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+let c: Vec<i32> = v1.drain(..).filter(|nr| *nr % 2 == 0).collect();
+
 // An Iter::map operation might fail, for example:
 let strings = vec!["tofu", "93", "18"];
 let possible_numbers: Vec<_> = strings
@@ -1963,6 +2018,8 @@ println!("{}",x);
 
 // A common strategy is to use shared references like Rc and Arc (equivalent to C++’s shared_ptr). Cloning a shared reference just increments the reference count, and dropping them decrements the count; when the count goes to zero the actual value is dropped. This is a kind of garbage collection and provides the important guarantee that the references will last ‘just long enough’. So typically you would clone a reference and move it into a closure, and avoid explicit lifetime problems.
 
+
+// exercism solution Exercism solution
 
 // leap year solution
 pub fn is_leap_year(year: i64) -> bool {

@@ -23,6 +23,27 @@ simple drawing like for children
 link picture with meaning, start to think in pictures, pictures must make sense to you, simple pictures are just fine.
 This will make your learning potential increase.
 
+// To be productive
+
+busyness is not productivity
+
+Prioritize and plan.
+
+Some things are more important than others, try to figure what they are. Choose one or two so you can get them done the next day, so you can be closer to your goal.
+
+Limit the number of tasks at a reasonable, doable level so you can achieve it. When you go to bed you want to know you achieved something.
+
+Plan ahead at least a day before.
+
+Consider your peak productivity time during the day and do the hard or creative things then.
+Group similar things together.
+
+Make an environment where you are not distracted.
+Task switching, that's bad
+
+If you have things that keep repeating like setting up a project, try to write a script to automatize the task.
+
+
 // To learn 
 * exercise improves brain functions, even dancing a few steps
 * short study sessions, learn for about 1 hour take break, move in the break if you can
@@ -56,24 +77,11 @@ Mockingbird wireframe tool
 9 Schedule, learn stuff fast
 11 exercism.io
 13 Google fonts, www.colorcombos.com
-18 learn dotfiles http://dotfiles.github.io/
 20 interaction flow modeling languace (designing data-intensive web applications)
 css Tailwind interesting utility framework
-insomnia organizer for rest and graphQl 
 figma, design and prototype
 
 // diverse IT
--- book domain driven design
-
-// programming books
-code complete, mythical man month, pragmatic programer from jr to master
-Structure and Interpretation of Computer Programs
-Introduction to Algorithms by Cormen, Leiserson, Rivest & Stein
-Design Patterns by the Gang of Four
-Refactoring: Improving the Design of Existing Code
-
-// books again
-Enterprise Integration patterns
 
 great mnemonic technique
 
@@ -153,8 +161,11 @@ Chrome extension daily.dev News for Busy Developers
 
 //
 web development
+vizbug extension (modify site with a design tool)
 make black jack ,poker or other game, stock prices, or just build sites as fast as possible
-build maze and use algorithms to solve it
+
+****************************
+See if you can do online payments from the backend not the frontend
 
 api key
 api token
@@ -164,9 +175,18 @@ api token
 Algorithms + Data Structures
 The mythical man Month,
 The algorithm design manual
-pragmatic programer
+pragmatic programmer
 just enough s analysis
 Don't Make Me Think by Steve Krug
 Domain Modeling Made Functional
 
 
+// BDD testing
+Spec not Test
+Scenario Not Test Case
+
+Given, When, Then
+Given these start conditions, when we carry out these actions, then we expect this outcome
+
+Start specs with 'Should' instead of Test
+ShouldAddTwoNumber vs TestAddTwoNumbers

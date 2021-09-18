@@ -1,3 +1,29 @@
+
+// How to call from one arm of the match to the other
+fn update(&mut self, ctx: &Context<Self>, msg: Self::Message) -> bool {
+    match msg {
+        Msg::Payload(payload) => {
+            if payload != self.payload {
+                self.debugged_payload = format!("{:?}", payload);
+                self.payload = payload;
+                true
+            } else {
+                false
+            }
+        }
+        Msg::AsyncPayload => {
+            // From AsyncPayload to Payload
+            let callback = ctx.link().callback(Msg::Payload);
+
+            bindings::get_payload_later(Closure::once_into_js(move |payload: String| {
+                callback.emit(payload)
+            }));
+            false
+        }
+    }
+}
+
+
 // Reducers take the previous state of the app and return a new state based on the action passed to it.
 
 // reform use callback supplied from parent to communicate with parent from view
