@@ -3,6 +3,13 @@
 -- try sql fiddle
 -- diagrams prg: execute query
 
+-- provide credentials like this
+DATABASE_URL=postgres://localhost?dbname=mydb&user=postgres&password=postgres
+
+-- start pgadmin4
+./pgadmin4env/bin/pgadmin4&
+
+
 -- <start stop database
 Ubuntu or Debian can run multiple instances of PostgreSQL and provide a specific way to autostart/stop/start 
 each cluster.
@@ -98,8 +105,42 @@ postgresql: SELECT column_name FROM information_schema.columns WHERE table_name 
 
 -- view creation sql
 pg_dump --schema-only -h localhost -d mydb -t orders 
+
 -- -E encoding -s schema-only -v verbose
 pg_dump -h 127.0.0.1 -E UTF8 -s -v mydb > mydb.ddl -- this will create a file in curr dir
+
+
+-- short way of creating user(role)
+-- interactive login shell
+sudo -u postgres -i
+create database mydb2;
+create user myuser with encrypted password 'mypass';
+grant all privileges on database mydb2 to myuser;
+
+-- nicer way to create roles/users
+-- The command gets you the psql command line interface in full admin mode.
+sudo -u postgres psql
+
+-- Creating user
+sudo -u postgres createuser <username>
+
+-- Creating Database
+sudo -u postgres createdb <dbname>
+
+-- Giving the user a password
+sudo -u postgres psql
+psql=# alter user <username> with encrypted password '<password>';
+
+-- Granting privileges on database
+psql=# grant all privileges on database <dbname> to <username> ;
+
+-- Doing purely via psql
+
+-- Your OS might not have the createuser or createdb binaries, or you may, for some reason want to do it purely via psql, then these are the three magic commands 
+CREATE DATABASE yourdbname;
+CREATE USER youruser WITH ENCRYPTED PASSWORD 'yourpass';
+GRANT ALL PRIVILEGES ON DATABASE yourdbname TO youruser;
+
 -- create role
 CREATE ROLE leo LOGIN PASSWORD 'lion!king'
 CREATEDB VALID UNTIL 'infinity';
@@ -107,6 +148,14 @@ CREATEDB VALID UNTIL 'infinity';
 -- create superuser role
 CREATE ROLE regina LOGIN PASSWORD 'queen!penultimate'
 SUPERUSER VALID UNTIL '2020-10-20 23:00';
+
+
+-- drop role properly, for ex user raz
+drop owned by raz;
+drop user raz;
+-- check you droped the user
+select rolname from pg_roles;
+
 
 -- view roles
 SELECT rolname

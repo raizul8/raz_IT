@@ -1,3 +1,5 @@
+// Pick a problem and then use various tools to solve that problem is more engaging than learning the tools. When only the tools are being taught, it's boring. If your brain does not find the information relevant it will discard it.
+
 Get a white board to practice programming interview questions. 
 
 //
@@ -203,8 +205,6 @@ When you write code you have to be twice as smart to debug it.
 Testing create new types from existing ones and stub out the things that are unnecessary for the test.
 
 //********************************* BDD ********************************************
-<bdd> 
-
 					Behavior driven development
 
 
@@ -218,37 +218,33 @@ Start specs with 'Should' instead of Test
 ShouldAddTwoNumber vs TestAddTwoNumbers
 
 
+****************************************************************************************************
+****************************************************************************************************
+// Deliberate practice, learn faster
+1. Have clear defined goals (Understand what the problem is)
+2. 100% focus and attention
+3. Get out of your comfort zone
+	Nobody like to to what they are not good at, but there is where you have to concentrate.
+	Your feedback will be that you suck, but if you want to be more that's were you have to go.
+4. Push outside of your comfort zone.
+
+When you code you will encounter situations that show you were you are weak or lack understanding. Those need to be addressed.
+
+When you encounter a weakness you may be busy working on something else you can't just stop to drill into the weakness so just make note of it and drill it later.
+
+Then you can drill those problems repeatedly and in different contexts.
+
+So if you don't understand js promises you can look at js interview questions to see what questions pop up and work through those. Work different problems different context, your understanding gets better.
 
 
+****************************************************************************************************
+****************************************************************************************************
+Take care of your mind and energy
 
+1 Make sure you get your sleep. If you put one and half hour of intense concentrated training than you need rest.
+2 You will get stuck, take a break from that problem, rest or do something else. What happens is your brain will work in the background to come with a solution(diffuse thinking).
 
+If you want to study for 6 hours don't cram them together. Break them in 2h 3 times a day.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-</bdd>
-
+3 Regular exercise especially outside.
 

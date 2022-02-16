@@ -13,6 +13,16 @@
 ledge" = 56 (sound rather than spelling)
 "Editing Memorize Numbers (section)" = 1123340239400762
 
+// Do leetcode problems
+
+// plan 1
+database book
+testing book Dave Farley
+documentation should be from code
+
+a little css/scss and web design
+basic algorithms
+
 // algorithms and data structures for rust
 // rust design patterns, there is an online book now
 // learn words useful for programming names

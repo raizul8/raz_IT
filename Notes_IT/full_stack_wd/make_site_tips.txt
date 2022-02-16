@@ -1,0 +1,1 @@
+Use css clamp function, it will use min max to select average no more media queries required.

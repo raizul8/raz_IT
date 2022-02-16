@@ -3,6 +3,52 @@
 // learn clippy tool that tells you what you shouldn't do
 // wireframe tool for web development
 
+// Vim
+// Ctrl + o when insert mode to use a command like easy motion
+
+// Delete inside quotes
+// di"
+// Delete all including the quotes
+// da"
+
+
+//  google actually did some really cool
+// research on this a while back where they
+// talked to all their teams and did lots
+// of surveys
+// and what they found out was that happy
+// and productive teams share two common
+// traits and the first is autonomy they
+// have a lot of individual control about
+// what they're working on and the second
+// is that both they and external parties
+// value what they're doing so they find a
+// lot of value in what they're doing so if
+// you don't have autonomy and you don't
+// have that sense of value it's easy to
+// get
+// burnt out in a situation like that so
+// whatever you can do in conjunction with
+// your company and your manager to get the
+// whole team
+// into that autonomous and valued state
+// the better off it's going to be
+// but if none of that works honestly it's
+// a great hiring environment out there
+// super hot right now so if it's not if it
+// for you and if it if you're burning out
+// at work and you know that there's just
+// really no way out of it at this
+// particular work then there's probably
+// another good job out there for you 
+
+rocket = {git = "https://github.com/SergioBenitez/Rocket", tag="v0.5.0-rc.1"}
+
+// fix code for edition
+cargo fix --edition
+// then modify edition field
+edition = "2021"
+// then cargo build or test to check your code works
 
 // As of Rust 1.41.0, you can use the following command to update crates to their latest version:
 cargo install <crate>
@@ -135,6 +181,28 @@ default-features = false
 features = ["release_max_level_debug", "max_level_debug"]
 
 // rust has conditional compilation
+
+// run examples from others repository
+cargo run --release --example small_fib
+cargo run --example small_fib
+// be carefull from where you run cargo run for ex:
+// I had rocket_auth repo where if you don't run cargo run from the same folder that has templates it can't find the templates. The root path is where you run cargo run.
+
+
+
+// provide credentials like this
+DATABASE_URL=postgres://localhost?dbname=mydb&user=postgres&password=postgres
+
+// sqlx example of database credentials
+let pool_options = PgConnectOptions::new()
+        .host("localhost")
+        .port(5432)
+        .username("dbuser")
+        .database("dbtest")
+        .password("dbpassword");
+
+let pool: PgPool = Pool::<Postgres>::connect_with(pool_options).await?;
+
 
 // Use dbg! instead of println
 fn fibonacci(n: u32) -> u32 {
@@ -474,6 +542,26 @@ struct User {
     active: bool,
 }
 
+// Interesting way to destructure Message::Hello
+enum Message {
+    Hello { id: i32 },
+}
+
+let msg = Message::Hello { id: 10 };
+
+match msg {
+    // to access id you need to create a new var(id_var, could also be called id)
+    Message::Hello { id: id_var @ 3..=7 } => {
+        println!("Found an id in range 3..7: id_var={}", id_var);
+    }
+    // id cannot be accesed because it's out of scope
+    Message::Hello { id: 10..=12 } => {
+        println!("Found id in 10..12 range");
+    }
+    Message::Hello { id } => {
+        println!("Found some other id {}", id);
+    }
+}
 
 // destructure struct
 // This code creates the variables x and y that match the x and y fields of the p variable. The outcome is that the variables x and y contain the values from the p struct.
@@ -2047,8 +2135,29 @@ pub fn raindrops(x: u32) -> String {
 }
 
 
+// Error chain
+fn error_chain_fmt(
+    e: &impl std::error::Error,
+    f: &mut std::fmt::Formatter<'_>,
+) -> std::fmt::Result {
 
+    writeln!(f, "{}\n", e)?;
+    let mut current = e.source();
+    
+    // this iterates over the error chain
+    while let Some(cause) = current {
+        writeln!(f, "Caused by:\n\t{}", cause)?;
+        current = cause.source();
+    }
+    Ok(())
+}
 
+// It iterates over the whole chain of errors7 that led to the failure we are trying to print.
+// We can then change our implementation of Debug for StoreTokenError to use it:
 
-
+impl std::fmt::Debug for StoreTokenError {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        error_chain_fmt(self, f)
+    }
+}
 

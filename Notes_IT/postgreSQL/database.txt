@@ -15,3 +15,40 @@ database
  - No non-key field is dependent on any other non-key field.
  - Can I figure any values from this row from any other values from this row.
 
+
+BCNF(Boyce–Codd normal form or 3.5NF) was developed in 1974 by Raymond F. Boyce and Edgar F. Codd to address certain types of anomalies not dealt with by 3NF as originally defined. If a relational schema is in BCNF then all redundancy based on functional dependency have been removed, although other types of redundancy may still exist.
+
+
+A functional dependency is a constraint that specifies the relationship between two sets of attributes where one set can accurately determine the value of other sets. It is denoted as X → Y, where X is a set of attributes that is capable of determining the value of Y. The attribute set on the left side of the arrow, X is called Determinant, while on the right side, Y is called the Dependent. Functional dependencies are used to mathematically express relations among database entities and are very important to understand advanced concepts in Relational Database System
+
+
+1NF 
+	1. Each column should contain atomic values
+	2. Each column should contain values of the same type, for ex. don't mix date with a random string or number.
+	3. Each column should have a unique name
+	4. Order in which you save data is not important.
+
+2NF
+ - Only applies on tables with composite keys.
+ - We should not have partial dependencies, as in a field depends on a part of the primary key.
+
+ For ex. we have score table with student_id  and subject_id as primary key because they can uniquely identify a row.
+ 	
+ We identify a row with a composite primary key(student_id and subject_id).
+
+ But for each subject we only have one teacher, it makes no sense to have teacher column when we should be able find out the teacher with the aid of subject_id. So teacher is dependent on subject_id which is part of the primary key, hence partial dependency. This should not exist. There are many ways we can fix this, these are just two.
+ We add teacher column to Subject Table or make table teachers with teacher_id and name.
+
+ 			STUDENTS TABLE 							        SUBJECT TABLE
+
+student_id	  name    reg_no	branch    address	|	subject_id		subject_name	teacher
+
+
+
+								SCORE TABLE
+														(needs to be removed)
+		score_id	student_id    subject_id	marks	teacher
+		1 			1 			  1             82      Mr.J
+		2 			1 			  2 			77		Mr.C++
+		5 			2 			  4             95      Mr.P
+		3           3             1             85      Mr.J	
