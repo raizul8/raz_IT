@@ -26,6 +26,11 @@
         bogarazvan n1962 R_gmail1
         bogarazvan2 R_gmail2
 
+    router 
+        http://router.asus.com
+        Asus4000
+        M_1964
+
     firefox
         bogarazvan2@gmail.com R88
     pinterest 
@@ -142,6 +147,9 @@
         bogarazvan2@gmail.com
         R88
 
+
+    bt_pass unique: 
+        M1**401
 
     electrica: 
         // don't know if they are good

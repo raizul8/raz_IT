@@ -1,0 +1,1082 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"po",
+				"postgres"
+			],
+			[
+				"cm",
+				"cmd_notify"
+			],
+			[
+				"call",
+				"callback"
+			],
+			[
+				"SS",
+				"SSH_ASKPASS"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "/home/raz/raz_IT/notes_books/notes_diverse.txt",
+			"settings":
+			{
+				"buffer_size": 144,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			},
+			"undo_stack":
+			[
+				[
+					1,
+					1,
+					"insert",
+					{
+						"characters": "1"
+					},
+					"AQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAA",
+					"AgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8L8"
+				],
+				[
+					2,
+					1,
+					"insert",
+					{
+						"characters": " "
+					},
+					"AQAAAAEAAAAAAAAAAgAAAAAAAAAAAAAA",
+					"AgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAABAAAAAAAAAAEAAAAAAAAAAAAAAAAA8L8"
+				],
+				[
+					3,
+					2,
+					"left_delete",
+					null,
+					"AgAAAAEAAAAAAAAAAQAAAAAAAAABAAAAIAAAAAAAAAAAAAAAAAAAAAABAAAAMQ",
+					"AgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAACAAAAAAAAAAIAAAAAAAAAAAAAAAAA8L8"
+				],
+				[
+					4,
+					1,
+					"insert",
+					{
+						"characters": "\n1"
+					},
+					"AgAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAACAAAAAAAAAAAAAAA",
+					"AgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8L8"
+				],
+				[
+					5,
+					1,
+					"insert",
+					{
+						"characters": " page"
+					},
+					"BQAAAAIAAAAAAAAAAwAAAAAAAAAAAAAAAwAAAAAAAAAEAAAAAAAAAAAAAAAEAAAAAAAAAAUAAAAAAAAAAAAAAAUAAAAAAAAABgAAAAAAAAAAAAAABgAAAAAAAAAHAAAAAAAAAAAAAAA",
+					"AgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAACAAAAAAAAAAIAAAAAAAAAAAAAAAAA8L8"
+				],
+				[
+					6,
+					1,
+					"insert",
+					{
+						"characters": " lice"
+					},
+					"BQAAAAcAAAAAAAAACAAAAAAAAAAAAAAACAAAAAAAAAAJAAAAAAAAAAAAAAAJAAAAAAAAAAoAAAAAAAAAAAAAAAoAAAAAAAAACwAAAAAAAAAAAAAACwAAAAAAAAAMAAAAAAAAAAAAAAA",
+					"AgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAHAAAAAAAAAAcAAAAAAAAAAAAAAAAA8L8"
+				],
+				[
+					7,
+					1,
+					"insert",
+					{
+						"characters": "nse"
+					},
+					"AwAAAAwAAAAAAAAADQAAAAAAAAAAAAAADQAAAAAAAAAOAAAAAAAAAAAAAAAOAAAAAAAAAA8AAAAAAAAAAAAAAA",
+					"AgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAMAAAAAAAAAAwAAAAAAAAAAAAAAAAA8L8"
+				],
+				[
+					9,
+					1,
+					"insert",
+					{
+						"characters": "t"
+					},
+					"AQAAAAgAAAAAAAAACQAAAAAAAAAAAAAA",
+					"AgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAIAAAAAAAAAAgAAAAAAAAAAAAAAAAA8L8"
+				],
+				[
+					10,
+					1,
+					"left_delete",
+					null,
+					"AQAAAAgAAAAAAAAACAAAAAAAAAABAAAAdA",
+					"AgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAJAAAAAAAAAAkAAAAAAAAAAAAAAAAA8L8"
+				],
+				[
+					11,
+					1,
+					"insert",
+					{
+						"characters": "nutr"
+					},
+					"BAAAAAgAAAAAAAAACQAAAAAAAAAAAAAACQAAAAAAAAAKAAAAAAAAAAAAAAAKAAAAAAAAAAsAAAAAAAAAAAAAAAsAAAAAAAAADAAAAAAAAAAAAAAA",
+					"AgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAIAAAAAAAAAAgAAAAAAAAAAAAAAAAA8L8"
+				],
+				[
+					12,
+					1,
+					"insert",
+					{
+						"characters": "itioin"
+					},
+					"BgAAAAwAAAAAAAAADQAAAAAAAAAAAAAADQAAAAAAAAAOAAAAAAAAAAAAAAAOAAAAAAAAAA8AAAAAAAAAAAAAAA8AAAAAAAAAEAAAAAAAAAAAAAAAEAAAAAAAAAARAAAAAAAAAAAAAAARAAAAAAAAABIAAAAAAAAAAAAAAA",
+					"AgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAMAAAAAAAAAAwAAAAAAAAAAAAAAAAA8L8"
+				],
+				[
+					13,
+					1,
+					"insert",
+					{
+						"characters": " "
+					},
+					"AQAAABIAAAAAAAAAEwAAAAAAAAAAAAAA",
+					"AgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAASAAAAAAAAABIAAAAAAAAAAAAAAAAA8L8"
+				],
+				[
+					16,
+					1,
+					"left_delete",
+					null,
+					"AQAAABAAAAAAAAAAEAAAAAAAAAABAAAAaQ",
+					"AgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAARAAAAAAAAABEAAAAAAAAAAAAAAAAA8L8"
+				],
+				[
+					18,
+					1,
+					"insert",
+					{
+						"characters": "the"
+					},
+					"AwAAAAgAAAAAAAAACQAAAAAAAAAAAAAACQAAAAAAAAAKAAAAAAAAAAAAAAAKAAAAAAAAAAsAAAAAAAAAAAAAAA",
+					"AgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAIAAAAAAAAAAgAAAAAAAAAAAAAAAAA8L8"
+				],
+				[
+					19,
+					1,
+					"insert",
+					{
+						"characters": " "
+					},
+					"AQAAAAsAAAAAAAAADAAAAAAAAAAAAAAA",
+					"AgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAALAAAAAAAAAAsAAAAAAAAAAAAAAAAA8L8"
+				],
+				[
+					20,
+					3,
+					"left_delete",
+					null,
+					"AwAAAAsAAAAAAAAACwAAAAAAAAABAAAAIAoAAAAAAAAACgAAAAAAAAABAAAAZQkAAAAAAAAACQAAAAAAAAABAAAAaA",
+					"AgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAMAAAAAAAAAAwAAAAAAAAAAAAAAAAA8L8"
+				],
+				[
+					21,
+					1,
+					"insert",
+					{
+						"characters": "eh"
+					},
+					"AgAAAAkAAAAAAAAACgAAAAAAAAAAAAAACgAAAAAAAAALAAAAAAAAAAAAAAA",
+					"AgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAJAAAAAAAAAAkAAAAAAAAAAAAAAAAA8L8"
+				],
+				[
+					22,
+					1,
+					"insert",
+					{
+						"characters": " "
+					},
+					"AQAAAAsAAAAAAAAADAAAAAAAAAAAAAAA",
+					"AgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAALAAAAAAAAAAsAAAAAAAAAAAAAAAAA8L8"
+				],
+				[
+					24,
+					1,
+					"insert",
+					{
+						"characters": "c"
+					},
+					"AQAAAAkAAAAAAAAACgAAAAAAAAAAAAAA",
+					"AgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAJAAAAAAAAAAkAAAAAAAAAAAAAAAAA8L8"
+				],
+				[
+					25,
+					1,
+					"left_delete",
+					null,
+					"AQAAAAkAAAAAAAAACQAAAAAAAAABAAAAYw",
+					"AgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAKAAAAAAAAAAoAAAAAAAAAAAAAAAAA8L8"
+				],
+				[
+					27,
+					1,
+					"insert",
+					{
+						"characters": "c"
+					},
+					"AQAAAAoAAAAAAAAACwAAAAAAAAAAAAAA",
+					"AgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAKAAAAAAAAAAoAAAAAAAAAAAAAAAAA8L8"
+				],
+				[
+					29,
+					1,
+					"insert",
+					{
+						"characters": "\n\n\n\n"
+					},
+					"BAAAAB4AAAAAAAAAHwAAAAAAAAAAAAAAHwAAAAAAAAAgAAAAAAAAAAAAAAAgAAAAAAAAACEAAAAAAAAAAAAAACEAAAAAAAAAIgAAAAAAAAAAAAAA",
+					"AgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAeAAAAAAAAAB4AAAAAAAAA////////738"
+				],
+				[
+					31,
+					1,
+					"insert",
+					{
+						"characters": "Mind"
+					},
+					"BAAAAB8AAAAAAAAAIAAAAAAAAAAAAAAAIAAAAAAAAAAhAAAAAAAAAAAAAAAhAAAAAAAAACIAAAAAAAAAAAAAACIAAAAAAAAAIwAAAAAAAAAAAAAA",
+					"AgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAfAAAAAAAAAB8AAAAAAAAAAAAAAAAAAAA"
+				],
+				[
+					32,
+					1,
+					"insert",
+					{
+						"characters": " map"
+					},
+					"BAAAACMAAAAAAAAAJAAAAAAAAAAAAAAAJAAAAAAAAAAlAAAAAAAAAAAAAAAlAAAAAAAAACYAAAAAAAAAAAAAACYAAAAAAAAAJwAAAAAAAAAAAAAA",
+					"AgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAjAAAAAAAAACMAAAAAAAAAAAAAAAAA8L8"
+				],
+				[
+					33,
+					1,
+					"insert",
+					{
+						"characters": "\n"
+					},
+					"AQAAACcAAAAAAAAAKAAAAAAAAAAAAAAA",
+					"AgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAnAAAAAAAAACcAAAAAAAAAAAAAAAAA8L8"
+				],
+				[
+					34,
+					1,
+					"insert",
+					{
+						"characters": "Make"
+					},
+					"BAAAACgAAAAAAAAAKQAAAAAAAAAAAAAAKQAAAAAAAAAqAAAAAAAAAAAAAAAqAAAAAAAAACsAAAAAAAAAAAAAACsAAAAAAAAALAAAAAAAAAAAAAAA",
+					"AgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAoAAAAAAAAACgAAAAAAAAAAAAAAAAA8L8"
+				],
+				[
+					35,
+					1,
+					"insert",
+					{
+						"characters": " "
+					},
+					"AQAAACwAAAAAAAAALQAAAAAAAAAAAAAA",
+					"AgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAsAAAAAAAAACwAAAAAAAAAAAAAAAAA8L8"
+				],
+				[
+					36,
+					1,
+					"insert",
+					{
+						"characters": "notes"
+					},
+					"BQAAAC0AAAAAAAAALgAAAAAAAAAAAAAALgAAAAAAAAAvAAAAAAAAAAAAAAAvAAAAAAAAADAAAAAAAAAAAAAAADAAAAAAAAAAMQAAAAAAAAAAAAAAMQAAAAAAAAAyAAAAAAAAAAAAAAA",
+					"AgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAtAAAAAAAAAC0AAAAAAAAAAAAAAAAA8L8"
+				],
+				[
+					37,
+					1,
+					"insert",
+					{
+						"characters": " that"
+					},
+					"BQAAADIAAAAAAAAAMwAAAAAAAAAAAAAAMwAAAAAAAAA0AAAAAAAAAAAAAAA0AAAAAAAAADUAAAAAAAAAAAAAADUAAAAAAAAANgAAAAAAAAAAAAAANgAAAAAAAAA3AAAAAAAAAAAAAAA",
+					"AgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAyAAAAAAAAADIAAAAAAAAAAAAAAAAA8L8"
+				],
+				[
+					38,
+					1,
+					"insert",
+					{
+						"characters": " you"
+					},
+					"BAAAADcAAAAAAAAAOAAAAAAAAAAAAAAAOAAAAAAAAAA5AAAAAAAAAAAAAAA5AAAAAAAAADoAAAAAAAAAAAAAADoAAAAAAAAAOwAAAAAAAAAAAAAA",
+					"AgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAA3AAAAAAAAADcAAAAAAAAAAAAAAAAA8L8"
+				],
+				[
+					39,
+					1,
+					"insert",
+					{
+						"characters": " must"
+					},
+					"BQAAADsAAAAAAAAAPAAAAAAAAAAAAAAAPAAAAAAAAAA9AAAAAAAAAAAAAAA9AAAAAAAAAD4AAAAAAAAAAAAAAD4AAAAAAAAAPwAAAAAAAAAAAAAAPwAAAAAAAABAAAAAAAAAAAAAAAA",
+					"AgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAA7AAAAAAAAADsAAAAAAAAAAAAAAAAA8L8"
+				],
+				[
+					40,
+					1,
+					"insert",
+					{
+						"characters": " memorize"
+					},
+					"CQAAAEAAAAAAAAAAQQAAAAAAAAAAAAAAQQAAAAAAAABCAAAAAAAAAAAAAABCAAAAAAAAAEMAAAAAAAAAAAAAAEMAAAAAAAAARAAAAAAAAAAAAAAARAAAAAAAAABFAAAAAAAAAAAAAABFAAAAAAAAAEYAAAAAAAAAAAAAAEYAAAAAAAAARwAAAAAAAAAAAAAARwAAAAAAAABIAAAAAAAAAAAAAABIAAAAAAAAAEkAAAAAAAAAAAAAAA",
+					"AgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAABAAAAAAAAAAEAAAAAAAAAAAAAAAAAA8L8"
+				],
+				[
+					41,
+					1,
+					"insert",
+					{
+						"characters": " and"
+					},
+					"BAAAAEkAAAAAAAAASgAAAAAAAAAAAAAASgAAAAAAAABLAAAAAAAAAAAAAABLAAAAAAAAAEwAAAAAAAAAAAAAAEwAAAAAAAAATQAAAAAAAAAAAAAA",
+					"AgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAABJAAAAAAAAAEkAAAAAAAAAAAAAAAAA8L8"
+				],
+				[
+					42,
+					1,
+					"insert",
+					{
+						"characters": " print"
+					},
+					"BgAAAE0AAAAAAAAATgAAAAAAAAAAAAAATgAAAAAAAABPAAAAAAAAAAAAAABPAAAAAAAAAFAAAAAAAAAAAAAAAFAAAAAAAAAAUQAAAAAAAAAAAAAAUQAAAAAAAABSAAAAAAAAAAAAAABSAAAAAAAAAFMAAAAAAAAAAAAAAA",
+					"AgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAABNAAAAAAAAAE0AAAAAAAAAAAAAAAAA8L8"
+				],
+				[
+					45,
+					4,
+					"left_delete",
+					null,
+					"BAAAADYAAAAAAAAANgAAAAAAAAABAAAAdDUAAAAAAAAANQAAAAAAAAABAAAAYTQAAAAAAAAANAAAAAAAAAABAAAAaDMAAAAAAAAAMwAAAAAAAAABAAAAdA",
+					"AgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAA3AAAAAAAAADcAAAAAAAAAAAAAAAAA8L8"
+				],
+				[
+					46,
+					1,
+					"insert",
+					{
+						"characters": "on"
+					},
+					"AgAAADMAAAAAAAAANAAAAAAAAAAAAAAANAAAAAAAAAA1AAAAAAAAAAAAAAA",
+					"AgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAzAAAAAAAAADMAAAAAAAAAAAAAAAAA8L8"
+				],
+				[
+					47,
+					1,
+					"insert",
+					{
+						"characters": " what"
+					},
+					"BQAAADUAAAAAAAAANgAAAAAAAAAAAAAANgAAAAAAAAA3AAAAAAAAAAAAAAA3AAAAAAAAADgAAAAAAAAAAAAAADgAAAAAAAAAOQAAAAAAAAAAAAAAOQAAAAAAAAA6AAAAAAAAAAAAAAA",
+					"AgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAA1AAAAAAAAADUAAAAAAAAAAAAAAAAA8L8"
+				],
+				[
+					49,
+					1,
+					"insert",
+					{
+						"characters": " them"
+					},
+					"BQAAAFYAAAAAAAAAVwAAAAAAAAAAAAAAVwAAAAAAAABYAAAAAAAAAAAAAABYAAAAAAAAAFkAAAAAAAAAAAAAAFkAAAAAAAAAWgAAAAAAAAAAAAAAWgAAAAAAAABbAAAAAAAAAAAAAAA",
+					"AgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAABWAAAAAAAAAFYAAAAAAAAA////////738"
+				],
+				[
+					50,
+					1,
+					"insert",
+					{
+						"characters": "\n\n"
+					},
+					"AgAAAFsAAAAAAAAAXAAAAAAAAAAAAAAAXAAAAAAAAABdAAAAAAAAAAAAAAA",
+					"AgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAABbAAAAAAAAAFsAAAAAAAAAAAAAAAAA8L8"
+				],
+				[
+					51,
+					1,
+					"insert",
+					{
+						"characters": "W"
+					},
+					"AQAAAF0AAAAAAAAAXgAAAAAAAAAAAAAA",
+					"AgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAABdAAAAAAAAAF0AAAAAAAAAAAAAAAAA8L8"
+				],
+				[
+					52,
+					1,
+					"left_delete",
+					null,
+					"AQAAAF0AAAAAAAAAXQAAAAAAAAABAAAAVw",
+					"AgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAABeAAAAAAAAAF4AAAAAAAAAAAAAAAAA8L8"
+				],
+				[
+					53,
+					1,
+					"insert",
+					{
+						"characters": "Invest"
+					},
+					"BgAAAF0AAAAAAAAAXgAAAAAAAAAAAAAAXgAAAAAAAABfAAAAAAAAAAAAAABfAAAAAAAAAGAAAAAAAAAAAAAAAGAAAAAAAAAAYQAAAAAAAAAAAAAAYQAAAAAAAABiAAAAAAAAAAAAAABiAAAAAAAAAGMAAAAAAAAAAAAAAA",
+					"AgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAABdAAAAAAAAAF0AAAAAAAAAAAAAAAAA8L8"
+				],
+				[
+					55,
+					1,
+					"insert",
+					{
+						"characters": "HOt"
+					},
+					"AwAAAF0AAAAAAAAAXgAAAAAAAAAAAAAAXgAAAAAAAABfAAAAAAAAAAAAAABfAAAAAAAAAGAAAAAAAAAAAAAAAA",
+					"AgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAABdAAAAAAAAAF0AAAAAAAAAAAAAAAAAAAA"
+				],
+				[
+					56,
+					2,
+					"left_delete",
+					null,
+					"AgAAAF8AAAAAAAAAXwAAAAAAAAABAAAAdF4AAAAAAAAAXgAAAAAAAAABAAAATw",
+					"AgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAABgAAAAAAAAAGAAAAAAAAAAAAAAAAAA8L8"
+				],
+				[
+					57,
+					1,
+					"insert",
+					{
+						"characters": "ow"
+					},
+					"AgAAAF4AAAAAAAAAXwAAAAAAAAAAAAAAXwAAAAAAAABgAAAAAAAAAAAAAAA",
+					"AgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAABeAAAAAAAAAF4AAAAAAAAAAAAAAAAA8L8"
+				],
+				[
+					58,
+					1,
+					"insert",
+					{
+						"characters": " to"
+					},
+					"AwAAAGAAAAAAAAAAYQAAAAAAAAAAAAAAYQAAAAAAAABiAAAAAAAAAAAAAABiAAAAAAAAAGMAAAAAAAAAAAAAAA",
+					"AgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAABgAAAAAAAAAGAAAAAAAAAAAAAAAAAA8L8"
+				],
+				[
+					59,
+					1,
+					"insert",
+					{
+						"characters": " invest"
+					},
+					"BwAAAGMAAAAAAAAAZAAAAAAAAAAAAAAAZAAAAAAAAABlAAAAAAAAAAAAAABlAAAAAAAAAGYAAAAAAAAAAAAAAGYAAAAAAAAAZwAAAAAAAAAAAAAAZwAAAAAAAABoAAAAAAAAAAAAAABoAAAAAAAAAGkAAAAAAAAAAAAAAGkAAAAAAAAAagAAAAAAAAAAAAAA",
+					"AgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAABjAAAAAAAAAGMAAAAAAAAAAAAAAAAA8L8"
+				],
+				[
+					60,
+					1,
+					"insert",
+					{
+						"characters": " "
+					},
+					"AQAAAGoAAAAAAAAAawAAAAAAAAAAAAAA",
+					"AgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAABqAAAAAAAAAGoAAAAAAAAAAAAAAAAA8L8"
+				],
+				[
+					61,
+					6,
+					"right_delete",
+					null,
+					"BgAAAGsAAAAAAAAAawAAAAAAAAABAAAASWsAAAAAAAAAawAAAAAAAAABAAAAbmsAAAAAAAAAawAAAAAAAAABAAAAdmsAAAAAAAAAawAAAAAAAAABAAAAZWsAAAAAAAAAawAAAAAAAAABAAAAc2sAAAAAAAAAawAAAAAAAAABAAAAdA",
+					"AgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAABrAAAAAAAAAGsAAAAAAAAAAAAAAAAA8L8"
+				],
+				[
+					62,
+					1,
+					"insert",
+					{
+						"characters": "when"
+					},
+					"BAAAAGsAAAAAAAAAbAAAAAAAAAAAAAAAbAAAAAAAAABtAAAAAAAAAAAAAABtAAAAAAAAAG4AAAAAAAAAAAAAAG4AAAAAAAAAbwAAAAAAAAAAAAAA",
+					"AgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAABrAAAAAAAAAGsAAAAAAAAAAAAAAAAA8L8"
+				],
+				[
+					63,
+					1,
+					"insert",
+					{
+						"characters": " there"
+					},
+					"BgAAAG8AAAAAAAAAcAAAAAAAAAAAAAAAcAAAAAAAAABxAAAAAAAAAAAAAABxAAAAAAAAAHIAAAAAAAAAAAAAAHIAAAAAAAAAcwAAAAAAAAAAAAAAcwAAAAAAAAB0AAAAAAAAAAAAAAB0AAAAAAAAAHUAAAAAAAAAAAAAAA",
+					"AgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAABvAAAAAAAAAG8AAAAAAAAAAAAAAAAA8L8"
+				],
+				[
+					64,
+					1,
+					"insert",
+					{
+						"characters": " is"
+					},
+					"AwAAAHUAAAAAAAAAdgAAAAAAAAAAAAAAdgAAAAAAAAB3AAAAAAAAAAAAAAB3AAAAAAAAAHgAAAAAAAAAAAAAAA",
+					"AgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAB1AAAAAAAAAHUAAAAAAAAAAAAAAAAA8L8"
+				],
+				[
+					65,
+					1,
+					"insert",
+					{
+						"characters": " inflat"
+					},
+					"BwAAAHgAAAAAAAAAeQAAAAAAAAAAAAAAeQAAAAAAAAB6AAAAAAAAAAAAAAB6AAAAAAAAAHsAAAAAAAAAAAAAAHsAAAAAAAAAfAAAAAAAAAAAAAAAfAAAAAAAAAB9AAAAAAAAAAAAAAB9AAAAAAAAAH4AAAAAAAAAAAAAAH4AAAAAAAAAfwAAAAAAAAAAAAAA",
+					"AgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAB4AAAAAAAAAHgAAAAAAAAAAAAAAAAA8L8"
+				],
+				[
+					66,
+					1,
+					"insert",
+					{
+						"characters": "io"
+					},
+					"AgAAAH8AAAAAAAAAgAAAAAAAAAAAAAAAgAAAAAAAAACBAAAAAAAAAAAAAAA",
+					"AgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAB/AAAAAAAAAH8AAAAAAAAAAAAAAAAA8L8"
+				],
+				[
+					67,
+					1,
+					"insert",
+					{
+						"characters": "n,"
+					},
+					"AgAAAIEAAAAAAAAAggAAAAAAAAAAAAAAggAAAAAAAACDAAAAAAAAAAAAAAA",
+					"AgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAACBAAAAAAAAAIEAAAAAAAAAAAAAAAAA8L8"
+				],
+				[
+					68,
+					1,
+					"insert",
+					{
+						"characters": " "
+					},
+					"AQAAAIMAAAAAAAAAhAAAAAAAAAAAAAAA",
+					"AgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAACDAAAAAAAAAIMAAAAAAAAAAAAAAAAA8L8"
+				],
+				[
+					69,
+					1,
+					"insert",
+					{
+						"characters": "recess"
+					},
+					"BgAAAIQAAAAAAAAAhQAAAAAAAAAAAAAAhQAAAAAAAACGAAAAAAAAAAAAAACGAAAAAAAAAIcAAAAAAAAAAAAAAIcAAAAAAAAAiAAAAAAAAAAAAAAAiAAAAAAAAACJAAAAAAAAAAAAAACJAAAAAAAAAIoAAAAAAAAAAAAAAA",
+					"AgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAACEAAAAAAAAAIQAAAAAAAAAAAAAAAAA8L8"
+				],
+				[
+					70,
+					1,
+					"insert",
+					{
+						"characters": "ion"
+					},
+					"AwAAAIoAAAAAAAAAiwAAAAAAAAAAAAAAiwAAAAAAAACMAAAAAAAAAAAAAACMAAAAAAAAAI0AAAAAAAAAAAAAAA",
+					"AgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAACKAAAAAAAAAIoAAAAAAAAAAAAAAAAA8L8"
+				]
+			]
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"in",
+				"Package Control: Install Package"
+			],
+			[
+				"insta",
+				"Install Package Control"
+			]
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 194.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/home/raz/raz_IT/Notes_IT/Rust/rust_notes1.rs",
+		"/home/raz/raz_IT/Notes_IT/TScript/TS1.ts",
+		"/home/raz/Downloads/acte_razvan/acte_masterclass/todo.txt",
+		"/home/raz/raz_IT/Notes_IT/postgreSQL/postgreSql.sql",
+		"/home/raz/raz_IT/Notes_IT/postgreSQL/database.txt",
+		"/home/raz/Documents/teme_nutritie/luni 07 feb 2022",
+		"/home/raz/Downloads/suport_curs/suport_curs_modul_1/lu9526h143ym.tmp",
+		"/home/raz/code_projects/rust_projects/rocket_prac1/rocket_my_auth/src/main.rs",
+		"/home/raz/code_projects/rust_projects/rocket_prac1/rocket_of_repo1/Rocket/examples/hello/src/main.rs",
+		"/home/raz/code_projects/rust_projects/rocket_prac1/rocket_of_repo1/Rocket/examples/hello/Cargo.toml",
+		"/home/raz/code_projects/rust_projects/rocket_prac1/rocket_of_repo1/Rocket/examples/pastebin (copy)/src/tests.rs",
+		"/home/raz/code_projects/rust_projects/rocket_prac1/rocket_of_repo1/Rocket/examples/pastebin (copy)/src/paste_id.rs",
+		"/home/raz/code_projects/rust_projects/rocket_prac1/rocket_of_repo1/Rocket/examples/pastebin (copy)/src/main.rs",
+		"/home/raz/Documents/keybindings.json",
+		"/home/raz/Documents/mys.nu",
+		"/home/raz/Documents/que.sh",
+		"/home/raz/Documents/ans.sh",
+		"/home/raz/Documents/ex_ssh.sh",
+		"/home/raz/code_projects/ts_projects1/ts_vue_projects_1/pokemon-app-posts-1/package.json",
+		"/home/raz/code_projects/ts_projects1/ts_vue_projects_1/pokemon-app/src/views/About.vue",
+		"/home/raz/code_projects/ts_projects1/ts_vue_projects_1/pokemon-app/src/views/Home.vue",
+		"/home/raz/code_projects/ts_projects1/ts_vue_projects_1/pokemon-app-1/src/views/Home.vue",
+		"/home/raz/code_projects/ts_projects1/ts_vue_projects_1/pokemon-app-1/src/views/About.vue",
+		"/home/raz/code_projects/ts_projects1/ts_vue_projects_1/pokemon-app-1/src/components/HelloWorld.vue",
+		"/home/raz/code_projects/ts_projects1/ts_vue_projects_1/pokemon-app-1/src/App.vue",
+		"/home/raz/raz_IT/Notes_IT/nu_shell/nu_shell.sh",
+		"/home/raz/code_projects/rust_projects/rocket_prac1/rocket_of_repo1/Rocket/examples/todo/src/main.rs",
+		"/home/raz/code_projects/rust_projects/rocket_prac1/rocket_of_repo1/Rocket/examples/pastebin/Cargo.toml",
+		"/home/raz/code_projects/rust_projects/rocket_prac1/rocket_my_auth/Cargo.toml",
+		"/home/raz/.config/fish/config.fish",
+		"/home/raz/code_projects/rust_projects/rocket_prac1/rocket_of_repo1/Rocket/.gitignore",
+		"/home/raz/code_projects/ts_projects1/ts3/episode_30/.prettierrc",
+		"/home/raz/raz_IT/Notes_IT/programming_tips_articles_to_do_list/it_to_do_1.txt",
+		"/home/raz/code_projects/rust_projects/rocket_prac1/rocket_of_repo1/Rocket/examples/hello/src/tests.rs",
+		"/home/raz/code_projects/rust_projects/rocket_prac1/rocket_auth/examples/postgres.rs",
+		"/home/raz/code_projects/rust_projects/rocket_prac1/rocket_auth/Cargo.toml",
+		"/home/raz/code_projects/rust_projects/rocket_prac1/rocket_my_hello1/Cargo.toml",
+		"/home/raz/code_projects/ts_projects1/ts3/ts_proj1/.prettierignore",
+		"/home/raz/code_projects/ts_projects1/ts3/learn_ts1/.prettierrc",
+		"/home/raz/code_projects/ts_projects1/ts3/learn_ts1/.eslintrc.js",
+		"/home/raz/code_projects/ts_projects1/ts3/learn_ts1/.eslintignore",
+		"/home/raz/code_projects/ts_projects1/ts3/episode_30/mylib/.prettierrc",
+		"/home/raz/code_projects/ts_projects1/ts3/ts_proj1/src/example1.js",
+		"/home/raz/code_projects/ts_projects1/try_css1/css_example1/package.json",
+		"/home/raz/code_projects/ts_projects1/ts3/learn_ts2/src/example1.ts",
+		"/home/raz/code_projects/ts_projects1/ts3/ts_proj1/package-lock.json",
+		"/home/raz/code_projects/ts_projects1/ts3/ts_proj1/.prettierrc",
+		"/home/raz/code_projects/ts_projects1/ts3/ts_proj1/yarn.lock",
+		"/home/raz/code_projects/ts_projects1/ts3/episode_30/ts-consumer/tsconfig.json",
+		"/home/raz/code_projects/ts_projects1/ts3/episode_30/ts-consumer/package.json",
+		"/home/raz/code_projects/ts_projects1/ts3/learn_ts2/.prettierrc",
+		"/home/raz/code_projects/ts_projects1/ts3/ramda1/package.json",
+		"/home/raz/code_projects/ts_projects1/ts3/episode_30/package.json",
+		"/home/raz/code_projects/rust_projects/rust_projects1/rust_example1/Cargo.toml",
+		"/home/raz/code_projects/rust_projects/rust_web3/yew/Cargo.toml",
+		"/home/raz/code_projects/ts_projects1/ts3/learn_ts2/package.json",
+		"/home/raz/code_projects/ts_projects1/ts3/learn_ts2/ex1.ts",
+		"/home/raz/code_projects/ts_projects1/ts3/ramda1/.vscode/tasks.json",
+		"/home/raz/code_projects/ts_projects1/ts3/ramda1/.vscode/launch.json",
+		"/home/raz/code_projects/ts_projects1/ts3/learn_ts1/package.json",
+		"/home/raz/raz_IT/Notes_IT/programming_tips_articles_to_do_list/IT_to_read.txt",
+		"/home/raz/raz_IT/Notes_IT/programming_tips_articles_to_do_list/IT_Tips.txt",
+		"/home/raz/raz_IT/workspaces/.prettierrc",
+		"/home/raz/raz_IT/Notes_IT/raz_notes/pass.txt",
+		"/home/raz/raz_IT/Notes_IT/Rust/yew1.rs",
+		"/home/raz/code_projects/ts_projects1/ts3/ramda1/.eslintrc.json",
+		"/home/raz/package.json",
+		"/home/raz/code_projects/ts_projects1/ts1/ex1/webpack.config.js",
+		"/home/raz/code_projects/ts_projects1/ts1/rx_js_1/.vscode/launch.json",
+		"/home/raz/code_projects/ts_projects1/ts1/rx_js_1/package.json",
+		"/home/raz/code_projects/ts_projects1/ts1/rx_js_1/tsconfig.json",
+		"/home/raz/code_projects/ts_projects1/ts1/rx_js_1/webpack.config.js",
+		"/home/raz/code_projects/ts_projects1/ts3/ramda1/package-lock.json",
+		"/home/raz/.bashrc",
+		"/home/raz/.profile",
+		"/home/raz/code_projects/rust_projects/rust_web1/todomvc_yew_1/src/state.rs",
+		"/home/raz/code_projects/rust_projects/rust_web1/todomvc_yew_1/src/main.rs",
+		"/home/raz/code_projects/rust_projects/rust_web1/seed-app-todomvc-master2/src/lib.rs",
+		"/home/raz/code_projects/rust_projects/rust_web1/todomvc_yew_1/Cargo.toml",
+		"/home/raz/code_projects/rust_projects/rust_web2/yew-0.18.0/packages/yew-router/Cargo.toml",
+		"/home/raz/code_projects/rust_projects/rust_web2/yew-0.18.0/examples/counter/Cargo.toml",
+		"/home/raz/code_projects/rust_projects/rust_web2/yew-0.18.0/examples/futures/Cargo.toml",
+		"/home/raz/code_projects/rust_projects/rust_web2/yew-master_e65688e/examples/counter/Cargo.toml",
+		"/home/raz/code_projects/rust_projects/rust_web2/yew-master_e65688e/commit_nr.txt",
+		"/home/raz/code_projects/rust_projects/rust_web2/yew-master_0.18/examples/js_callback/src/get-payload-script.js",
+		"/home/raz/code_projects/rust_projects/rust_web2/yew-master_0.18_copy/examples/js_callback/Cargo.toml",
+		"/home/raz/code_projects/rust_projects/rust_web1/yew-master_18/examples/node_refs/src/main.rs",
+		"/home/raz/code_projects/rust_projects/rust_web1/yew-master_18/examples/node_refs/src/input.rs",
+		"/home/raz/code_projects/rust_projects/rust_web1/yew-master_18/examples/todomvc/src/state.rs",
+		"/home/raz/code_projects/rust_projects/rust_web1/yew-master_18/examples/todomvc/src/main.rs",
+		"/home/raz/code_projects/rust_projects/rust_web1/yew-master_18/examples/node_refs/README.md",
+		"/home/raz/code_projects/rust_projects/rust_web1/seed-app-todomvc-master/src/lib.rs",
+		"/home/raz/code_projects/rust_projects/rust_web1/yew-master_18/examples/todomvc/Cargo.toml",
+		"/home/raz/code_projects/rust_projects/rust_web1/yew-master_18/packages/yew-services/src/lib.rs",
+		"/home/raz/code_projects/rust_projects/rust_web1/yew-master_18/packages/yew-services/Cargo.toml",
+		"/home/raz/code_projects/rust_projects/rust_web1/yew_my_todo1/src/main.rs",
+		"/home/raz/code_projects/rust_projects/rust_web1/seed-app-todomvc-master/index.html",
+		"/home/raz/code_projects/rust_projects/rust_web1/yew-master_18/examples/todomvc/index.html",
+		"/home/raz/code_projects/rust_projects/rust_web1/todo_mvc/Cargo.toml",
+		"/home/raz/code_projects/rust_projects/rust_web1/todo_mvc/Cargo.lock",
+		"/home/raz/code_projects/rust_projects/rust_web1/seed_counter1/index.html",
+		"/home/raz/code_projects/rust_projects/rust_web1/todo_mvc/index.html",
+		"/home/raz/code_projects/rust_projects/rust_web1/seed-app-todomvc-master/Makefile.toml",
+		"/home/raz/code_projects/rust_projects/rust_web1/yew-master_18/examples/router/index.html",
+		"/home/raz/code_projects/rust_projects/rust_web1/yew-master_18/examples/router/index.scss",
+		"/home/raz/.cargo/registry/src/github.com-1ecc6299db9ec823/atomic_hooks-0.1.0/src/lib.rs",
+		"/home/raz/.cargo/registry/src/github.com-1ecc6299db9ec823/topo-0.9.4/src/lib.rs",
+		"/home/raz/code_projects/rust_projects/rust_web1/seed-app-todomvc-master/index1.html",
+		"/home/raz/code_projects/rust_projects/rust_web1/yew-master_18/examples/README.md",
+		"/home/raz/code_projects/rust_projects/rust_web1/yew-master_18/examples/todomvc/dist/index.html",
+		"/home/raz/code_projects/rust_projects/rust_web1/yew-master_18/examples/todomvc/index.css",
+		"/home/raz/code_projects/rust_projects/rust_web1/yew-master_18/examples/todomvc/style/base.css",
+		"/home/raz/code_projects/rust_projects/rust_web1/yew-master_18/Makefile.toml",
+		"/home/raz/dev_sda1_back/movies/Hades -CODEX/READ HOW TO INSTALL.txt",
+		"/home/raz/code_projects/rust_projects/rust_web1/seed-app-todomvc-master/pkg/README.md",
+		"/home/raz/code_projects/rust_projects/rust_web1/todo_mvc/dist/index.html",
+		"/home/raz/code_projects/rust_projects/rust_web1/seed-app-counter-master/Cargo.toml",
+		"/home/raz/code_projects/rust_projects/rust_web1/seed-app-counter-master/Makefile.toml",
+		"/home/raz/code_projects/rust_projects/rust_web1/seed-app-counter-master/index.html",
+		"/home/raz/code_projects/rust_projects/rust_web1/seed_counter1/Cargo.toml",
+		"/home/raz/code_projects/rust_projects/rust_web1/yew-app_v_18_new_site/index.html",
+		"/home/raz/code_projects/rust_projects/rust_web1/yew-app_v_18_new_site/index1.html",
+		"/home/raz/code_projects/rust_projects/rust_web1/yew-app_v_18_new_site/dist/index.html",
+		"/home/raz/code_projects/rust_projects/rust_web1/yew-app_v_18_new_site/dist/index1.html",
+		"/home/raz/raz_IT/workspaces/prog_default.sublime-project",
+		"/home/raz/.config/sublime-text-3/Packages/User/Default (Linux).sublime-keymap",
+		"/home/raz/.config/sublime-text-3/Local/Session.sublime_session",
+		"/home/raz/.config/sublime-text-3/Packages/User/Package Control.sublime-settings"
+	],
+	"find":
+	{
+		"height": 28.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"type",
+			"PasteId",
+			"pasteId",
+			"git",
+			"sudo",
+			"INSERT",
+			"create",
+			"init -y",
+			"micros",
+			"input",
+			"unuse",
+			"iter",
+			"vector",
+			"#!\\[allow",
+			"\\\\#![allow",
+			"#![allow",
+			"update",
+			"range",
+			"list",
+			"nth",
+			"for",
+			"error",
+			"/index"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": true,
+		"replace_history":
+		[
+			"./index"
+		],
+		"reverse": false,
+		"scrollbar_highlights": true,
+		"show_context": true,
+		"use_buffer2": true,
+		"use_gitignore": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "/home/raz/raz_IT/notes_books/notes_diverse.txt",
+					"selected": true,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 144,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								144,
+								144
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"stack_multiselect": false,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 28.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "daily_schedule.sublime-project",
+	"replace":
+	{
+		"height": 52.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"ru",
+				"~/raz_IT/Notes_IT/Rust/rust_notes1.rs"
+			],
+			[
+				"rus",
+				"~/raz_IT/Notes_IT/Rust/rust_notes1.rs"
+			],
+			[
+				"nu",
+				"~/raz_IT/notes_books/nutrition/nutrition.txt"
+			],
+			[
+				"q",
+				"~/raz_IT/notes_books/quotes.txt"
+			],
+			[
+				"",
+				"~/raz_IT/Notes_IT/nu_shell/nu_shell.sh"
+			],
+			[
+				"nut",
+				"~/raz_IT/notes_books/my_business.txt"
+			],
+			[
+				"le",
+				"~/snap/exercism/5/exercism/rust/leap/tests/leap.rs"
+			],
+			[
+				"nushell",
+				"~/raz_IT/Notes_IT/nu_shell/nu_shell.sh"
+			],
+			[
+				"it",
+				"~/raz_IT/Notes_IT/programming_tips_articles_to_do_list/it_to_do_1.txt"
+			],
+			[
+				"pass",
+				"~/raz_IT/Notes_IT/raz_notes/pass.txt"
+			],
+			[
+				"i",
+				"~/raz_IT/Notes_IT/programming_tips_articles_to_do_list/it_to_do_1.txt"
+			],
+			[
+				"n",
+				"~/raz_IT/notes_books/nutrition/nutrition.txt"
+			],
+			[
+				"id",
+				"~/raz_IT/Notes_IT/programming_tips_articles_to_do_list/it_to_do_1.txt"
+			],
+			[
+				"rst",
+				"~/raz_IT/Notes_IT/Rust/rust_notes1.rs"
+			],
+			[
+				"qu",
+				"~/raz_IT/notes_books/quotes.txt"
+			],
+			[
+				"my",
+				"~/raz_IT/notes_books/my_business.txt"
+			],
+			[
+				"can",
+				"~/raz_IT/notes_books/self_improvement/cant_hurt_me.txt"
+			],
+			[
+				"m",
+				"~/raz_IT/notes_books/my_business.txt"
+			],
+			[
+				"hur",
+				"~/raz_IT/notes_books/self_improvement/cant_hurt_me.txt"
+			],
+			[
+				"jj",
+				"~/dev_sda1_back/books/bdsBooks/The Miracle of Mindfulness (7Summits)/jjj.txt"
+			],
+			[
+				"cu",
+				"~/raz_IT/notes_books/dating_sx_psycohology/cupid_poison_arrow.txt"
+			],
+			[
+				"fm",
+				"~/raz_IT/notes_books/dating_sx_psycohology/sx_fm_psychology.txt"
+			],
+			[
+				"re",
+				"~/raz_IT/notes_books/dating_sx_psycohology/relationship.txt"
+			],
+			[
+				"rle",
+				"~/raz_IT/notes_books/dating_sx_psycohology/relationship.txt"
+			],
+			[
+				"bu",
+				"~/raz_IT/notes_books/my_business.txt"
+			],
+			[
+				"s",
+				"~/raz_IT/notes_books/dating_sx_psycohology/sx_fm_psychology.txt"
+			],
+			[
+				"myu",
+				"~/raz_IT/notes_books/my_business.txt"
+			],
+			[
+				"cup",
+				"~/raz_IT/notes_books/dating_sx_psycohology/cupid_poison_arrow.txt"
+			],
+			[
+				"f",
+				"~/raz_IT/notes_books/psychology/future_authoring.txt"
+			],
+			[
+				"sx",
+				"~/raz_IT/notes_books/dating_sx_psycohology/sx_fm_psychology.txt"
+			],
+			[
+				"r",
+				"~/raz_IT/notes_books/read.txt"
+			],
+			[
+				"fu",
+				"~/raz_IT/notes_books/psychology/future_authoring.txt"
+			],
+			[
+				"sf",
+				"~/raz_IT/notes_books/dating_sx_psycohology/sx_fm_psychology.txt"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"~/raz_IT/workspaces/typescript_proj.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": false,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": false,
+	"side_bar_width": 150.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
