@@ -29,6 +29,9 @@ The Book: On the Taboo Against Knowing Who You Are by Alan Watts
 Cosmos CArl Sagan
 
 
+Brothers Karamazov Dostoevsky
+The master and margarita Mikhail Bulgakov
+Books from Nikos Kazantzakis
 
 List of Books
 
@@ -60,7 +63,8 @@ by David D. Gilmore
 ----
 ester perel books
 
-
+How to solve it By G. Polya
+	"A system of thinking which can help you solve any problem"
 
 
 
