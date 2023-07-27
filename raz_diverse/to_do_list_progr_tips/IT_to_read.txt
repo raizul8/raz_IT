@@ -68,3 +68,32 @@ Computer Science Reconsidered: The Invocation Model of Process Expression Karl M
 Description:
 The Invocation Model of Process Expression argues that mathematics does not provide the most appropriate conceptual foundations for computer science, but, rather, that these foundations are a primary source of unnecessary complexity and confusion.  It supports that there is a more appropriate conceptual model that unifies forms of expression considered quite disparate and simplifies issues considered complex and intractable.  This book presents that this model of process expression is alternative theory of computer science that is both valid and practical.
 
+
+
+RECOMMENDED BOOKS
+Uncle Bob • Clean Code • https://amzn.to/3soPO6k
+Uncle Bob • Clean Coder • https://amzn.to/3dhEPWX
+Uncle Bob • Clean Architecture • https://amzn.to/3x0gjBQ
+Uncle Bob • Clean Agile • https://amzn.to/3fEqTrO
+Uncle Bob • Agile Software Development • https://amzn.to/3qIk2lf
+Allen Holub • Holub on Patterns • https://amzn.to/3g8Is3u
+Allen Holub • Taming Java Threads • https://amzn.to/3mLNYdI
+Gamma, Helm, Johnson & Booch • Design Patterns • https://amzn.to/3sPJ8yk
+Tom DeMarco • Structured Analysis and System Specification • https://amzn.to/39IjdRH
+Fred Brooks Jr. • The Mythical Man-Month • https://amzn.to/31NJc5C
+David Marquet • Turn the Ship Around! • https://amzn.to/39LfDGa
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

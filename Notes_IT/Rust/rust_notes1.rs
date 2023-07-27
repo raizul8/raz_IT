@@ -146,8 +146,10 @@ rustup toolchain install 1.18.0
 // In Rust, where we have the concept of ownership and borrowing, an additional difference between references and smart pointers is that references are pointers that only borrow data; in contrast, in many cases, smart pointers own the data they point to.
 
 
-// Add an allow attribute on a struct, module, function, etc.:
+//********
+// Use BtreeSet, BtreeMap over hashmaps
 
+// Add an allow attribute on a struct, module, function, etc.:
 #[allow(dead_code)]
 struct SemanticDirection;
 
@@ -203,6 +205,38 @@ let pool_options = PgConnectOptions::new()
 
 let pool: PgPool = Pool::<Postgres>::connect_with(pool_options).await?;
 
+
+// let-else statements
+use create::prelude::*;
+
+pub fn key_sum(item: &str) -> Result<(&str, i32)> {
+    let Some((key, val)) = item.split_once(':') else {
+        return Err(Error::Static("Invalid item"));
+    };
+
+    let Ok(val) = val.trim().parse::<i32>() else {
+        return Err(Error::Static("Invalid item"));
+    };
+
+    Ok((key, val))
+}
+
+// break from labeled blocks
+let result = 'block: {
+    do_thing();
+    if condition_not_met() {
+        break 'block 1;
+    }
+
+    do_next_thing();
+    if condition_not_met() {
+        break 'block 2;
+    }
+    
+    do_last_thing();
+    3
+
+};
 
 // Use dbg! instead of println
 fn fibonacci(n: u32) -> u32 {
@@ -2105,34 +2139,6 @@ println!("{}",x);
 // move closures avoid borrow-checking problems by avoiding borrowing - they move the values. If those values are Copy, then Rust will copy. But otherwise the value will be moved and not be available afterwards. This is the only way to get a closure with a 'static lifetime.
 
 // A common strategy is to use shared references like Rc and Arc (equivalent to C++’s shared_ptr). Cloning a shared reference just increments the reference count, and dropping them decrements the count; when the count goes to zero the actual value is dropped. This is a kind of garbage collection and provides the important guarantee that the references will last ‘just long enough’. So typically you would clone a reference and move it into a closure, and avoid explicit lifetime problems.
-
-
-// exercism solution Exercism solution
-
-// leap year solution
-pub fn is_leap_year(year: i64) -> bool {
-    match (year % 4, year % 100, year % 400) {
-        (0, 0, 0) => true,
-        (0, 0, _) => false,
-        (0, _, _) => true,
-        (_, _, _) => false,
-    }
-}
-
-
-// raindrop solution
-pub fn raindrops(x: u32) -> String {
-    let is_factor = |factor| x % factor == 0;
-    let mut rez = String::new();
-
-    if is_factor(3) { rez.push_str("Pling"); }
-    if is_factor(5) { rez.push_str("Plang"); }
-    if is_factor(7) { rez.push_str("Plong"); }
-
-    if rez.is_empty() { rez = x.to_string(); }
-
-    rez
-}
 
 
 // Error chain
