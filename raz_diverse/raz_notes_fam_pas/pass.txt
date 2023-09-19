@@ -1,14 +1,34 @@
 <pass>
+    www.locuridemuncacluj.net/
+    bogarazva2@gmail.com
+    r88_munca
+
     cod Tulghesului: 400388
 	razputin88_S s2
 	bogarazvan2_yh s2
 
+
+    HBOmax
+    bogarazvan2@gmail.com
+    R_hbomax
+
+    regina maria
+    bogarazvan2@gmail.com
+    R_88
+
     git guardian : git raizul8 account
+    e-jobs: bogarazvan2@gmail.com
+    psw: r88_ejobs
 
     git accounts: 
     1. bogarazvan ntk
     2. raizul8 r8888 bogarazavan2@gmail.com   
        to push I had to my_pig_w_o_c etc
+
+    github
+        life.natural.nutrition@gmail.com
+        Life_gt1
+        user: Raizul1
 
     docker  raizul8 r88
 
@@ -23,9 +43,16 @@
 	Urban Rivals: 3M-Raizul r88, Raizul_2 st's ft
 
 	gmail 
-        bogarazvan n1962 R_gmail1
+        bogarazvan  R_gmail1
         bogarazvan2 R_gmail2
+        life.natural.nutrition R_nutrition
 
+
+    modem:
+        192.168.1.1
+        admin
+        R_88
+        
     router 
         http://router.asus.com
         Asus4000
@@ -148,7 +175,7 @@
         R88
 
 
-    bt_pass unique: 
+    bt_crd_pass unique: 
         M1**401
 
     electrica: 

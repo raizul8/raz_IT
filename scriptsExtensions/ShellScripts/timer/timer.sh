@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo "Enter minutes"
+echo "Enter minutes until shut_down"
 read minutes
 
 # sleep 2 && xset dpms force off

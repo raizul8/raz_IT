@@ -1,3 +1,8 @@
 #!/bin/bash
-# pm-hibernate
-pm-suspend
+
+echo "Enter minutes until sleep"
+read minutes
+
+sleep "$((minutes * 60))"
+
+systemctl suspend
