@@ -1,0 +1,9 @@
+2l -> 2ms/2h -> 1ms/h
+
+8l in 8/h cate masini ? 
+8l * 1ms/h = 8 masini pe ora
+8l * 8m/h = 64m in 8 ore
+
+100g  99%/w
+x     96%/w
+96,96

@@ -12,6 +12,16 @@
     bogarazvan2@gmail.com
     R_hbomax
 
+    Neo_Bt
+    1240331BR
+    mynbtwksonclds.
+    legat plus punct
+
+    SodexoPluxee
+    my s_xo1
+    Cod securizare 2**55
+    Pn 1383
+
     regina maria
     bogarazvan2@gmail.com
     R_88
@@ -48,14 +58,14 @@
         life.natural.nutrition R_nutrition
 
 
-    modem:
+    router digi:
         192.168.1.1
         admin
         R_88
         
     router 
         http://router.asus.com
-        Asus4000
+        ASUS4000
         M_1964
 
     firefox
@@ -110,13 +120,6 @@
     scribid raz bogarazvan2@gmail.com : R88
     evernote bogarazvan2@gmail.com R88
 
-    router 192.168.1.1 local ntw
-    r2415
-
-    router 192.168.1.1 admin 
-    r188
-
-    router 192.168.1.3 r188
 
     stackoverflow careers
         John Glassgow
@@ -151,7 +154,7 @@
     mediadot.ro g+ bogarazvan2@gmail.com
     evomag bogarazvan2@gmail.com p: R88
 
-    luscious net Raizul br2@gmail R88
+    luscious net Raizul br2@gmail Rzl88
     instagram  br2@gmail johndoe8728 R88 this doesn't work
     instagram  fckbook br@gmail full name: John Doe userName: Johny_2415 psw:R88 This does work.
     lnmtl raizul r88 br2@gmail
